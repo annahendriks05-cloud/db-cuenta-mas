@@ -85,9 +85,24 @@ export default function HeroSection() {
             <h2 className="text-xl font-semibold text-[#001e50] mb-2">
               Konto eröffnen bei Deutsche Bank
             </h2>
-            <p className="text-gray-600 text-sm mb-6">
+            <p className="text-gray-600 text-sm mb-4">
               Füllen Sie dieses Formular aus und wir werden uns unverbindlich mit Ihnen in Verbindung setzen.
             </p>
+            
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+              <h3 className="text-sm font-semibold text-[#001e50] mb-2 flex items-center gap-2">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+                Was passiert mit Ihren Daten?
+              </h3>
+              <ul className="text-xs text-gray-700 space-y-1.5">
+                <li>• Ein persönlicher Berater wird Sie innerhalb von 24 Stunden kontaktieren</li>
+                <li>• Ihre Daten werden sicher und vertraulich behandelt</li>
+                <li>• Keine versteckten Kosten oder Verpflichtungen</li>
+                <li>• Sie erhalten detaillierte Informationen über EURUA und EURC Produkte</li>
+              </ul>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
