@@ -30,9 +30,11 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="w-6 h-6 text-[#001e50]" fill="currentColor">
-                  <path d="M2 4h20v2H2V4zm0 7h20v2H2v-2zm0 7h20v2H2v-2z"/>
+              <div className="w-10 h-10 bg-white flex items-center justify-center p-0.5">
+                <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+                  <rect width="100" height="100" fill="#0018A8"/>
+                  <rect x="15" y="15" width="70" height="70" fill="white"/>
+                  <path d="M20 80 L80 20" stroke="#0018A8" strokeWidth="12"/>
                 </svg>
               </div>
               <div>
