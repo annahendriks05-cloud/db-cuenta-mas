@@ -26,51 +26,25 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo & Description */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white flex items-center justify-center p-0.5">
-                <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                  <rect width="100" height="100" fill="#0018A8"/>
-                  <rect x="15" y="15" width="70" height="70" fill="white"/>
-                  <path d="M20 80 L80 20" stroke="#0018A8" strokeWidth="12"/>
-                </svg>
-              </div>
-              <div>
-                <p className="font-semibold">Deutsche Bank</p>
-              </div>
-            </div>
-            <p className="text-sm text-white/70 max-w-sm">
-              Deutsche Bank bietet hochwertige Finanzlösungen für Privatkunden und Unternehmen, 
-              unterstützt durch die Stärke einer globalen Bank.
-            </p>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-10 h-10 bg-white flex items-center justify-center p-1.5">
+            <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+              <rect x="10" y="10" width="80" height="80" fill="none" stroke="#001e50" strokeWidth="8"/>
+              <path d="M20 80 L80 20" stroke="#001e50" strokeWidth="8"/>
+            </svg>
           </div>
-
-          {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4">Produkte</h4>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li className="hover:text-white transition-colors cursor-pointer">EURUA Festgeld</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Hypotheken</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Investitionen</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Versicherungen</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Rechtliches</h4>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li className="hover:text-white transition-colors cursor-pointer">Impressum</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Datenschutz</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Cookies</li>
-              <li className="hover:text-white transition-colors cursor-pointer">AGB</li>
-            </ul>
+            <p className="font-semibold text-lg">Deutsche Bank</p>
+            <p className="text-xs text-white/60">España</p>
           </div>
         </div>
+        <p className="text-sm text-white/70 max-w-2xl mb-8">
+          Deutsche Bank bietet hochwertige Finanzlösungen für Privatkunden und Unternehmen, 
+          unterstützt durch die Stärke einer globalen Bank.
+        </p>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Deutsche Bank AG. Alle Rechte vorbehalten.
           </p>
