@@ -69,11 +69,10 @@ export default function HeroSection() {
           >
             {/* Logo */}
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-white flex items-center justify-center p-1">
+              <div className="w-16 h-16 bg-[#0018A8] flex items-center justify-center p-2">
                 <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                  <rect width="100" height="100" fill="#0018A8"/>
-                  <rect x="15" y="15" width="70" height="70" fill="white"/>
-                  <path d="M20 80 L80 20" stroke="#0018A8" strokeWidth="12"/>
+                  <rect x="10" y="10" width="80" height="80" fill="none" stroke="white" strokeWidth="8"/>
+                  <path d="M20 80 L80 20" stroke="white" strokeWidth="8"/>
                 </svg>
               </div>
               <div>
