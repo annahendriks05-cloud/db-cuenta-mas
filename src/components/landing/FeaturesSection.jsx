@@ -29,7 +29,7 @@ export default function FeaturesSection() {
         {
           icon: Banknote,
           title: 'MEHR RENTABILITÄT',
-          description: 'Genießen Sie 1,50 % effektiven Jahreszins für Guthaben zwischen 10.000 € und 150.000 €.',
+          description: 'Genießen Sie 6 % effektiven Jahreszins für Guthaben zwischen 10.000 € und 150.000 €.',
           highlight: true
         },
         {
