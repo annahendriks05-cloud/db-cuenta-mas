@@ -63,8 +63,8 @@ export default function HeroSection() {
               className="bg-[#002654] rounded-lg p-8 inline-block"
             >
               <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
-              <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">2.740€</p>
-              <p className="text-white text-lg">mit Ihrem Konto</p>
+              <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">500€</p>
+              <p className="text-white text-lg">Willkommensbonus</p>
             </motion.div>
 
             <p className="mt-8 text-white/80 text-sm">
