@@ -120,7 +120,7 @@ export default function AnlageDialog({ open, onOpenChange }) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="EURC">EURC</SelectItem>
-                <SelectItem value="EURUA">EURUA</SelectItem>
+                <SelectItem value="EURAU">EURAU</SelectItem>
               </SelectContent>
             </Select>
           </div>
