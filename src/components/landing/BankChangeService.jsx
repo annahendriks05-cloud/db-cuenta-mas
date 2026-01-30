@@ -4,13 +4,13 @@ import { Check } from 'lucide-react';
 
 export default function BankChangeService() {
   const services = [
-    'Sus recibos (luz, agua, etc.).',
-    'Transferencias periódicas salientes e ingresos habituales (ej. Ingreso por alquiler).',
-    'Traspaso de su saldo actual e incluso el cierre de cuenta.'
+    'Ihre Lastschriften (Strom, Wasser, etc.).',
+    'Periodische ausgehende Überweisungen und regelmäßige Eingänge (z.B. Mieteinnahmen).',
+    'Übertragung Ihres aktuellen Guthabens und sogar Kontoschließung.'
   ];
 
   return (
-    <div className="bg-[#f8f9fa] py-16 md:py-24">
+    <div className="bg-white py-16 md:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -21,12 +21,12 @@ export default function BankChangeService() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl text-[#001e50] font-light mb-6 leading-tight">
-              Le ayudamos a cambiar todos sus recibos de banco
+              Wir helfen Ihnen, alle Ihre Bankabbuchungen zu wechseln
             </h2>
             
             <p className="text-gray-600 mb-8">
-              El proceso es <strong className="text-[#001e50]">sencillo, seguro y sin ningún coste</strong>, 
-              y lo puede realizar de forma digital o a través de su Gestor Personal. Usted elige que desea cambiar:
+              Der Prozess ist <strong className="text-[#001e50]">einfach, sicher und völlig kostenlos</strong>, 
+              und Sie können ihn digital oder über Ihren persönlichen Berater durchführen. Sie wählen, was Sie ändern möchten:
             </p>
             
             <div className="space-y-4">
@@ -58,7 +58,7 @@ export default function BankChangeService() {
           >
             <img
               src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=400&fit=crop"
-              alt="Cambio de banco"
+              alt="Bankwechsel"
               className="rounded-2xl shadow-lg max-w-full h-auto"
             />
           </motion.div>
@@ -69,11 +69,11 @@ export default function BankChangeService() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 text-center bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+          className="mt-16 text-center bg-gradient-to-r from-[#f8f9fa] to-white rounded-2xl p-8 shadow-sm border border-gray-100"
         >
           <p className="text-lg text-[#001e50]">
-            Hágase cliente y disfrute de todos los beneficios de ser de Deutsche Bank, 
-            <strong> un banco global tan local como lo necesite</strong>.
+            Werden Sie Kunde und genießen Sie alle Vorteile der Deutschen Bank, 
+            <strong> einer globalen Bank, die so lokal ist, wie Sie es brauchen</strong>.
           </p>
         </motion.div>
       </div>

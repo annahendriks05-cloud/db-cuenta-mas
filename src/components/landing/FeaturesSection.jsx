@@ -5,37 +5,37 @@ import { PlusCircle, MinusCircle, CreditCard, Banknote, Globe, Shield } from 'lu
 export default function FeaturesSection() {
   const featureGroups = [
     {
-      title: 'MÁS libertad para hacer MÁS',
+      title: 'MEHR Freiheit, um MEHR zu tun',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=350&fit=crop',
       features: [
         {
           icon: PlusCircle,
-          title: 'MÁS CAJEROS',
-          description: 'Retiradas de efectivo a débito gratis en todos los cajeros del mundo.',
+          title: 'MEHR GELDAUTOMATEN',
+          description: 'Kostenlose Bargeldabhebungen an allen Geldautomaten weltweit.',
           highlight: true
         },
         {
           icon: MinusCircle,
-          title: 'SIN COMISIONES',
-          description: 'Por cambio de divisa, al comprar con la Tarjeta Débito Más DB.',
+          title: 'KEINE GEBÜHREN',
+          description: 'Für Währungswechsel beim Einkauf mit der Debitkarte.',
           highlight: false
         }
       ]
     },
     {
-      title: 'MÁS beneficios para disfrutar MÁS del día a día',
+      title: 'MEHR Vorteile für den Alltag',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=350&fit=crop',
       features: [
         {
           icon: Banknote,
-          title: 'MÁS RENTABILIDAD',
-          description: 'Disfrute de un 1,50 % TAE en saldos de entre 10.000 € hasta 150.000 €.',
+          title: 'MEHR RENTABILITÄT',
+          description: 'Genießen Sie 1,50 % effektiven Jahreszins für Guthaben zwischen 10.000 € und 150.000 €.',
           highlight: true
         },
         {
           icon: Globe,
-          title: 'ACCESO GLOBAL',
-          description: 'Gestione su cuenta desde cualquier lugar del mundo con DB App.',
+          title: 'GLOBALER ZUGANG',
+          description: 'Verwalten Sie Ihr Konto von überall auf der Welt mit der DB App.',
           highlight: false
         }
       ]
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl text-[#001e50] font-light">
-            Una cuenta para los que quieren MÁS por mucho menos
+            Ein Konto für alle, die MEHR für viel weniger wollen
           </h2>
         </motion.div>
 
@@ -122,9 +122,9 @@ export default function FeaturesSection() {
           className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {[
-            { icon: Shield, title: 'Seguridad', desc: 'Máxima protección para sus datos y transacciones' },
-            { icon: CreditCard, title: 'Sin Costes Ocultos', desc: 'Transparencia total en todas las operaciones' },
-            { icon: Globe, title: 'Presencia Global', desc: 'Respaldo de un banco internacional líder' }
+            { icon: Shield, title: 'Sicherheit', desc: 'Maximaler Schutz für Ihre Daten und Transaktionen' },
+            { icon: CreditCard, title: 'Keine versteckten Kosten', desc: 'Völlige Transparenz bei allen Operationen' },
+            { icon: Globe, title: 'Globale Präsenz', desc: 'Unterstützung durch eine führende internationale Bank' }
           ].map((badge, index) => (
             <div
               key={index}

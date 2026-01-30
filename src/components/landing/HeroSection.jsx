@@ -14,18 +14,18 @@ import {
 
 export default function HeroSection() {
   const [formData, setFormData] = useState({
-    nombre: '',
-    apellidos: '',
-    dni: '',
-    telefono: '',
+    vorname: '',
+    nachname: '',
+    personalausweis: '',
+    telefon: '',
     email: '',
-    codigoPostal: '',
+    postleitzahl: '',
     autorizo: false
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log('Formular eingereicht:', formData);
   };
 
   return (
@@ -48,13 +48,11 @@ export default function HeroSection() {
               </div>
               <div>
                 <p className="text-xl font-semibold">Deutsche Bank</p>
-                <p className="text-sm opacity-80">España</p>
               </div>
             </div>
 
-            <p className="text-sm opacity-80 mb-2">Cuenta Más DB</p>
             <h1 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
-              Aquí su dinero vale MÁS
+              Ihr Geld ist hier MEHR wert
             </h1>
 
             {/* Promotion Box */}
@@ -64,13 +62,13 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-[#002654] rounded-lg p-8 inline-block"
             >
-              <p className="text-white/80 text-lg mb-2">Llévese hasta</p>
+              <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
               <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">2.740€</p>
-              <p className="text-white text-lg">con su Cuenta MÁS DB</p>
+              <p className="text-white text-lg">mit Ihrem Konto</p>
             </motion.div>
 
             <p className="mt-8 text-white/80 text-sm">
-              Elija como abrir su Cuenta Más DB, a través de un Gestor o directamente online en{' '}
+              Wählen Sie, wie Sie Ihr Konto eröffnen möchten, über einen Berater oder direkt online in der{' '}
               <span className="text-white underline cursor-pointer hover:text-[#ffd000] transition-colors">
                 DB App
               </span>
@@ -85,74 +83,75 @@ export default function HeroSection() {
             className="bg-white rounded-lg shadow-2xl p-8"
           >
             <h2 className="text-xl font-semibold text-[#001e50] mb-2">
-              ¿Quiere contratar la Cuenta Más DB?
+              Konto eröffnen bei Deutsche Bank
             </h2>
             <p className="text-gray-600 text-sm mb-6">
-              Rellene este formulario y nos pondremos en contacto con usted, sin compromiso.
+              Füllen Sie dieses Formular aus und wir werden uns unverbindlich mit Ihnen in Verbindung setzen.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <Label htmlFor="nombre" className="text-sm text-gray-700">
-                  Nombre <span className="text-red-500">*</span>
+                <Label htmlFor="vorname" className="text-sm text-gray-700">
+                  Vorname <span className="text-red-500">*</span>
                 </Label>
                 <Input
-                  id="nombre"
-                  placeholder="Introduzca su nombre"
-                  value={formData.nombre}
-                  onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
+                  id="vorname"
+                  placeholder="Ihr Vorname"
+                  value={formData.vorname}
+                  onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
                 />
               </div>
 
               <div>
-                <Label htmlFor="apellidos" className="text-sm text-gray-700">
-                  Apellidos <span className="text-red-500">*</span>
+                <Label htmlFor="nachname" className="text-sm text-gray-700">
+                  Nachname <span className="text-red-500">*</span>
                 </Label>
                 <Input
-                  id="apellidos"
-                  placeholder="Introduzca sus apellidos"
-                  value={formData.apellidos}
-                  onChange={(e) => setFormData({ ...formData, apellidos: e.target.value })}
+                  id="nachname"
+                  placeholder="Ihr Nachname"
+                  value={formData.nachname}
+                  onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
                 />
               </div>
 
               <div>
-                <Label htmlFor="dni" className="text-sm text-gray-700">
-                  DNI <span className="text-red-500">*</span>
+                <Label htmlFor="personalausweis" className="text-sm text-gray-700">
+                  Personalausweis <span className="text-red-500">*</span>
                 </Label>
                 <Input
-                  id="dni"
-                  placeholder="Ejemplo: 12345678X"
-                  value={formData.dni}
-                  onChange={(e) => setFormData({ ...formData, dni: e.target.value })}
+                  id="personalausweis"
+                  placeholder="Beispiel: 12345678X"
+                  value={formData.personalausweis}
+                  onChange={(e) => setFormData({ ...formData, personalausweis: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
                 />
               </div>
 
               <div>
-                <Label htmlFor="telefono" className="text-sm text-gray-700">
-                  Teléfono <span className="text-red-500">*</span>
+                <Label htmlFor="telefon" className="text-sm text-gray-700">
+                  Telefon <span className="text-red-500">*</span>
                 </Label>
                 <div className="flex gap-2 mt-1">
-                  <Select defaultValue="es">
+                  <Select defaultValue="de">
                     <SelectTrigger className="w-24 border-gray-300">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="de">🇩🇪 +49</SelectItem>
+                      <SelectItem value="at">🇦🇹 +43</SelectItem>
+                      <SelectItem value="ch">🇨🇭 +41</SelectItem>
                       <SelectItem value="es">🇪🇸 +34</SelectItem>
                       <SelectItem value="fr">🇫🇷 +33</SelectItem>
-                      <SelectItem value="de">🇩🇪 +49</SelectItem>
                       <SelectItem value="uk">🇬🇧 +44</SelectItem>
-                      <SelectItem value="us">🇺🇸 +1</SelectItem>
                     </SelectContent>
                   </Select>
                   <Input
-                    id="telefono"
+                    id="telefon"
                     placeholder="612 34 56 78"
-                    value={formData.telefono}
-                    onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+                    value={formData.telefon}
+                    onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
                     className="flex-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
                   />
                 </div>
@@ -160,12 +159,12 @@ export default function HeroSection() {
 
               <div>
                 <Label htmlFor="email" className="text-sm text-gray-700">
-                  Correo electrónico <span className="text-red-500">*</span>
+                  E-Mail <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="Ejemplo: correo@dominio.ue"
+                  placeholder="Beispiel: email@domain.de"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
@@ -173,14 +172,14 @@ export default function HeroSection() {
               </div>
 
               <div>
-                <Label htmlFor="codigoPostal" className="text-sm text-gray-700">
-                  Código postal <span className="text-red-500">*</span>
+                <Label htmlFor="postleitzahl" className="text-sm text-gray-700">
+                  Postleitzahl <span className="text-red-500">*</span>
                 </Label>
                 <Input
-                  id="codigoPostal"
-                  placeholder="Ejemplo: 08001"
-                  value={formData.codigoPostal}
-                  onChange={(e) => setFormData({ ...formData, codigoPostal: e.target.value })}
+                  id="postleitzahl"
+                  placeholder="Beispiel: 10115"
+                  value={formData.postleitzahl}
+                  onChange={(e) => setFormData({ ...formData, postleitzahl: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
                 />
               </div>
@@ -193,10 +192,11 @@ export default function HeroSection() {
                   className="mt-1 border-gray-300 data-[state=checked]:bg-[#001e50]"
                 />
                 <Label htmlFor="autorizo" className="text-xs text-gray-600 leading-relaxed">
-                  AUTORIZO la recogida y tratamiento de mis datos para gestionar mi solicitud y recibir información comercial tal como recoge la{' '}
+                  ICH AUTORISIERE die Erhebung und Verarbeitung meiner Daten zur Verwaltung meines Antrags und zum Empfang kommerzieller Informationen, wie in der{' '}
                   <span className="text-[#001e50] underline cursor-pointer hover:text-[#003087]">
-                    Política de Protección de Datos
-                  </span>.
+                    Datenschutzrichtlinie
+                  </span>{' '}
+                  beschrieben.
                 </Label>
               </div>
 
@@ -204,7 +204,7 @@ export default function HeroSection() {
                 type="submit"
                 className="w-full bg-[#001e50] hover:bg-[#003087] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
               >
-                ENVIAR FORMULARIO
+                FORMULAR ABSENDEN
               </Button>
             </form>
           </motion.div>

@@ -9,16 +9,16 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="space-y-4 text-xs text-white/60">
             <p>
-              <sup>1</sup> Promoción válida para nóminas domiciliadas de al menos 2.000€ mensuales. 
-              Consulte condiciones completas en la web.
+              <sup>1</sup> Aktion gültig für Gehaltsüberweisungen von mindestens 2.000 € pro Monat. 
+              Vollständige Bedingungen auf der Website einsehen.
             </p>
             <p>
-              <sup>2</sup> TAE 1,50% aplicable a saldos entre 10.000€ y 150.000€. 
-              Para importes superiores, consulte condiciones específicas.
+              <sup>2</sup> Effektiver Jahreszins von 1,50% anwendbar auf Guthaben zwischen 10.000 € und 150.000 €. 
+              Für höhere Beträge spezifische Bedingungen einsehen.
             </p>
             <p>
-              <sup>3</sup> Promociones válidas hasta el 02/03/2026. 
-              Sujetas a términos y condiciones. Consulte las bases legales completas.
+              <sup>3</sup> Aktionen gültig bis 02.03.2026. 
+              Vorbehaltlich der allgemeinen Geschäftsbedingungen. Vollständige rechtliche Grundlagen einsehen.
             </p>
           </div>
         </div>
@@ -37,33 +37,32 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-semibold">Deutsche Bank</p>
-                <p className="text-xs text-white/60">España</p>
               </div>
             </div>
             <p className="text-sm text-white/70 max-w-sm">
-              Deutsche Bank España ofrece soluciones financieras de calidad para particulares y empresas, 
-              respaldado por la solidez de un banco global.
+              Deutsche Bank bietet hochwertige Finanzlösungen für Privatkunden und Unternehmen, 
+              unterstützt durch die Stärke einer globalen Bank.
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4">Productos</h4>
+            <h4 className="font-semibold mb-4">Produkte</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li className="hover:text-white transition-colors cursor-pointer">Cuenta Más DB</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Hipotecas</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Inversiones</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Seguros</li>
+              <li className="hover:text-white transition-colors cursor-pointer">EURUA Festgeld</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Hypotheken</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Investitionen</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Versicherungen</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">Rechtliches</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li className="hover:text-white transition-colors cursor-pointer">Aviso Legal</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Política de Privacidad</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Impressum</li>
+              <li className="hover:text-white transition-colors cursor-pointer">Datenschutz</li>
               <li className="hover:text-white transition-colors cursor-pointer">Cookies</li>
-              <li className="hover:text-white transition-colors cursor-pointer">MiFID</li>
+              <li className="hover:text-white transition-colors cursor-pointer">AGB</li>
             </ul>
           </div>
         </div>
@@ -71,17 +70,17 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Deutsche Bank España. Todos los derechos reservados.
+            © {new Date().getFullYear()} Deutsche Bank AG. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-6">
             <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
-              Contacto
+              Kontakt
             </span>
             <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
-              Oficinas
+              Filialen
             </span>
             <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
-              Atención al Cliente
+              Kundenservice
             </span>
           </div>
         </div>

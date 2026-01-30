@@ -8,7 +8,7 @@ export default function RiskIndicator() {
         {/* Risk Indicator Header */}
         <div className="text-center mb-3">
           <span className="text-xs font-semibold tracking-wider text-[#001e50] uppercase">
-            Indicador de Riesgo
+            Risikoindikator
           </span>
         </div>
         
@@ -17,22 +17,22 @@ export default function RiskIndicator() {
           <div className="flex flex-col items-center">
             <span className="text-4xl font-light text-[#001e50]">1/6</span>
             <p className="text-xs text-gray-600 text-center max-w-md mt-1">
-              Este número es indicativo del riesgo del producto, siendo 1/6 indicativo del menor riesgo y 6/6 del mayor riesgo.
+              Diese Zahl ist ein Indikator für das Produktrisiko, wobei 1/6 das geringste Risiko und 6/6 das höchste Risiko anzeigt.
             </p>
           </div>
           
           <div className="hidden md:block w-px h-16 bg-gray-300"></div>
           
           <p className="text-xs text-gray-600 text-center md:text-left max-w-md">
-            Deutsche Bank se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito de España. 
-            <span className="text-[#001e50] font-medium"> El importe garantizado tiene como límite 100.000 € por depositante.</span>
+            Deutsche Bank ist Mitglied des Einlagensicherungsfonds für Kreditinstitute. 
+            <span className="text-[#001e50] font-medium"> Der garantierte Betrag beträgt bis zu 100.000 € pro Einleger.</span>
           </p>
         </div>
         
         {/* Lock Notice */}
         <div className="flex items-center justify-center gap-2 mt-3 text-xs text-gray-600">
           <Lock className="w-4 h-4" />
-          <p>El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones.</p>
+          <p>Die Rückzahlung, Rücknahme oder vorzeitige Rückgabe eines Teils oder des gesamten investierten Kapitals unterliegt Gebühren oder Strafen.</p>
         </div>
       </div>
     </div>
