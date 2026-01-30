@@ -35,7 +35,6 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold text-lg">Deutsche Bank</p>
-            <p className="text-xs text-white/60">España</p>
           </div>
         </div>
         <p className="text-sm text-white/70 max-w-2xl mb-8">
