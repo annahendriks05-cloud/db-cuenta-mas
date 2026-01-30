@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { TrendingUp, Lock, Building2 } from 'lucide-react';
+import AnlageDialog from './AnlageDialog';
 
 export default function ProductSection() {
+  const [dialogOpen, setDialogOpen] = useState(false);
   return (
     <div className="bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
@@ -142,13 +144,16 @@ export default function ProductSection() {
             </Button>
             <Button
               variant="outline"
+              onClick={() => setDialogOpen(true)}
               className="border-[#001e50] text-[#001e50] hover:bg-[#001e50] hover:text-white px-8 py-6 text-base font-medium transition-all duration-300"
             >
-              In der DB App eröffnen
+              Geld anlegen
             </Button>
           </div>
         </motion.div>
       </div>
+      
+      <AnlageDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </div>
   );
 }
