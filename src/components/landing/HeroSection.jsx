@@ -100,7 +100,7 @@ export default function HeroSection() {
             <p className="mt-8 text-white/80 text-sm">
               Wählen Sie, wie Sie Ihr Konto eröffnen möchten, über einen Berater oder direkt online in der{' '}
               <span className="text-white underline cursor-pointer hover:text-[#ffd000] transition-colors">
-                Deutsche Bank App
+                FORMULAR ABSENDEN
               </span>
             </p>
           </motion.div>
