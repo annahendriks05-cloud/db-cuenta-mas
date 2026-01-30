@@ -109,13 +109,13 @@ export default function ProductSection() {
                 </span>
                 
                 <div className="mt-6">
-                  <span className="text-5xl md:text-6xl font-light text-[#001e50]">Bis zu 2.240 €</span>
+                  <span className="text-5xl md:text-6xl font-light text-[#001e50]">Bis zu 6.000 €</span>
                 </div>
                 
                 <p className="text-xl mt-4 font-medium text-[#001e50]">für Ihre Ersparnisse</p>
                 
                 <p className="text-gray-600 mt-4 text-sm leading-relaxed">
-                  1,50 % effektiver Jahreszins für Guthaben zwischen 10.000 € und 150.000 €<sup>2</sup>.
+                  6% effektiver Jahreszins für Guthaben zwischen 10.000 € und 150.000 €<sup>2</sup>.
                 </p>
               </div>
             </div>
