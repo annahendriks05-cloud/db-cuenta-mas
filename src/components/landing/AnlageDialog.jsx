@@ -49,6 +49,17 @@ export default function AnlageDialog({ open, onOpenChange }) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center p-1.5">
+              <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#001e50" strokeWidth="8"/>
+                <path d="M20 80 L80 20" stroke="#001e50" strokeWidth="8"/>
+              </svg>
+            </div>
+            <div>
+              <p className="font-semibold text-[#001e50]">Deutsche Bank</p>
+            </div>
+          </div>
           <DialogTitle className="text-2xl text-[#001e50]">Geld anlegen</DialogTitle>
         </DialogHeader>
         
