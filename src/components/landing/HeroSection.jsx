@@ -98,7 +98,7 @@ export default function HeroSection() {
             </motion.div>
 
             <p className="mt-8 text-white/80 text-sm">
-              Wählen Sie, wie Sie Ihr Konto eröffnen möchten, über einen Berater oder direkt online in der{' '}
+              Wählen Sie, wie Sie Ihr Konto eröffnen möchten, über einen Berater oder direkt über der SMS Funktion{' '}
               <span className="text-white underline cursor-pointer hover:text-[#ffd000] transition-colors">
                 FORMULAR ABSENDEN
               </span>
