@@ -11,6 +11,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { base44 } from '@/api/base44Client';
+import { toast } from 'sonner';
+import { Loader2 } from 'lucide-react';
 
 export default function HeroSection() {
   const [formData, setFormData] = useState({
@@ -22,10 +25,35 @@ export default function HeroSection() {
     postleitzahl: '',
     autorizo: false
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Formular eingereicht:', formData);
+    
+    if (!formData.autorizo) {
+      toast.error('Bitte akzeptieren Sie die Datenschutzrichtlinie');
+      return;
+    }
+
+    setLoading(true);
+    
+    try {
+      await base44.entities.ContactoFormulario.create(formData);
+      toast.success('Formular erfolgreich übermittelt! Wir werden Sie bald kontaktieren.');
+      setFormData({
+        vorname: '',
+        nachname: '',
+        personalausweis: '',
+        telefon: '',
+        email: '',
+        postleitzahl: '',
+        autorizo: false
+      });
+    } catch (error) {
+      toast.error('Fehler beim Senden des Formulars');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -218,9 +246,17 @@ export default function HeroSection() {
 
               <Button
                 type="submit"
+                disabled={loading}
                 className="w-full bg-[#001e50] hover:bg-[#003087] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
               >
-                FORMULAR ABSENDEN
+                {loading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    Senden...
+                  </>
+                ) : (
+                  'FORMULAR ABSENDEN'
+                )}
               </Button>
             </form>
           </motion.div>
