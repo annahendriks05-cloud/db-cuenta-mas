@@ -41,12 +41,22 @@ export default function ProductSection() {
                   </span>
                 </div>
                 
-                <h3 className="text-4xl md:text-5xl font-light mb-4">
+                <h3 className="text-4xl md:text-5xl font-light mb-2">
                   EURAU bis <span className="text-[#ffd000]">6%</span>
                 </h3>
-                <h3 className="text-4xl md:text-5xl font-light mb-8">
+                <h3 className="text-4xl md:text-5xl font-light mb-6">
                   EURC bis <span className="text-[#ffd000]">6%</span>
                 </h3>
+                
+                <div className="bg-white/10 rounded-lg p-4 mb-6 border border-white/20">
+                  <p className="text-white/90 text-sm font-medium mb-2">Zinsgestaffelt:</p>
+                  <div className="text-white/80 text-sm space-y-1">
+                    <div>• Ab 25.000€: <span className="text-[#ffd000] font-semibold">4%</span></div>
+                    <div>• Ab 50.000€: <span className="text-[#ffd000] font-semibold">5%</span></div>
+                    <div>• Ab 100.000€: <span className="text-[#ffd000] font-semibold">6%</span></div>
+                  </div>
+                  <p className="text-white/70 text-xs mt-2">+ 2% Cashback auf alle Beträge</p>
+                </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
