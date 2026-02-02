@@ -14,10 +14,10 @@ export default function SecuritySection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl text-[#001e50] font-light mb-4">
-            EURUA & EURC: 100% Sicher
+            EURAU & EURC: 100% Sicher
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            EURUA gehört zur <strong className="text-[#001e50]">Deutsche Bank</strong> - 
+            EURAU gehört zur <strong className="text-[#001e50]">Deutsche Bank</strong> - 
             Ihre Einlagen sind vollständig geschützt
           </p>
         </motion.div>
@@ -39,7 +39,7 @@ export default function SecuritySection() {
               Teil der Deutsche Bank
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
-              EURUA ist ein Produkt der Deutsche Bank AG und profitiert von der Stabilität und Sicherheit einer der größten Banken der Welt.
+              EURAU ist ein Produkt der Deutsche Bank AG und profitiert von der Stabilität und Sicherheit einer der größten Banken der Welt.
             </p>
           </motion.div>
 
@@ -94,7 +94,7 @@ export default function SecuritySection() {
             <h3 className="text-2xl md:text-3xl font-light">100% Sicher & Zuverlässig</h3>
           </div>
           <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed">
-            Als Teil der <strong className="text-white">Deutsche Bank</strong> bietet EURUA Ihnen nicht nur 
+            Als Teil der <strong className="text-white">Deutsche Bank</strong> bietet EURAU Ihnen nicht nur 
             attraktive Zinsen, sondern auch die Sicherheit und Stabilität eines globalen Finanzinstituts 
             mit über 150 Jahren Erfahrung.
           </p>

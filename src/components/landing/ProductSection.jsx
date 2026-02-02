@@ -42,7 +42,7 @@ export default function ProductSection() {
                 </div>
                 
                 <h3 className="text-4xl md:text-5xl font-light mb-4">
-                  EURUA bis <span className="text-[#ffd000]">6%</span>
+                  EURAU bis <span className="text-[#ffd000]">6%</span>
                 </h3>
                 <h3 className="text-4xl md:text-5xl font-light mb-8">
                   EURC bis <span className="text-[#ffd000]">6%</span>
