@@ -13,8 +13,8 @@ export default function Footer() {
               Vollständige Bedingungen auf der Website einsehen.
             </p>
             <p>
-              <sup>2</sup> Effektiver Jahreszins von 1,50% anwendbar auf Guthaben zwischen 10.000 € und 150.000 €. 
-              Für höhere Beträge spezifische Bedingungen einsehen.
+              <sup>2</sup> Effektiver Jahreszins von 4% bis 6% anwendbar auf Guthaben zwischen 10.000 € und 150.000 €. 
+              4% ab 25.000€, 5% ab 50.000€, 6% ab 100.000€.
             </p>
             <p>
               <sup>3</sup> Aktionen gültig bis 02.03.2026. 
