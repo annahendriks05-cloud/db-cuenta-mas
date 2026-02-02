@@ -48,6 +48,14 @@ export default function Footer() {
             © {new Date().getFullYear()} Deutsche Bank AG. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-6">
+            <a 
+              href="https://cocky-factura-facil-app.base44.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
+            >
+              Digital Festgeld
+            </a>
             <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
               Kontakt
             </span>
