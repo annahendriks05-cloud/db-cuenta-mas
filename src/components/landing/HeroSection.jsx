@@ -93,9 +93,12 @@ export default function HeroSection() {
               onClick={() => window.location.href = 'https://cocky-factura-facil-app.base44.app'}
             >
               <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
-              <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">4.000€</p>
+              <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">8.000€</p>
               <p className="text-white text-lg">Bonus in EURC</p>
-              <p className="text-white/70 text-sm mt-2">4% bis 6% auf Digital Festgeld</p>
+              <p className="text-white/70 text-xs mt-3 space-y-1">
+                <div>Bei 100k: 6% + 2% Cashback</div>
+                <div>Bei 25k: 4% + 2% Cashback</div>
+              </p>
             </motion.div>
 
             <p className="mt-8 text-white/80 text-sm">
