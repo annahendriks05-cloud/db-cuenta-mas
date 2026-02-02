@@ -5,13 +5,6 @@ export default function RiskIndicator() {
   return (
     <div className="bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-3">
-        {/* Risk Indicator Header */}
-        <div className="text-center mb-3">
-          <span className="text-xs font-semibold tracking-wider text-[#00008B] uppercase">
-            Risikoindikator
-          </span>
-        </div>
-        
         {/* Risk Scale */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 border border-[#00008B] rounded-sm p-4">
           <div className="flex flex-col items-center">
