@@ -48,14 +48,23 @@ export default function ProductSection() {
                   EURC bis <span className="text-[#ffd000]">6%</span>
                 </h3>
                 
-                <div className="bg-white/10 rounded-lg p-4 mb-6 border border-white/20">
-                  <p className="text-white/90 text-sm font-medium mb-2">Zinsgestaffelt:</p>
-                  <div className="text-white/80 text-sm space-y-1">
-                    <div>• Ab 25.000€: <span className="text-[#ffd000] font-semibold">4%</span></div>
-                    <div>• Ab 50.000€: <span className="text-[#ffd000] font-semibold">5%</span></div>
-                    <div>• Ab 100.000€: <span className="text-[#ffd000] font-semibold">6%</span></div>
+                <div className="bg-white/10 rounded-lg p-4 mb-6 border border-white/20 space-y-3">
+                  <p className="text-white/90 text-sm font-medium">Beispiel-Bonusberechnung:</p>
+                  
+                  <div className="bg-white/5 rounded p-3 border border-white/10">
+                    <p className="text-white/70 text-xs font-semibold mb-1">25.000€ Anlage</p>
+                    <p className="text-white/90 text-sm"><span className="text-[#ffd000] font-bold">4%</span> Zins + <span className="text-[#ffd000] font-bold">2%</span> Cashback = <span className="text-[#ffd000] font-bold">1.500€</span> Bonus</p>
                   </div>
-                  <p className="text-white/70 text-xs mt-2">+ 2% Cashback auf alle Beträge</p>
+                  
+                  <div className="bg-white/5 rounded p-3 border border-white/10">
+                    <p className="text-white/70 text-xs font-semibold mb-1">50.000€ Anlage</p>
+                    <p className="text-white/90 text-sm"><span className="text-[#ffd000] font-bold">5%</span> Zins + <span className="text-[#ffd000] font-bold">2%</span> Cashback = <span className="text-[#ffd000] font-bold">3.500€</span> Bonus</p>
+                  </div>
+                  
+                  <div className="bg-white/5 rounded p-3 border border-white/10">
+                    <p className="text-white/70 text-xs font-semibold mb-1">100.000€ Anlage</p>
+                    <p className="text-white/90 text-sm"><span className="text-[#ffd000] font-bold">6%</span> Zins + <span className="text-[#ffd000] font-bold">2%</span> Cashback = <span className="text-[#ffd000] font-bold">8.000€</span> Bonus</p>
+                  </div>
                 </div>
                 
                 <div className="space-y-4">
