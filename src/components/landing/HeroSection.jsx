@@ -57,7 +57,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="bg-[#001e50] relative overflow-hidden">
+    <div className="bg-[#00008B] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
@@ -89,7 +89,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-[#002654] rounded-lg p-8 inline-block"
+              className="bg-[#0000A0] rounded-lg p-8 inline-block"
             >
               <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
               <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">500€</p>
@@ -179,7 +179,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-white rounded-lg shadow-2xl p-8"
           >
-            <h2 className="text-xl font-semibold text-[#001e50] mb-2">
+            <h2 className="text-xl font-semibold text-[#00008B] mb-2">
               Konto eröffnen bei Deutsche Bank
             </h2>
             <p className="text-gray-600 text-sm mb-4">
@@ -187,7 +187,7 @@ export default function HeroSection() {
             </p>
             
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-              <h3 className="text-sm font-semibold text-[#001e50] mb-3 flex items-center gap-2">
+              <h3 className="text-sm font-semibold text-[#00008B] mb-3 flex items-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -238,7 +238,7 @@ export default function HeroSection() {
                   placeholder="Ihr Vorname"
                   value={formData.vorname}
                   onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
                 />
               </div>
 
@@ -251,7 +251,7 @@ export default function HeroSection() {
                   placeholder="Ihr Nachname"
                   value={formData.nachname}
                   onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
                 />
               </div>
 
@@ -264,7 +264,7 @@ export default function HeroSection() {
                   placeholder="Beispiel: 12345678X"
                   value={formData.personalausweis}
                   onChange={(e) => setFormData({ ...formData, personalausweis: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
                 />
               </div>
 
@@ -291,7 +291,7 @@ export default function HeroSection() {
                     placeholder="612 34 56 78"
                     value={formData.telefon}
                     onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
-                    className="flex-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                    className="flex-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
                   />
                 </div>
               </div>
@@ -306,7 +306,7 @@ export default function HeroSection() {
                   placeholder="Beispiel: email@domain.de"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
                 />
               </div>
 
@@ -319,7 +319,7 @@ export default function HeroSection() {
                   placeholder="Beispiel: 10115"
                   value={formData.postleitzahl}
                   onChange={(e) => setFormData({ ...formData, postleitzahl: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
                 />
               </div>
 
@@ -328,11 +328,11 @@ export default function HeroSection() {
                   id="autorizo"
                   checked={formData.autorizo}
                   onCheckedChange={(checked) => setFormData({ ...formData, autorizo: checked })}
-                  className="mt-1 border-gray-300 data-[state=checked]:bg-[#001e50]"
+                  className="mt-1 border-gray-300 data-[state=checked]:bg-[#00008B]"
                 />
                 <Label htmlFor="autorizo" className="text-xs text-gray-600 leading-relaxed">
                   ICH AUTORISIERE die Erhebung und Verarbeitung meiner Daten zur Verwaltung meines Antrags und zum Empfang kommerzieller Informationen, wie in der{' '}
-                  <span className="text-[#001e50] underline cursor-pointer hover:text-[#003087]">
+                  <span className="text-[#00008B] underline cursor-pointer hover:text-[#0000CD]">
                     Datenschutzrichtlinie
                   </span>{' '}
                   beschrieben.
@@ -342,7 +342,7 @@ export default function HeroSection() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#001e50] hover:bg-[#003087] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
+                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
               >
                 {loading ? (
                   <>

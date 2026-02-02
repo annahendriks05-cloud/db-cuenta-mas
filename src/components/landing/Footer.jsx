@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#001e50] text-white">
+    <footer className="bg-[#00008B] text-white">
       {/* Footnotes */}
       <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -29,8 +29,8 @@ export default function Footer() {
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 bg-white flex items-center justify-center p-1.5">
             <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-              <rect x="10" y="10" width="80" height="80" fill="none" stroke="#001e50" strokeWidth="8"/>
-              <path d="M20 80 L80 20" stroke="#001e50" strokeWidth="8"/>
+              <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00008B" strokeWidth="8"/>
+              <path d="M20 80 L80 20" stroke="#00008B" strokeWidth="8"/>
             </svg>
           </div>
           <div>
