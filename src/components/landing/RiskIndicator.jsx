@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lock } from 'lucide-react';
+import { Lock, Shield, ShieldCheck } from 'lucide-react';
 
 export default function RiskIndicator() {
   return (
@@ -20,6 +20,60 @@ export default function RiskIndicator() {
             Deutsche Bank ist Mitglied des Einlagensicherungsfonds für Kreditinstitute. 
             <span className="text-[#00008B] font-medium"> Der garantierte Betrag beträgt bis zu 100.000 € pro Einleger.</span>
           </p>
+        </div>
+
+        {/* Security & Fraud Protection Section */}
+        <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 border border-green-200 mt-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-green-600 rounded-full p-2">
+              <ShieldCheck className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-lg font-semibold text-[#00008B]">
+              Sicherheit & Betrugsschutzgarantien
+            </h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="flex items-start gap-3">
+              <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">100% Betrugsschutz</p>
+                <p className="text-gray-600">
+                  Sie sind vollständig gegen betrügerische Transaktionen geschützt. Bei Missbrauch erstatten wir Ihnen den vollständigen Betrag zurück.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Echtzeit-Überwachung</p>
+                <p className="text-gray-600">
+                  Unsere KI-gestützten Systeme überwachen alle Transaktionen rund um die Uhr auf verdächtige Aktivitäten.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sichere Verschlüsselung</p>
+                <p className="text-gray-600">
+                  Alle Daten werden mit modernster 256-Bit-SSL-Verschlüsselung geschützt und entsprechen den höchsten Sicherheitsstandards.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sofortbenachrichtigungen</p>
+                <p className="text-gray-600">
+                  Sie erhalten Echtzeit-Benachrichtigungen bei jeder Kontobewegung, um verdächtige Aktivitäten sofort zu erkennen.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Lock Notice */}
