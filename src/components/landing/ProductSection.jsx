@@ -14,7 +14,7 @@ export default function ProductSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl text-center text-[#001e50] font-light mb-16"
+          className="text-3xl md:text-4xl text-center text-[#00008B] font-light mb-16"
         >
           Wer gibt Ihnen MEHR für Ihr Gehalt und Ihre Ersparnisse?
         </motion.h2>
@@ -30,7 +30,7 @@ export default function ProductSection() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
             <div>
-              <div className="bg-gradient-to-br from-[#001e50] to-[#003087] rounded-2xl p-10 text-white relative overflow-hidden">
+              <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl p-10 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                 
@@ -104,17 +104,17 @@ export default function ProductSection() {
             
             <div>
               <div className="bg-gradient-to-br from-[#f8f9fa] to-white border border-gray-200 rounded-2xl p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#001e50]/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#00008B]/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 
-                <span className="text-xs uppercase tracking-wider text-[#001e50] font-semibold">
+                <span className="text-xs uppercase tracking-wider text-[#00008B] font-semibold">
                   MEHR RENTABILITÄT
                 </span>
                 
                 <div className="mt-6">
-                  <span className="text-5xl md:text-6xl font-light text-[#001e50]">Bis zu 6.000 €</span>
+                  <span className="text-5xl md:text-6xl font-light text-[#00008B]">Bis zu 6.000 €</span>
                 </div>
                 
-                <p className="text-xl mt-4 font-medium text-[#001e50]">für Ihre Ersparnisse</p>
+                <p className="text-xl mt-4 font-medium text-[#00008B]">für Ihre Ersparnisse</p>
                 
                 <p className="text-gray-600 mt-4 text-sm leading-relaxed">
                   6% effektiver Jahreszins für Guthaben zwischen 10.000 € und 150.000 €<sup>2</sup>.
@@ -132,20 +132,20 @@ export default function ProductSection() {
           className="mt-16 text-center"
         >
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            <strong className="text-[#001e50]">Nutzen Sie eine oder beide Aktionen</strong> vor dem 02.03.2026 
-            unter Einhaltung der <span className="text-[#001e50] underline cursor-pointer">Bedingungen</span><sup>3</sup>.
+            <strong className="text-[#00008B]">Nutzen Sie eine oder beide Aktionen</strong> vor dem 02.03.2026 
+            unter Einhaltung der <span className="text-[#00008B] underline cursor-pointer">Bedingungen</span><sup>3</sup>.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              className="bg-[#001e50] hover:bg-[#003087] text-white px-8 py-6 text-base font-medium transition-all duration-300"
+              className="bg-[#00008B] hover:bg-[#0000CD] text-white px-8 py-6 text-base font-medium transition-all duration-300"
             >
               Mit Berater kontaktieren
             </Button>
             <Button
               variant="outline"
               onClick={() => setDialogOpen(true)}
-              className="border-[#001e50] text-[#001e50] hover:bg-[#001e50] hover:text-white px-8 py-6 text-base font-medium transition-all duration-300"
+              className="border-[#001e50] text-[#00008B] hover:bg-[#001e50] hover:text-white px-8 py-6 text-base font-medium transition-all duration-300"
             >
               Geld anlegen
             </Button>

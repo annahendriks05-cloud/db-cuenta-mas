@@ -52,7 +52,7 @@ export default function FeaturesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl text-[#001e50] font-light">
+          <h2 className="text-3xl md:text-4xl text-[#00008B] font-light">
             Ein Konto für alle, die MEHR für viel weniger wollen
           </h2>
         </motion.div>
@@ -81,7 +81,7 @@ export default function FeaturesSection() {
 
               {/* Content */}
               <div className={groupIndex % 2 === 1 ? 'lg:order-1' : ''}>
-                <h3 className="text-2xl md:text-3xl text-[#001e50] font-light mb-8">
+                <h3 className="text-2xl md:text-3xl text-[#00008B] font-light mb-8">
                   {group.title}
                 </h3>
 
@@ -97,13 +97,13 @@ export default function FeaturesSection() {
                     >
                       <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${
                         feature.highlight 
-                          ? 'bg-[#001e50] text-white' 
-                          : 'bg-gray-100 text-[#001e50]'
+                          ? 'bg-[#00008B] text-white' 
+                          : 'bg-gray-100 text-[#00008B]'
                       }`}>
                         <feature.icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-[#001e50] mb-1">{feature.title}</h4>
+                        <h4 className="font-semibold text-[#00008B] mb-1">{feature.title}</h4>
                         <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                       </div>
                     </motion.div>
@@ -130,10 +130,10 @@ export default function FeaturesSection() {
               key={index}
               className="text-center p-6 rounded-xl bg-[#f8f9fa] hover:bg-white hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-full bg-[#001e50]/10 flex items-center justify-center mx-auto mb-4">
-                <badge.icon className="w-7 h-7 text-[#001e50]" />
+              <div className="w-14 h-14 rounded-full bg-[#00008B]/10 flex items-center justify-center mx-auto mb-4">
+                <badge.icon className="w-7 h-7 text-[#00008B]" />
               </div>
-              <h4 className="font-semibold text-[#001e50] mb-2">{badge.title}</h4>
+              <h4 className="font-semibold text-[#00008B] mb-2">{badge.title}</h4>
               <p className="text-gray-600 text-sm">{badge.desc}</p>
             </div>
           ))}

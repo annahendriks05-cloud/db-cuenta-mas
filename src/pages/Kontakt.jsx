@@ -51,7 +51,7 @@ export default function Kontakt() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#001e50] to-[#003087] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-[#00008B] to-[#0000CD] flex items-center justify-center p-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -60,7 +60,7 @@ export default function Kontakt() {
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-12 h-12 text-green-600" />
           </div>
-          <h2 className="text-3xl font-bold text-[#001e50] mb-4">
+          <h2 className="text-3xl font-bold text-[#00008B] mb-4">
             Vielen Dank!
           </h2>
           <p className="text-gray-600 mb-8">
@@ -68,7 +68,7 @@ export default function Kontakt() {
           </p>
           <Button
             onClick={() => window.location.href = '/'}
-            className="bg-[#001e50] hover:bg-[#003087] text-white"
+            className="bg-[#00008B] hover:bg-[#0000CD] text-white"
           >
             Zur Startseite
           </Button>
@@ -87,14 +87,14 @@ export default function Kontakt() {
           className="text-center mb-8"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-16 h-16 bg-white border-2 border-[#001e50] flex items-center justify-center p-2 rounded-lg shadow-lg">
+            <div className="w-16 h-16 bg-white border-2 border-[#00008B] flex items-center justify-center p-2 rounded-lg shadow-lg">
               <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#001e50" strokeWidth="8"/>
-                <path d="M20 80 L80 20" stroke="#001e50" strokeWidth="8"/>
+                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00008B" strokeWidth="8"/>
+                <path d="M20 80 L80 20" stroke="#00008B" strokeWidth="8"/>
               </svg>
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-light text-[#001e50] mb-4">
+          <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-4">
             Konto eröffnen bei Deutsche Bank
           </h1>
           <p className="text-lg text-gray-600">
@@ -110,7 +110,7 @@ export default function Kontakt() {
             transition={{ delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="bg-gradient-to-br from-[#001e50] to-[#003087] rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-semibold mb-4">Erhalten Sie bis zu</h3>
               <p className="text-6xl font-light text-[#ffd000] mb-2">500€</p>
               <p className="text-xl mb-6">Bonus in EURC</p>
@@ -121,7 +121,7 @@ export default function Kontakt() {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-xl font-semibold text-[#001e50] mb-4 flex items-center gap-2">
+              <h3 className="text-xl font-semibold text-[#00008B] mb-4 flex items-center gap-2">
                 <CheckCircle2 className="w-6 h-6 text-green-600" />
                 Ihre Vorteile
               </h3>
@@ -159,7 +159,7 @@ export default function Kontakt() {
           >
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
               <p className="text-sm text-gray-700">
-                <strong className="text-[#001e50]">⏱ Schnelle Bearbeitung:</strong> Ein Berater wird Sie innerhalb von 24 Stunden unverbindlich kontaktieren
+                <strong className="text-[#00008B]">⏱ Schnelle Bearbeitung:</strong> Ein Berater wird Sie innerhalb von 24 Stunden unverbindlich kontaktieren
               </p>
             </div>
 
@@ -174,7 +174,7 @@ export default function Kontakt() {
                   placeholder="Ihr Vorname"
                   value={formData.vorname}
                   onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
                 />
               </div>
 
@@ -188,7 +188,7 @@ export default function Kontakt() {
                   placeholder="Ihr Nachname"
                   value={formData.nachname}
                   onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
                 />
               </div>
 
@@ -202,7 +202,7 @@ export default function Kontakt() {
                   placeholder="Beispiel: 12345678X"
                   value={formData.personalausweis}
                   onChange={(e) => setFormData({ ...formData, personalausweis: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
                 />
               </div>
 
@@ -230,7 +230,7 @@ export default function Kontakt() {
                     placeholder="612 34 56 78"
                     value={formData.telefon}
                     onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
-                    className="flex-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                    className="flex-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
                   />
                 </div>
               </div>
@@ -246,7 +246,7 @@ export default function Kontakt() {
                   placeholder="Beispiel: email@domain.de"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
                 />
               </div>
 
@@ -260,7 +260,7 @@ export default function Kontakt() {
                   placeholder="Beispiel: 10115"
                   value={formData.postleitzahl}
                   onChange={(e) => setFormData({ ...formData, postleitzahl: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#001e50] focus:ring-[#001e50]"
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
                 />
               </div>
 
@@ -270,11 +270,11 @@ export default function Kontakt() {
                   required
                   checked={formData.autorizo}
                   onCheckedChange={(checked) => setFormData({ ...formData, autorizo: checked })}
-                  className="mt-1 border-gray-300 data-[state=checked]:bg-[#001e50]"
+                  className="mt-1 border-gray-300 data-[state=checked]:bg-[#00008B]"
                 />
                 <Label htmlFor="autorizo" className="text-xs text-gray-600 leading-relaxed">
                   ICH AUTORISIERE die Erhebung und Verarbeitung meiner Daten zur Verwaltung meines Antrags und zum Empfang kommerzieller Informationen, wie in der{' '}
-                  <span className="text-[#001e50] underline cursor-pointer hover:text-[#003087]">
+                  <span className="text-[#00008B] underline cursor-pointer hover:text-[#0000CD]">
                     Datenschutzrichtlinie
                   </span>{' '}
                   beschrieben. <span className="text-red-500">*</span>
@@ -284,7 +284,7 @@ export default function Kontakt() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#001e50] hover:bg-[#003087] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
+                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
               >
                 {loading ? (
                   <>

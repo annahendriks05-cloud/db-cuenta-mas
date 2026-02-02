@@ -13,11 +13,11 @@ export default function SecuritySection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl text-[#001e50] font-light mb-4">
+          <h2 className="text-3xl md:text-4xl text-[#00008B] font-light mb-4">
             EURAU & EURC: 100% Sicher
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            EURAU gehört zur <strong className="text-[#001e50]">Deutsche Bank</strong> - 
+            EURAU gehört zur <strong className="text-[#00008B]">Deutsche Bank</strong> - 
             Ihre Einlagen sind vollständig geschützt
           </p>
         </motion.div>
@@ -32,10 +32,10 @@ export default function SecuritySection() {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
           >
-            <div className="w-16 h-16 rounded-full bg-[#001e50] flex items-center justify-center mb-6 mx-auto">
+            <div className="w-16 h-16 rounded-full bg-[#00008B] flex items-center justify-center mb-6 mx-auto">
               <Building2 className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-[#001e50] mb-3 text-center">
+            <h3 className="text-xl font-semibold text-[#00008B] mb-3 text-center">
               Teil der Deutsche Bank
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
@@ -54,7 +54,7 @@ export default function SecuritySection() {
             <div className="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center mb-6 mx-auto">
               <Shield className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-[#001e50] mb-3 text-center">
+            <h3 className="text-xl font-semibold text-[#00008B] mb-3 text-center">
               100% Einlagensicherung
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
@@ -73,7 +73,7 @@ export default function SecuritySection() {
             <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center mb-6 mx-auto">
               <Lock className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-[#001e50] mb-3 text-center">
+            <h3 className="text-xl font-semibold text-[#00008B] mb-3 text-center">
               Betrugsschutz
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
@@ -87,7 +87,7 @@ export default function SecuritySection() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#001e50] to-[#003087] rounded-2xl p-8 md:p-12 text-white text-center"
+          className="bg-gradient-to-r from-[#00008B] to-[#0000CD] rounded-2xl p-8 md:p-12 text-white text-center"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <CheckCircle2 className="w-8 h-8 text-[#ffd000]" />
