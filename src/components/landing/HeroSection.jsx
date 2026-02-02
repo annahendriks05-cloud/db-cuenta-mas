@@ -95,7 +95,7 @@ export default function HeroSection() {
               <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
               <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">4.000€</p>
               <p className="text-white text-lg">Bonus in EURC</p>
-              <p className="text-white/70 text-sm mt-2">2% Cashback auf Digital Festgeld</p>
+              <p className="text-white/70 text-sm mt-2">4% bis 6% auf Digital Festgeld</p>
             </motion.div>
 
             <p className="mt-8 text-white/80 text-sm">
