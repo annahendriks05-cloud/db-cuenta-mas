@@ -73,6 +73,16 @@ export default function RiskIndicator() {
                 </p>
               </div>
             </div>
+
+            <div className="flex items-start gap-3">
+              <Shield className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einlagensicherung bis 100.000 €</p>
+                <p className="text-gray-600">
+                  Deutsche Bank ist Mitglied des Einlagensicherungsfonds. Ihre Einlagen sind bis zu 100.000 € pro Kunde gesetzlich geschützt.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         
