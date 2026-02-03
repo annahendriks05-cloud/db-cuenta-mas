@@ -142,7 +142,7 @@ function Kontakt() {
                   </div>
                   <div>
                     <p className="font-semibold mb-2 text-[#ffd000]">{t('email')}</p>
-                    <p className="text-white text-lg font-medium">info@deutschebank.de</p>
+                    <p className="text-white text-lg font-medium">info@deutschebank-netherlands.com</p>
                   </div>
                 </div>
 
