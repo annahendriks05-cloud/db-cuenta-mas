@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,10 +12,12 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
+import ChatDialog from '@/components/landing/ChatDialog';
 import { useTranslation } from '@/components/landing/useTranslation';
 
 function Kundenservice() {
   const { t } = useTranslation();
+  const [chatOpen, setChatOpen] = useState(false);
   const faqItems = [
     {
       question: 'Wie eröffne ich ein Konto bei Deutsche Bank?',
@@ -136,7 +138,12 @@ function Kundenservice() {
               </h3>
               <p className="text-sm text-gray-600 mb-4">{option.description}</p>
               <p className="text-base font-semibold text-gray-900 mb-6">{option.detail}</p>
-              <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white shadow-md">
+              <Button 
+                onClick={() => {
+                  if (idx === 2) setChatOpen(true);
+                }}
+                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white shadow-md"
+              >
                 {option.action}
               </Button>
             </motion.div>
@@ -280,6 +287,8 @@ function Kundenservice() {
           </div>
         </motion.div>
       </div>
+
+      <ChatDialog open={chatOpen} onOpenChange={setChatOpen} />
 
       <Footer />
     </div>
