@@ -49,9 +49,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <a 
-              href="https://cocky-factura-facil-app.base44.app" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="/DigitalFestgeld"
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
               Digital Festgeld

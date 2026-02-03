@@ -90,7 +90,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-[#0000A0] rounded-lg p-8 inline-block cursor-pointer hover:bg-[#0000B5] transition-colors"
-              onClick={() => window.location.href = 'https://cocky-factura-facil-app.base44.app'}
+              onClick={() => window.location.href = '/DigitalFestgeld'}
             >
               <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
               <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">8.000€</p>

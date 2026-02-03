@@ -49,12 +49,14 @@
  */
 import Home from './pages/Home';
 import Kontakt from './pages/Kontakt';
+import DigitalFestgeld from './pages/DigitalFestgeld';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
     "Home": Home,
     "Kontakt": Kontakt,
+    "DigitalFestgeld": DigitalFestgeld,
 }
 
 export const pagesConfig = {
