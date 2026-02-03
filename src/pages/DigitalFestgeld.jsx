@@ -93,14 +93,14 @@ export default function DigitalFestgeld() {
       
       {/* Risk Indicator */}
       <div className="bg-gradient-to-r from-green-50 to-blue-50 border-b border-green-200">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+        <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <div className="text-center">
-              <div className="text-5xl font-light text-[#00008B] mb-2">1/6</div>
-              <p className="text-sm font-semibold text-gray-800">Geringstes Produktrisiko - Höchste Sicherheit</p>
+              <div className="text-4xl md:text-5xl font-light text-[#00008B] mb-2">1/6</div>
+              <p className="text-xs md:text-sm font-semibold text-gray-800">Geringstes Produktrisiko - Höchste Sicherheit</p>
             </div>
             <div className="hidden md:block w-px h-20 bg-gray-300"></div>
-            <div className="text-sm text-gray-700 max-w-lg text-center md:text-left">
+            <div className="text-xs md:text-sm text-gray-700 max-w-lg text-center md:text-left px-4 md:px-0">
               <p><strong>Deutsche Bank ist Mitglied des Einlagensicherungsfonds.</strong></p>
               <p>Der garantierte Betrag beträgt bis zu 100.000 € pro Einleger.</p>
             </div>
@@ -110,26 +110,26 @@ export default function DigitalFestgeld() {
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white">
-        <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="max-w-7xl mx-auto px-4 py-12 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <p className="text-sm font-semibold">Digital Festgeld Pionier</p>
+            <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 md:px-4 py-1.5 md:py-2 mb-4 md:mb-6">
+              <p className="text-xs md:text-sm font-semibold">Digital Festgeld Pionier</p>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-light mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light mb-4 md:mb-6 px-4">
               Revolutionäres Digital Festgeld
             </h1>
             
-            <p className="text-xl text-white/90 mb-12">
+            <p className="text-base md:text-xl text-white/90 mb-8 md:mb-12 px-4">
               Wandeln Sie Ihr Geld in digitales, hochsicheres EURAU/EURC um. Erhalten Sie bis zu 6% Zinsen p.a. plus 2% Cashback-Bonus sofort nach Einzahlung.
             </p>
 
             {/* Feature Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-12 px-2">
               {[
                 { label: 'Einlagensicherung', value: 'Bis zu 100.000€', icon: ShieldCheck },
                 { label: 'Attraktive Zinsen', value: '4% bis 6% p.a.', icon: TrendingUp },
@@ -141,11 +141,11 @@ export default function DigitalFestgeld() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-3 md:p-4"
                 >
-                  <item.icon className="w-8 h-8 text-[#ffd000] mb-2 mx-auto" />
-                  <p className="text-xs text-white/70 mb-1">{item.label}</p>
-                  <p className="text-sm font-semibold">{item.value}</p>
+                  <item.icon className="w-6 h-6 md:w-8 md:h-8 text-[#ffd000] mb-2 mx-auto" />
+                  <p className="text-[10px] md:text-xs text-white/70 mb-1">{item.label}</p>
+                  <p className="text-xs md:text-sm font-semibold">{item.value}</p>
                 </motion.div>
               ))}
             </div>
@@ -154,36 +154,36 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Interest Rates Table */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-light text-[#00008B] text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-light text-[#00008B] text-center mb-8 md:mb-12 px-4">
             EURAU & EURC Festgeld Digital - Attraktive Zinsen
           </h2>
           
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-            <table className="w-full">
+          <div className="bg-white rounded-xl shadow-lg overflow-x-auto mb-8">
+            <table className="w-full min-w-[500px]">
               <thead className="bg-[#00008B] text-white">
                 <tr>
-                  <th className="py-4 px-6 text-left">Anlagesumme</th>
-                  <th className="py-4 px-6 text-left">Laufzeit</th>
-                  <th className="py-4 px-6 text-left">Zinssatz p.a.</th>
+                  <th className="py-3 md:py-4 px-3 md:px-6 text-left text-xs md:text-base">Anlagesumme</th>
+                  <th className="py-3 md:py-4 px-3 md:px-6 text-left text-xs md:text-base">Laufzeit</th>
+                  <th className="py-3 md:py-4 px-3 md:px-6 text-left text-xs md:text-base">Zinssatz p.a.</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200">
-                  <td className="py-4 px-6 font-semibold">10.000€ - 25.000€</td>
-                  <td className="py-4 px-6">12 Monate</td>
-                  <td className="py-4 px-6 text-[#00008B] font-bold text-lg">4.00%</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 font-semibold text-xs md:text-base">10.000€ - 25.000€</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-xs md:text-base">12 Monate</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-[#00008B] font-bold text-base md:text-lg">4.00%</td>
                 </tr>
                 <tr className="border-b border-gray-200">
-                  <td className="py-4 px-6 font-semibold">50.000€ - 75.000€</td>
-                  <td className="py-4 px-6">12 Monate</td>
-                  <td className="py-4 px-6 text-[#00008B] font-bold text-lg">5.00%</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 font-semibold text-xs md:text-base">50.000€ - 75.000€</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-xs md:text-base">12 Monate</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-[#00008B] font-bold text-base md:text-lg">5.00%</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 font-semibold">100.000€ - 200.000€</td>
-                  <td className="py-4 px-6">12 Monate</td>
-                  <td className="py-4 px-6 text-[#00008B] font-bold text-lg">6.00%</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 font-semibold text-xs md:text-base">100.000€ - 200.000€</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-xs md:text-base">12 Monate</td>
+                  <td className="py-3 md:py-4 px-3 md:px-6 text-[#00008B] font-bold text-base md:text-lg">6.00%</td>
                 </tr>
               </tbody>
             </table>
@@ -201,9 +201,9 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Cashback Examples */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
             {[
               { amount: '25.000€', bonus: '500€' },
               { amount: '50.000€', bonus: '1.000€' },
@@ -215,13 +215,13 @@ export default function DigitalFestgeld() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-6 text-center"
+                className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-4 md:p-6 text-center"
               >
-                <p className="text-sm text-white/70 mb-2">Anlage</p>
-                <p className="text-3xl font-light mb-4">{item.amount}</p>
-                <div className="border-t border-white/20 pt-4">
-                  <p className="text-xs text-[#ffd000] mb-1">Sofortbonus</p>
-                  <p className="text-2xl font-semibold text-[#ffd000]">{item.bonus}</p>
+                <p className="text-xs md:text-sm text-white/70 mb-2">Anlage</p>
+                <p className="text-2xl md:text-3xl font-light mb-3 md:mb-4">{item.amount}</p>
+                <div className="border-t border-white/20 pt-3 md:pt-4">
+                  <p className="text-[10px] md:text-xs text-[#ffd000] mb-1">Sofortbonus</p>
+                  <p className="text-xl md:text-2xl font-semibold text-[#ffd000]">{item.bonus}</p>
                 </div>
               </motion.div>
             ))}
@@ -234,16 +234,16 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-light text-[#00008B] text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-light text-[#00008B] text-center mb-3 md:mb-4 px-4">
             Ihre Vorteile auf einen Blick
           </h2>
-          <p className="text-center text-gray-600 mb-12">
+          <p className="text-center text-sm md:text-base text-gray-600 mb-8 md:mb-12 px-4">
             Deutsche Bank revolutioniert das Festgeld mit digitaler Innovation und maximaler Sicherheit
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               {
                 icon: ShieldCheck,
@@ -292,11 +292,11 @@ export default function DigitalFestgeld() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-lg p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <benefit.icon className="w-10 h-10 text-[#00008B] mb-4" />
-                <h3 className="text-lg font-semibold text-[#00008B] mb-2">{benefit.title}</h3>
-                <p className="text-sm text-gray-600">{benefit.desc}</p>
+                <benefit.icon className="w-8 h-8 md:w-10 md:h-10 text-[#00008B] mb-3 md:mb-4" />
+                <h3 className="text-base md:text-lg font-semibold text-[#00008B] mb-2">{benefit.title}</h3>
+                <p className="text-xs md:text-sm text-gray-600">{benefit.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -304,16 +304,16 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* How it Works */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-12 md:py-16">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-light text-[#00008B] text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-light text-[#00008B] text-center mb-3 md:mb-4 px-4">
             So einfach funktioniert's
           </h2>
-          <p className="text-center text-gray-600 mb-12">
+          <p className="text-center text-sm md:text-base text-gray-600 mb-8 md:mb-12 px-4">
             In nur 4 Schritten zu Ihrem hochverzinsten Digital Festgeld bei Deutsche Bank
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
             {[
               {
                 step: '1',
@@ -344,11 +344,11 @@ export default function DigitalFestgeld() {
                 transition={{ delay: idx * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-[#00008B] text-white rounded-full flex items-center justify-center text-2xl font-light mb-4 mx-auto">
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-[#00008B] text-white rounded-full flex items-center justify-center text-xl md:text-2xl font-light mb-3 md:mb-4 mx-auto">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-semibold text-[#00008B] mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+                <h3 className="text-base md:text-lg font-semibold text-[#00008B] mb-2">{item.title}</h3>
+                <p className="text-xs md:text-sm text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -364,18 +364,18 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Contact Form */}
-      <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] py-16">
+      <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] py-12 md:py-16">
         <div className="max-w-2xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-2xl p-8"
+            className="bg-white rounded-2xl shadow-2xl p-6 md:p-8"
           >
-            <h2 className="text-2xl font-semibold text-[#00008B] text-center mb-2">
+            <h2 className="text-xl md:text-2xl font-semibold text-[#00008B] text-center mb-2">
               Jetzt Digital Festgeld Konto eröffnen
             </h2>
-            <p className="text-center text-gray-600 mb-6">Deutsche Bank • Kostenlos & Unverbindlich</p>
+            <p className="text-center text-sm md:text-base text-gray-600 mb-6">Deutsche Bank • Kostenlos & Unverbindlich</p>
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
               <p className="text-sm text-gray-700 text-center">
@@ -524,16 +524,16 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Security Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-light text-[#00008B] text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-light text-[#00008B] text-center mb-3 md:mb-4 px-4">
             Maximale Sicherheit garantiert
           </h2>
-          <p className="text-center text-gray-600 mb-12">
+          <p className="text-center text-sm md:text-base text-gray-600 mb-8 md:mb-12 px-4">
             Deutsche Bank kombiniert bewährte Bankensicherheit mit innovativer Blockchain-Technologie
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 icon: ShieldCheck,
@@ -572,11 +572,11 @@ export default function DigitalFestgeld() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white rounded-lg p-6 shadow-sm"
+                className="bg-white rounded-lg p-4 md:p-6 shadow-sm"
               >
-                <item.icon className="w-10 h-10 text-green-600 mb-4" />
-                <h3 className="text-lg font-semibold text-[#00008B] mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+                <item.icon className="w-8 h-8 md:w-10 md:h-10 text-green-600 mb-3 md:mb-4" />
+                <h3 className="text-base md:text-lg font-semibold text-[#00008B] mb-2">{item.title}</h3>
+                <p className="text-xs md:text-sm text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -591,12 +591,12 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* FAQ */}
-      <div className="bg-white py-16">
+      <div className="bg-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-light text-[#00008B] text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-light text-[#00008B] text-center mb-3 md:mb-4 px-4">
             Häufig gestellte Fragen
           </h2>
-          <p className="text-center text-gray-600 mb-12">
+          <p className="text-center text-sm md:text-base text-gray-600 mb-8 md:mb-12 px-4">
             Alle wichtigen Informationen zum Digital Festgeld bei Deutsche Bank
           </p>
 
@@ -704,22 +704,22 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] py-16">
+      <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-light text-white mb-4">
+            <h2 className="text-2xl md:text-4xl font-light text-white mb-3 md:mb-4 px-4">
               Bereit für Digital Festgeld der Zukunft?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 px-4">
               Profitieren Sie von bis zu 6% Zinsen + 2% Cashback-Bonus. Starten Sie jetzt mit Deutsche Bank!
             </p>
             <Button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-12 py-6 text-lg font-semibold"
+              className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8 md:px-12 py-5 md:py-6 text-base md:text-lg font-semibold"
             >
               JETZT KONTO ERÖFFNEN
             </Button>
