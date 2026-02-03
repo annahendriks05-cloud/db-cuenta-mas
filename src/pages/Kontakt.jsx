@@ -252,59 +252,71 @@ function Kontakt() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="vorname">{t('firstName')} *</Label>
-                  <Input
-                    id="vorname"
-                    required
-                    value={formData.vorname}
-                    onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
-                    className="mt-1"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="nachname">{t('lastName')} *</Label>
-                  <Input
-                    id="nachname"
-                    required
-                    value={formData.nachname}
-                    onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
-                    className="mt-1"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="email">E-Mail *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-1"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="telefon">{t('phone')}</Label>
-                  <Input
-                    id="telefon"
-                    value={formData.telefon}
-                    onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
-                    className="mt-1"
-                  />
-                </div>
+              <div>
+                <Label htmlFor="vorname" className="text-sm text-gray-700">
+                  {t('firstName')} <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="vorname"
+                  placeholder="Ihr Vorname"
+                  required
+                  value={formData.vorname}
+                  onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
+                />
               </div>
 
               <div>
-                <Label htmlFor="betreff">{t('subject')} *</Label>
+                <Label htmlFor="nachname" className="text-sm text-gray-700">
+                  {t('lastName')} <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="nachname"
+                  placeholder="Ihr Nachname"
+                  required
+                  value={formData.nachname}
+                  onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="email" className="text-sm text-gray-700">
+                  E-Mail <span className="text-red-500">*</span>
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="Beispiel: email@domain.de"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="telefon" className="text-sm text-gray-700">
+                  {t('phone')}
+                </Label>
+                <Input
+                  id="telefon"
+                  placeholder="Beispiel: +49 612 34 56 78"
+                  value={formData.telefon}
+                  onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
+                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="betreff" className="text-sm text-gray-700">
+                  {t('subject')} <span className="text-red-500">*</span>
+                </Label>
                 <Select
                   value={formData.betreff}
                   onValueChange={(value) => setFormData({ ...formData, betreff: value })}
                 >
-                  <SelectTrigger className="mt-1">
+                  <SelectTrigger className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]">
                     <SelectValue placeholder="Bitte wählen..." />
                   </SelectTrigger>
                   <SelectContent>
@@ -318,21 +330,23 @@ function Kontakt() {
               </div>
 
               <div>
-                <Label htmlFor="nachricht">{t('message')} *</Label>
+                <Label htmlFor="nachricht" className="text-sm text-gray-700">
+                  {t('message')} <span className="text-red-500">*</span>
+                </Label>
                 <Textarea
                   id="nachricht"
                   required
                   value={formData.nachricht}
                   onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })}
-                  className="mt-1 h-32"
-                  placeholder={t('messagePlaceholder')}
+                  className="mt-1 h-32 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
+                  placeholder="Ihre Nachricht..."
                 />
               </div>
 
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white py-6 text-base"
+                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
               >
                 {loading ? (
                   <>
