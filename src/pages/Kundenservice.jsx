@@ -261,28 +261,28 @@ function Kundenservice() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-12 text-center"
+          className="bg-gradient-to-br from-[#00008B] via-[#0000CD] to-[#00008B] text-white rounded-2xl p-16 text-center"
         >
-          <h2 className="text-3xl font-light mb-4">
-            {t('stillQuestions')}
+          <h2 className="text-4xl font-bold mb-4">
+            Weitere Fragen?
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            {t('contactTeam')}
+          <p className="text-white/90 mb-10 max-w-2xl mx-auto text-lg">
+            Unser Team steht Ihnen jederzeit zur Verfügung, um Ihnen zu helfen.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to={createPageUrl('Kontakt')}>
-              <Button className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8">
-                {t('contactForm')}
+            <Link to={createPageUrl('Kontakt')} onClick={() => window.scrollTo(0, 0)}>
+              <Button className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8 font-semibold">
+                Kontaktformular
               </Button>
             </Link>
-            <Link to={createPageUrl('Filialen')}>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8">
-                {t('findBranch')}
+            <Link to={createPageUrl('Filialen')} onClick={() => window.scrollTo(0, 0)}>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 font-semibold">
+                Filiale suchen
               </Button>
             </Link>
           </div>
         </motion.div>
-      </div>
+        </div>
 
       <ChatDialog open={chatOpen} onOpenChange={setChatOpen} />
 
