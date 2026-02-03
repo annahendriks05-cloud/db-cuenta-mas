@@ -86,33 +86,20 @@ function Kundenservice() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="bg-[#00008B] text-white py-4">
-        <div className="max-w-7xl mx-auto px-4">
-          <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Deutsche_Bank_logo_without_wordmark.svg/240px-Deutsche_Bank_logo_without_wordmark.svg.png" 
-              alt="Deutsche Bank Logo" 
-              className="w-10 h-10 bg-white p-1"
-            />
-            <p className="text-lg font-semibold">Deutsche Bank</p>
-          </Link>
-        </div>
-      </div>
       <Navigation />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-16">
+      <div className="bg-gradient-to-br from-[#00008B] via-[#0000CD] to-[#00008B] text-white py-24">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               {t('customerServiceTitle')}
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-white/90 leading-relaxed">
               {t('customerServiceSubtitle')}
             </p>
           </motion.div>
