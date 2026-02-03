@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { MapPin, Phone, Clock, Search } from 'lucide-react';
+import { MapPin, Clock, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
@@ -12,53 +12,165 @@ function Filialen() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filialen = [
+    // Holanda
+    {
+      name: 'Deutsche Bank Amsterdam',
+      adresse: 'De Entree 195, 1101 HE Amsterdam, Nederland',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Nederland'
+    },
+    {
+      name: 'Deutsche Bank Rotterdam',
+      adresse: 'Weena 690, 3012 CN Rotterdam, Nederland',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Nederland'
+    },
+    {
+      name: 'Deutsche Bank Den Haag',
+      adresse: 'Prinses Beatrixlaan 15, 2595 AK Den Haag, Nederland',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Nederland'
+    },
+    {
+      name: 'Deutsche Bank Utrecht',
+      adresse: 'Papendorpseweg 100, 3528 BJ Utrecht, Nederland',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Nederland'
+    },
+    // Alemania
     {
       name: 'Deutsche Bank Frankfurt Hauptsitz',
-      adresse: 'Taunusanlage 12, 60325 Frankfurt am Main',
-      telefon: '+49 69 910-00',
+      adresse: 'Taunusanlage 12, 60325 Frankfurt am Main, Deutschland',
       zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
-      services: ['Beratung', 'Geldautomaten', 'Schließfächer']
+      land: 'Deutschland'
     },
     {
-      name: 'Deutsche Bank Berlin Mitte',
-      adresse: 'Unter den Linden 13-15, 10117 Berlin',
-      telefon: '+49 30 3407-0',
+      name: 'Deutsche Bank Berlin',
+      adresse: 'Unter den Linden 13-15, 10117 Berlin, Deutschland',
       zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
-      services: ['Beratung', 'Geldautomaten', 'Depot']
+      land: 'Deutschland'
     },
     {
-      name: 'Deutsche Bank München Zentrum',
-      adresse: 'Promenadeplatz 15, 80333 München',
-      telefon: '+49 89 21270',
-      zeiten: 'Mo-Fr: 9:00-18:00, Sa: Geschlossen',
-      services: ['Beratung', 'Geldautomaten', 'Business Banking']
+      name: 'Deutsche Bank München',
+      adresse: 'Promenadeplatz 15, 80333 München, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
     },
     {
-      name: 'Deutsche Bank Hamburg City',
-      adresse: 'Jungfernstieg 7, 20354 Hamburg',
-      telefon: '+49 40 37030',
+      name: 'Deutsche Bank Hamburg',
+      adresse: 'Jungfernstieg 7, 20354 Hamburg, Deutschland',
       zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
-      services: ['Beratung', 'Geldautomaten']
+      land: 'Deutschland'
+    },
+    // Reino Unido
+    {
+      name: 'Deutsche Bank London',
+      adresse: '1 Great Winchester Street, London EC2N 2DB, United Kingdom',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'United Kingdom'
+    },
+    // Francia
+    {
+      name: 'Deutsche Bank Paris',
+      adresse: '3 Avenue de Friedland, 75008 Paris, France',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'France'
+    },
+    // Italia
+    {
+      name: 'Deutsche Bank Milano',
+      adresse: 'Piazza del Calendario 3, 20126 Milano, Italia',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'Italia'
     },
     {
-      name: 'Deutsche Bank Köln Innenstadt',
-      adresse: 'Hohe Straße 145, 50667 Köln',
-      telefon: '+49 221 1650',
-      zeiten: 'Mo-Fr: 9:00-18:00, Sa: Geschlossen',
-      services: ['Beratung', 'Geldautomaten', 'Schließfächer']
+      name: 'Deutsche Bank Roma',
+      adresse: 'Via Mercadante 12/14, 00198 Roma, Italia',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'Italia'
+    },
+    // España
+    {
+      name: 'Deutsche Bank Madrid',
+      adresse: 'Paseo de la Castellana 18, 28046 Madrid, España',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'España'
     },
     {
-      name: 'Deutsche Bank Stuttgart Mitte',
-      adresse: 'Königstraße 26, 70173 Stuttgart',
-      telefon: '+49 711 2040',
-      zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
-      services: ['Beratung', 'Geldautomaten']
+      name: 'Deutsche Bank Barcelona',
+      adresse: 'Avinguda Diagonal 477, 08036 Barcelona, España',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'España'
+    },
+    // Estados Unidos
+    {
+      name: 'Deutsche Bank New York',
+      adresse: '60 Wall Street, New York, NY 10005, USA',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'USA'
+    },
+    // Suiza
+    {
+      name: 'Deutsche Bank Zürich',
+      adresse: 'Uraniastrasse 9, 8001 Zürich, Schweiz',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Schweiz'
+    },
+    // Bélgica
+    {
+      name: 'Deutsche Bank Bruxelles',
+      adresse: 'Avenue Marnix 24, 1000 Bruxelles, Belgique',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Belgique'
+    },
+    // Austria
+    {
+      name: 'Deutsche Bank Wien',
+      adresse: 'Fleischmarkt 1, 1010 Wien, Österreich',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Österreich'
+    },
+    // Luxemburgo
+    {
+      name: 'Deutsche Bank Luxembourg',
+      adresse: '2 Boulevard Konrad Adenauer, 1115 Luxembourg',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Luxembourg'
+    },
+    // Singapur
+    {
+      name: 'Deutsche Bank Singapore',
+      adresse: 'One Raffles Quay, Singapore 048583',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Singapore'
+    },
+    // Hong Kong
+    {
+      name: 'Deutsche Bank Hong Kong',
+      adresse: 'Cheung Kong Center, 2 Queen\'s Road Central, Hong Kong',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Hong Kong'
+    },
+    // Japón
+    {
+      name: 'Deutsche Bank Tokyo',
+      adresse: '2-11-1 Nagatacho, Chiyoda-ku, Tokyo 100-6171, Japan',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Japan'
+    },
+    // Australia
+    {
+      name: 'Deutsche Bank Sydney',
+      adresse: 'Deutsche Bank Place, Corner Hunter & Phillip Streets, Sydney NSW 2000, Australia',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Australia'
     }
   ];
 
   const filteredFilialen = filialen.filter(filiale =>
     filiale.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    filiale.adresse.toLowerCase().includes(searchQuery.toLowerCase())
+    filiale.adresse.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    filiale.land.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -91,7 +203,7 @@ function Filialen() {
               Filialen
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Finden Sie eine Deutsche Bank Filiale in Ihrer Nähe
+              Finden Sie eine Deutsche Bank Filiale weltweit
             </p>
 
             {/* Search */}
@@ -99,7 +211,7 @@ function Filialen() {
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <Input
-                  placeholder="Stadt, PLZ oder Straße suchen..."
+                  placeholder="Stadt, Land oder Adresse suchen..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 py-6 text-base"
@@ -125,34 +237,15 @@ function Filialen() {
                 {filiale.name}
               </h3>
 
-              <div className="space-y-3 text-sm">
+              <div className="space-y-3 text-sm mb-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-[#00008B] flex-shrink-0 mt-0.5" />
                   <p className="text-gray-700">{filiale.adresse}</p>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-[#00008B] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">{filiale.telefon}</p>
-                </div>
-
-                <div className="flex items-start gap-3">
                   <Clock className="w-4 h-4 text-[#00008B] flex-shrink-0 mt-0.5" />
                   <p className="text-gray-700">{filiale.zeiten}</p>
-                </div>
-              </div>
-
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-xs text-gray-500 mb-2">Verfügbare Services:</p>
-                <div className="flex flex-wrap gap-2">
-                  {filiale.services.map((service, i) => (
-                    <span
-                      key={i}
-                      className="text-xs bg-blue-50 text-[#00008B] px-2 py-1 rounded"
-                    >
-                      {service}
-                    </span>
-                  ))}
                 </div>
               </div>
 
@@ -183,8 +276,8 @@ function Filialen() {
               <div className="w-16 h-16 bg-[#00008B] rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#00008B] mb-2">Über 500 Filialen</h3>
-              <p className="text-gray-600">In ganz Deutschland für Sie da</p>
+              <h3 className="text-xl font-semibold text-[#00008B] mb-2">Weltweit vertreten</h3>
+              <p className="text-gray-600">In über 50 Ländern für Sie da</p>
             </motion.div>
 
             <motion.div
@@ -195,7 +288,7 @@ function Filialen() {
               className="bg-white rounded-xl p-6 text-center"
             >
               <div className="w-16 h-16 bg-[#00008B] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-[#00008B] mb-2">Persönliche Beratung</h3>
               <p className="text-gray-600">Kompetente Experten vor Ort</p>
