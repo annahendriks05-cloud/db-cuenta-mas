@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import { useTranslation } from './useTranslation';
 
 export default function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-[#00008B] text-white">
       {/* Footnotes */}
@@ -40,39 +43,38 @@ export default function Footer() {
           </div>
         </div>
         <p className="text-sm text-white/70 max-w-2xl mb-8">
-          Deutsche Bank bietet hochwertige Finanzlösungen für Privatkunden und Unternehmen, 
-          unterstützt durch die Stärke einer globalen Bank.
+          {t('footerDescription')}
         </p>
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Deutsche Bank AG. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Deutsche Bank AG. {t('allRightsReserved')}.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             <Link 
               to={createPageUrl('DigitalFestgeld')}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
-              Digital Festgeld
+              {t('digitalFestgeld')}
             </Link>
             <Link 
               to={createPageUrl('Kontakt')}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
-              Kontakt
+              {t('kontakt')}
             </Link>
             <Link 
               to={createPageUrl('Filialen')}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
-              Filialen
+              {t('filialen')}
             </Link>
             <Link 
               to={createPageUrl('Kundenservice')}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
-              Kundenservice
+              {t('kundenservice')}
             </Link>
           </div>
         </div>

@@ -12,8 +12,10 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
+import { useTranslation } from '@/components/landing/useTranslation';
 
 function Kundenservice() {
+  const { t } = useTranslation();
   const faqItems = [
     {
       question: 'Wie eröffne ich ein Konto bei Deutsche Bank?',
@@ -52,31 +54,31 @@ function Kundenservice() {
   const serviceOptions = [
     {
       icon: Phone,
-      title: 'Telefon-Hotline',
-      description: '24/7 für Notfälle erreichbar',
+      title: t('phoneHotline'),
+      description: t('available247'),
       detail: '+49 69 910-00',
-      action: 'Jetzt anrufen'
+      action: t('callNow')
     },
     {
       icon: Mail,
-      title: 'E-Mail Support',
-      description: 'Antwort innerhalb von 24 Stunden',
+      title: t('emailSupport'),
+      description: t('response24h'),
       detail: 'service@deutschebank.de',
-      action: 'E-Mail senden'
+      action: t('sendEmail')
     },
     {
       icon: MessageCircle,
-      title: 'Live-Chat',
+      title: t('liveChat'),
       description: 'Mo-Fr 8:00-20:00 Uhr',
-      detail: 'Chat mit Kundenberater',
-      action: 'Chat starten'
+      detail: t('chatWithAdvisor'),
+      action: t('startChat')
     },
     {
       icon: FileText,
-      title: 'Dokumente & Formulare',
-      description: 'Alle wichtigen Unterlagen',
-      detail: 'Download-Center',
-      action: 'Zu den Dokumenten'
+      title: t('documents'),
+      description: t('allDocuments'),
+      detail: t('downloadCenter'),
+      action: t('toDocuments')
     }
   ];
 
@@ -107,10 +109,10 @@ function Kundenservice() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-6">
-              Kundenservice
+              {t('customerServiceTitle')}
             </h1>
             <p className="text-xl text-gray-600">
-              Wir sind für Sie da - per Telefon, E-Mail, Chat oder in unseren Filialen
+              {t('customerServiceSubtitle')}
             </p>
           </motion.div>
         </div>
@@ -155,17 +157,17 @@ function Kundenservice() {
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-red-900 mb-2">
-                Notfall-Hotline
+                {t('emergencyHotline')}
               </h3>
               <p className="text-red-800 mb-4">
-                Karte verloren oder gestohlen? Verdächtige Aktivitäten auf Ihrem Konto?
+                {t('cardLostStolen')}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-red-600 hover:bg-red-700 text-white">
-                  Karte sperren: +49 116 116
+                  {t('blockCard')}: +49 116 116
                 </Button>
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50">
-                  Online sperren
+                  {t('blockOnline')}
                 </Button>
               </div>
             </div>
@@ -182,10 +184,10 @@ function Kundenservice() {
           <div className="text-center mb-12">
             <HelpCircle className="w-16 h-16 text-[#00008B] mx-auto mb-4" />
             <h2 className="text-3xl font-light text-[#00008B] mb-4">
-              Häufig gestellte Fragen
+              {t('faq')}
             </h2>
             <p className="text-gray-600">
-              Finden Sie schnelle Antworten auf die häufigsten Fragen
+              {t('findAnswers')}
             </p>
           </div>
 
@@ -215,21 +217,20 @@ function Kundenservice() {
           className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-12 text-center"
         >
           <h2 className="text-3xl font-light mb-4">
-            Haben Sie noch Fragen?
+            {t('stillQuestions')}
           </h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Unser Kundenservice-Team ist gerne für Sie da. Kontaktieren Sie uns per Telefon, 
-            E-Mail oder vereinbaren Sie einen persönlichen Beratungstermin.
+            {t('contactTeam')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to={createPageUrl('Kontakt')}>
               <Button className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8">
-                Kontaktformular
+                {t('contactForm')}
               </Button>
             </Link>
             <Link to={createPageUrl('Filialen')}>
               <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8">
-                Filiale finden
+                {t('findBranch')}
               </Button>
             </Link>
           </div>

@@ -16,8 +16,10 @@ import {
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
+import { useTranslation } from './useTranslation';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     vorname: '',
     nachname: '',
@@ -83,7 +85,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
-              Ihr Geld ist hier MEHR wert
+              {t('moneyWorthMore')}
             </h1>
 
             {/* Promotion Box */}
@@ -94,9 +96,9 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-[#0000A0] rounded-lg p-8 inline-block cursor-pointer hover:bg-[#0000B5] transition-colors"
               >
-                <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
+                <p className="text-white/80 text-lg mb-2">{t('upTo')}</p>
                 <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">8.000€</p>
-                <p className="text-white text-lg">Bonus in EURC</p>
+                <p className="text-white text-lg">{t('bonusInEURC')}</p>
                 <p className="text-white/70 text-xs mt-3 space-y-1">
                   <div>25k: 4% + 2% Cashback</div>
                   <div>50k: 5% + 2% Cashback</div>
@@ -106,9 +108,9 @@ export default function HeroSection() {
             </Link>
 
             <p className="mt-8 text-white/80 text-sm">
-              Wählen Sie, wie Sie Ihr Konto eröffnen möchten, über einen Berater oder direkt über der SMS Funktion{' '}
+              {t('chooseHow')}{' '}
               <span className="text-white underline cursor-pointer hover:text-[#ffd000] transition-colors">
-                FORMULAR ABSENDEN
+                {t('submitForm')}
               </span>
             </p>
 
@@ -128,8 +130,8 @@ export default function HeroSection() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold text-lg">Maximale Sicherheit</h3>
-                    <p className="text-white/70 text-sm">Von Deutsche Bank garantiert</p>
+                    <h3 className="text-white font-semibold text-lg">{t('maximumSecurity')}</h3>
+                    <p className="text-white/70 text-sm">{t('guaranteedBy')}</p>
                   </div>
                 </div>
                 
@@ -189,10 +191,10 @@ export default function HeroSection() {
             className="bg-white rounded-lg shadow-2xl p-8"
           >
             <h2 className="text-xl font-semibold text-[#00008B] mb-2">
-              Konto eröffnen bei Deutsche Bank
+              {t('openAccount')}
             </h2>
             <p className="text-gray-600 text-sm mb-4">
-              Füllen Sie dieses Formular aus und wir werden uns unverbindlich mit Ihnen in Verbindung setzen.
+              {t('fillForm')}
             </p>
             
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
@@ -200,7 +202,7 @@ export default function HeroSection() {
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Maximale Sicherheit mit EURUA/EURC
+                {t('securityWith')}
               </h3>
               <ul className="text-xs text-gray-700 space-y-2">
                 <li className="flex items-start gap-2">
@@ -233,18 +235,18 @@ export default function HeroSection() {
                 </li>
               </ul>
               <p className="text-xs text-gray-600 mt-3 pt-3 border-t border-blue-200">
-                Ein Berater wird Sie innerhalb von 24 Stunden unverbindlich kontaktieren
+                {t('advisorContact')}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Label htmlFor="vorname" className="text-sm text-gray-700">
-                  Vorname <span className="text-red-500">*</span>
+                  {t('firstName')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="vorname"
-                  placeholder="Ihr Vorname"
+                  placeholder={t('yourFirstName')}
                   value={formData.vorname}
                   onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
@@ -253,11 +255,11 @@ export default function HeroSection() {
 
               <div>
                 <Label htmlFor="nachname" className="text-sm text-gray-700">
-                  Nachname <span className="text-red-500">*</span>
+                  {t('lastName')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="nachname"
-                  placeholder="Ihr Nachname"
+                  placeholder={t('yourLastName')}
                   value={formData.nachname}
                   onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
                   className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#00008B]"
@@ -266,7 +268,7 @@ export default function HeroSection() {
 
               <div>
                 <Label htmlFor="personalausweis" className="text-sm text-gray-700">
-                  Personalausweis <span className="text-red-500">*</span>
+                  {t('idCard')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="personalausweis"
@@ -279,7 +281,7 @@ export default function HeroSection() {
 
               <div>
                 <Label htmlFor="telefon" className="text-sm text-gray-700">
-                  Telefon <span className="text-red-500">*</span>
+                  {t('phone')} <span className="text-red-500">*</span>
                 </Label>
                 <div className="flex gap-2 mt-1">
                   <Select defaultValue="de">
@@ -307,7 +309,7 @@ export default function HeroSection() {
 
               <div>
                 <Label htmlFor="email" className="text-sm text-gray-700">
-                  E-Mail <span className="text-red-500">*</span>
+                  {t('email')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="email"
@@ -321,7 +323,7 @@ export default function HeroSection() {
 
               <div>
                 <Label htmlFor="postleitzahl" className="text-sm text-gray-700">
-                  Postleitzahl <span className="text-red-500">*</span>
+                  {t('zipCode')} <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="postleitzahl"
@@ -340,11 +342,10 @@ export default function HeroSection() {
                   className="mt-1 border-gray-300 data-[state=checked]:bg-[#00008B]"
                 />
                 <Label htmlFor="autorizo" className="text-xs text-gray-600 leading-relaxed">
-                  ICH AUTORISIERE die Erhebung und Verarbeitung meiner Daten zur Verwaltung meines Antrags und zum Empfang kommerzieller Informationen, wie in der{' '}
+                  {t('authorize')}{' '}
                   <span className="text-[#00008B] underline cursor-pointer hover:text-[#0000CD]">
-                    Datenschutzrichtlinie
-                  </span>{' '}
-                  beschrieben.
+                    {t('privacyPolicy')}
+                  </span>{t('described')}
                 </Label>
               </div>
 
@@ -356,10 +357,10 @@ export default function HeroSection() {
                 {loading ? (
                   <>
                     <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    Senden...
+                    {t('sending')}
                   </>
                 ) : (
-                  'FORMULAR ABSENDEN'
+                  t('submitForm')
                 )}
               </Button>
             </form>

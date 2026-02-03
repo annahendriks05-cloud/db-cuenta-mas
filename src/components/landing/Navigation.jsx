@@ -2,13 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from './useTranslation';
 
 export default function Navigation() {
+  const { t } = useTranslation();
+  
   const navItems = [
-    { label: 'Digital Festgeld', path: 'DigitalFestgeld' },
-    { label: 'Kontakt', path: 'Kontakt' },
-    { label: 'Filialen', path: 'Filialen' },
-    { label: 'Kundenservice', path: 'Kundenservice' }
+    { label: t('digitalFestgeld'), path: 'DigitalFestgeld' },
+    { label: t('kontakt'), path: 'Kontakt' },
+    { label: t('filialen'), path: 'Filialen' },
+    { label: t('kundenservice'), path: 'Kundenservice' }
   ];
 
   return (

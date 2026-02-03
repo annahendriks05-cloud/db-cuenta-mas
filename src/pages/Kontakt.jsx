@@ -12,8 +12,10 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
+import { useTranslation } from '@/components/landing/useTranslation';
 
 function Kontakt() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     vorname: '',
     nachname: '',
@@ -86,10 +88,10 @@ function Kontakt() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-6">
-              Kontakt
+              {t('contactTitle')}
             </h1>
             <p className="text-xl text-gray-600">
-              Wir sind für Sie da. Kontaktieren Sie uns per Telefon, E-Mail oder über unser Kontaktformular.
+              {t('contactSubtitle')}
             </p>
           </motion.div>
         </div>
@@ -105,13 +107,13 @@ function Kontakt() {
               animate={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-6"
             >
-              <h2 className="text-2xl font-semibold mb-6">Kontaktinformationen</h2>
+              <h2 className="text-2xl font-semibold mb-6">{t('contactInformation')}</h2>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold mb-1">Telefon</p>
+                    <p className="font-semibold mb-1">{t('phone')}</p>
                     <p className="text-white/90">+49 69 910-00</p>
                     <p className="text-xs text-white/70 mt-1">Mo-Fr: 8:00 - 20:00 Uhr</p>
                   </div>
@@ -120,7 +122,7 @@ function Kontakt() {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold mb-1">E-Mail</p>
+                    <p className="font-semibold mb-1">{t('email')}</p>
                     <p className="text-white/90">kontakt@deutschebank.de</p>
                   </div>
                 </div>
@@ -128,7 +130,7 @@ function Kontakt() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold mb-1">Hauptsitz</p>
+                    <p className="font-semibold mb-1">{t('headquarters')}</p>
                     <p className="text-white/90">
                       Taunusanlage 12<br />
                       60325 Frankfurt am Main<br />
@@ -140,7 +142,7 @@ function Kontakt() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold mb-1">Öffnungszeiten</p>
+                    <p className="font-semibold mb-1">{t('openingHours')}</p>
                     <p className="text-white/90 text-sm">
                       Montag - Freitag: 8:00 - 20:00<br />
                       Samstag: 9:00 - 14:00<br />
@@ -157,12 +159,12 @@ function Kontakt() {
               transition={{ delay: 0.1 }}
               className="bg-blue-50 border border-blue-200 rounded-xl p-6"
             >
-              <h3 className="text-lg font-semibold text-[#00008B] mb-3">Schnelle Hilfe</h3>
+              <h3 className="text-lg font-semibold text-[#00008B] mb-3">{t('quickHelp')}</h3>
               <p className="text-sm text-gray-700 mb-4">
-                Für dringende Anliegen kontaktieren Sie bitte unsere Hotline.
+                {t('urgentMatters')}
               </p>
               <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white">
-                Hotline anrufen
+                {t('callHotline')}
               </Button>
             </motion.div>
           </div>
@@ -174,13 +176,13 @@ function Kontakt() {
             className="lg:col-span-2 bg-white rounded-xl shadow-lg p-8"
           >
             <h2 className="text-2xl font-semibold text-[#00008B] mb-6">
-              Senden Sie uns eine Nachricht
+              {t('sendMessage')}
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="vorname">Vorname *</Label>
+                  <Label htmlFor="vorname">{t('firstName')} *</Label>
                   <Input
                     id="vorname"
                     required
@@ -190,7 +192,7 @@ function Kontakt() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="nachname">Nachname *</Label>
+                  <Label htmlFor="nachname">{t('lastName')} *</Label>
                   <Input
                     id="nachname"
                     required
@@ -214,7 +216,7 @@ function Kontakt() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="telefon">Telefon</Label>
+                  <Label htmlFor="telefon">{t('phone')}</Label>
                   <Input
                     id="telefon"
                     value={formData.telefon}
@@ -225,7 +227,7 @@ function Kontakt() {
               </div>
 
               <div>
-                <Label htmlFor="betreff">Betreff *</Label>
+                <Label htmlFor="betreff">{t('subject')} *</Label>
                 <Select
                   value={formData.betreff}
                   onValueChange={(value) => setFormData({ ...formData, betreff: value })}
@@ -244,14 +246,14 @@ function Kontakt() {
               </div>
 
               <div>
-                <Label htmlFor="nachricht">Nachricht *</Label>
+                <Label htmlFor="nachricht">{t('message')} *</Label>
                 <Textarea
                   id="nachricht"
                   required
                   value={formData.nachricht}
                   onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })}
                   className="mt-1 h-32"
-                  placeholder="Beschreiben Sie Ihr Anliegen..."
+                  placeholder={t('messagePlaceholder')}
                 />
               </div>
 
@@ -263,10 +265,10 @@ function Kontakt() {
                 {loading ? (
                   <>
                     <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    Wird gesendet...
+                    {t('sending')}
                   </>
                 ) : (
-                  'Nachricht senden'
+                  t('sendButton')
                 )}
               </Button>
             </form>

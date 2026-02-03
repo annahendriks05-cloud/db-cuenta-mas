@@ -5,8 +5,10 @@ import { Button } from '@/components/ui/button';
 import { TrendingUp, Lock, Building2 } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 import AnlageDialog from './AnlageDialog';
+import { useTranslation } from './useTranslation';
 
 export default function ProductSection() {
+  const { t } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
   return (
     <div className="bg-white py-16 md:py-24">
@@ -18,7 +20,7 @@ export default function ProductSection() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl text-center text-[#00008B] font-light mb-16"
         >
-          Wer gibt Ihnen MEHR für Ihr Gehalt und Ihre Ersparnisse?
+          {t('whoGivesMore')}
         </motion.h2>
 
         {/* EURUA/EURC Product */}
@@ -39,7 +41,7 @@ export default function ProductSection() {
                 <div className="flex items-center gap-3 mb-6">
                   <TrendingUp className="w-8 h-8 text-[#ffd000]" />
                   <span className="text-xs uppercase tracking-wider text-[#ffd000] font-semibold">
-                    DIGITALES FESTGELD
+                    {t('digitalFixedDeposit')}
                   </span>
                 </div>
                 
@@ -51,7 +53,7 @@ export default function ProductSection() {
                 </h3>
                 
                 <div className="bg-white/10 rounded-lg p-4 mb-6 border border-white/20 space-y-3">
-                  <p className="text-white/90 text-sm font-medium">Beispiel-Bonusberechnung:</p>
+                  <p className="text-white/90 text-sm font-medium">{t('exampleBonus')}</p>
                   
                   <div className="bg-white/5 rounded p-3 border border-white/10">
                     <p className="text-white/70 text-xs font-semibold mb-1">25.000€ Anlage</p>
@@ -75,7 +77,7 @@ export default function ProductSection() {
                       <div className="w-3 h-3 rounded-full bg-[#ffd000]"></div>
                     </div>
                     <p className="text-white/90">
-                      <strong>Modern:</strong> Ein modernes, sicheres digitales Festgeld
+                      <strong>{t('modern')}:</strong> {t('modernDesc')}
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -83,7 +85,7 @@ export default function ProductSection() {
                       <div className="w-3 h-3 rounded-full bg-[#ffd000]"></div>
                     </div>
                     <p className="text-white/90">
-                      <strong>Mehr Zinsen:</strong> Attraktive Verzinsung für Ihre Einlagen
+                      <strong>{t('moreInterest')}:</strong> {t('moreInterestDesc')}
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -91,7 +93,7 @@ export default function ProductSection() {
                       <div className="w-3 h-3 rounded-full bg-[#ffd000]"></div>
                     </div>
                     <p className="text-white/90">
-                      <strong>Mehr Sicherheit:</strong> Vollständig abgesichert durch Deutsche Bank
+                      <strong>{t('moreSecurity')}:</strong> {t('moreSecurityDesc')}
                     </p>
                   </div>
                 </div>
@@ -128,17 +130,17 @@ export default function ProductSection() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#00008B]/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 
                 <span className="text-xs uppercase tracking-wider text-[#00008B] font-semibold">
-                  MEHR RENTABILITÄT
+                  {t('moreProfitability')}
                 </span>
                 
                 <div className="mt-6">
                   <span className="text-5xl md:text-6xl font-light text-[#00008B]">Bis zu 6.000 €</span>
                 </div>
                 
-                <p className="text-xl mt-4 font-medium text-[#00008B]">für Ihre Ersparnisse</p>
+                <p className="text-xl mt-4 font-medium text-[#00008B]">{t('forYourSavings')}</p>
                 
                 <p className="text-gray-600 mt-4 text-sm leading-relaxed">
-                  6% effektiver Jahreszins für Guthaben zwischen 10.000 € und 150.000 €<sup>2</sup>.
+                  6% {t('effectiveInterest')}<sup>2</sup>.
                 </p>
               </div>
             </div>
@@ -153,22 +155,21 @@ export default function ProductSection() {
           className="mt-16 text-center"
         >
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            <strong className="text-[#00008B]">Nutzen Sie eine oder beide Aktionen</strong> vor dem 02.03.2026 
-            unter Einhaltung der <span className="text-[#00008B] underline cursor-pointer">Bedingungen</span><sup>3</sup>.
+            <strong className="text-[#00008B]">{t('useOffers')}</strong> {t('beforeDate')} <span className="text-[#00008B] underline cursor-pointer">{t('conditions')}</span><sup>3</sup>.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               className="bg-[#00008B] hover:bg-[#0000CD] text-white px-8 py-6 text-base font-medium transition-all duration-300"
             >
-              Mit Berater kontaktieren
+              {t('contactAdvisor')}
             </Button>
             <Button
               variant="outline"
               onClick={() => setDialogOpen(true)}
               className="border-[#001e50] text-[#00008B] hover:bg-[#001e50] hover:text-white px-8 py-6 text-base font-medium transition-all duration-300"
             >
-              Geld anlegen
+              {t('investMoney')}
             </Button>
           </div>
         </motion.div>
