@@ -1,77 +1,79 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PlusCircle, MinusCircle, CreditCard, Banknote, Globe, Shield, Vault, Clock } from 'lucide-react';
+import { useTranslation } from './useTranslation';
 
 export default function FeaturesSection() {
+  const { t } = useTranslation();
   const featureGroups = [
     {
-      title: 'MEHR Freiheit, um MEHR zu tun',
+      title: t('moreFreedom'),
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=350&fit=crop',
       features: [
         {
           icon: PlusCircle,
-          title: 'MEHR GELDAUTOMATEN',
-          description: 'Kostenlose Bargeldabhebungen an allen Geldautomaten weltweit.',
+          title: t('moreAtms'),
+          description: t('atmDesc'),
           highlight: true
         },
         {
           icon: MinusCircle,
-          title: 'KEINE GEBÜHREN',
-          description: 'Für Währungswechsel beim Einkauf mit der Debitkarte.',
+          title: t('noFees'),
+          description: t('noFeesDesc'),
           highlight: false
         }
       ]
     },
     {
-      title: 'MEHR Vorteile für den Alltag',
+      title: t('moreBenefits'),
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=350&fit=crop',
       features: [
         {
           icon: Banknote,
-          title: 'MEHR RENTABILITÄT',
-          description: 'Genießen Sie 6 % effektiven Jahreszins für Guthaben zwischen 10.000 € und 150.000 €.',
+          title: t('moreProfit'),
+          description: t('profitDesc'),
           highlight: true
         },
         {
           icon: Globe,
-          title: 'GLOBALER ZUGANG',
-          description: 'Verwalten Sie Ihr Konto von überall auf der Welt mit der DB App.',
+          title: t('globalAccess'),
+          description: t('globalAccessDesc'),
           highlight: false
         }
       ]
     },
     {
-      title: 'MEHR Sicherheit mit Tresor-Lösung',
+      title: t('moreSafetyVault'),
       image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=350&fit=crop',
       features: [
         {
           icon: Vault,
-          title: 'ECHTE TRESOR-LÖSUNG',
-          description: 'Zentral und dezentral gesichert - sicherer als ein Schließfach. Ihr digitales Geld wird wie in einem Hochsicherheitstresor verwahrt.',
+          title: t('realVaultSolution'),
+          description: t('vaultDesc'),
           highlight: true
         },
         {
           icon: CreditCard,
-          title: 'EIGENE GRATIS DIGITAL-IBAN',
-          description: 'Kostenlose digitale IBAN für Empfang von Euro und Zahlungen in Euro - höchste Sicherheit garantiert.',
+          title: t('ownDigitalIban'),
+          description: t('ibanDesc'),
           highlight: false
         }
       ]
     },
     {
-      title: 'MEHR Flexibilität',
+      title: t('moreFlexibility'),
       image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop',
       features: [
         {
           icon: Clock,
-          title: 'FLEXIBLE ÖFFNUNGSZEITEN',
-          description: 'Auch samstags geöffnet für Ihre Bequemlichkeit und Planung.',
+          title: t('flexibleHoursVault'),
+          description: t('hoursDesc'),
           highlight: true
         },
         {
           icon: Shield,
-          title: '7 TAGE VERFÜGBAR',
-          description: 'Online-Banking rund um die Uhr - Zugriff auf Ihr Konto wann immer Sie möchten.',
+          title: t('sevenDaysAvailable'),
+          description: t('sevenDaysDesc'),
           highlight: false
         }
       ]
@@ -89,7 +91,7 @@ export default function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl text-[#00008B] font-light">
-            Ein Konto für alle, die MEHR für viel weniger wollen
+            {t('accountForMore')}
           </h2>
         </motion.div>
 
@@ -158,9 +160,9 @@ export default function FeaturesSection() {
           className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {[
-            { icon: Shield, title: 'Sicherheit', desc: 'Maximaler Schutz für Ihre Daten und Transaktionen' },
-            { icon: CreditCard, title: 'Keine versteckten Kosten', desc: 'Völlige Transparenz bei allen Operationen' },
-            { icon: Globe, title: 'Globale Präsenz', desc: 'Unterstützung durch eine führende internationale Bank' }
+            { icon: Shield, title: t('securityBadge'), desc: 'Maximaler Schutz für Ihre Daten und Transaktionen' },
+            { icon: CreditCard, title: t('noHiddenCosts'), desc: t('noCostsDesc') },
+            { icon: Globe, title: t('globalPresence'), desc: t('globalPresenceDesc') }
           ].map((badge, index) => (
             <div
               key={index}
