@@ -227,29 +227,28 @@ function Kundenservice() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-20"
         >
           <div className="text-center mb-12">
-            <HelpCircle className="w-16 h-16 text-[#00008B] mx-auto mb-4" />
-            <h2 className="text-3xl font-light text-[#00008B] mb-4">
-              {t('faq')}
+            <h2 className="text-4xl font-bold text-[#00008B] mb-4">
+              Häufig gestellte Fragen
             </h2>
-            <p className="text-gray-600">
-              {t('findAnswers')}
+            <p className="text-gray-600 text-lg">
+              Finden Sie Antworten auf Ihre Fragen
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqItems.map((item, idx) => (
               <AccordionItem
                 key={idx}
                 value={`item-${idx}`}
-                className="bg-gray-50 rounded-lg px-6 border border-gray-200"
+                className="bg-white border border-gray-200 rounded-lg px-6 hover:border-[#00008B]/30 transition-colors"
               >
-                <AccordionTrigger className="text-[#00008B] font-semibold hover:no-underline">
+                <AccordionTrigger className="text-[#00008B] font-semibold hover:no-underline py-4">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600">
+                <AccordionContent className="text-gray-600 pb-4">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
