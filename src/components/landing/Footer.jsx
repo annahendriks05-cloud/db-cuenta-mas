@@ -53,24 +53,28 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
             <Link 
               to={createPageUrl('DigitalFestgeld')}
+              onClick={() => window.scrollTo(0, 0)}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
               {t('digitalFestgeld')}
             </Link>
             <Link 
               to={createPageUrl('Kontakt')}
+              onClick={() => window.scrollTo(0, 0)}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
               {t('kontakt')}
             </Link>
             <Link 
               to={createPageUrl('Filialen')}
+              onClick={() => window.scrollTo(0, 0)}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
               {t('filialen')}
             </Link>
             <Link 
               to={createPageUrl('Kundenservice')}
+              onClick={() => window.scrollTo(0, 0)}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
               {t('kundenservice')}
