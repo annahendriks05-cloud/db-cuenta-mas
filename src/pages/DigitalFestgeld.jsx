@@ -80,12 +80,11 @@ export default function DigitalFestgeld() {
       <div className="bg-[#00008B] text-white py-4">
         <div className="max-w-7xl mx-auto px-4">
           <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
-            <div className="w-10 h-10 bg-white flex items-center justify-center p-1.5">
-              <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00008B" strokeWidth="8"/>
-                <path d="M20 80 L80 20" stroke="#00008B" strokeWidth="8"/>
-              </svg>
-            </div>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Deutsche_Bank_logo_without_wordmark.svg/240px-Deutsche_Bank_logo_without_wordmark.svg.png" 
+              alt="Deutsche Bank Logo" 
+              className="w-10 h-10 bg-white p-1"
+            />
             <p className="text-lg font-semibold">Deutsche Bank</p>
           </Link>
         </div>

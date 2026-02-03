@@ -73,12 +73,11 @@ export default function HeroSection() {
           >
             {/* Logo */}
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-16 h-16 bg-white flex items-center justify-center p-2">
-                <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                  <rect x="10" y="10" width="80" height="80" fill="none" stroke="#001e50" strokeWidth="8"/>
-                  <path d="M20 80 L80 20" stroke="#001e50" strokeWidth="8"/>
-                </svg>
-              </div>
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Deutsche_Bank_logo_without_wordmark.svg/240px-Deutsche_Bank_logo_without_wordmark.svg.png" 
+                alt="Deutsche Bank Logo" 
+                className="w-16 h-16"
+              />
               <div>
                 <p className="text-xl font-semibold">Deutsche Bank</p>
               </div>
