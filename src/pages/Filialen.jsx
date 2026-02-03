@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Search } from 'lucide-react';
+import { MapPin, Clock, Search, Globe2, Building2, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
@@ -198,120 +198,239 @@ function Filialen() {
       <Navigation />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="relative bg-gradient-to-br from-[#00008B] via-[#0000CD] to-[#1a1a8f] py-24 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ffd000] rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-6">
-              Filialen
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <Globe2 className="w-4 h-4 text-[#ffd000]" />
+              <span className="text-white/90 text-sm font-medium">Wereldwijd aanwezig</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-light text-white mb-6">
+              Vind uw dichtstbijzijnde filiaal
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Deutsche Bank filialen in Nederland. Zoek wereldwijd in de zoekbalk.
+            <p className="text-xl text-white/80 mb-12">
+              Deutsche Bank filialen in Nederland. Zoek wereldwijd naar alle locaties.
             </p>
 
             {/* Search */}
             <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <div className="relative group">
+                <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-[#00008B] transition-colors" />
                 <Input
                   placeholder="Zoek wereldwijd: stad, land of adres..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 py-6 text-base"
+                  className="pl-14 pr-6 py-7 text-base bg-white/95 backdrop-blur-sm border-0 shadow-2xl rounded-2xl focus:ring-2 focus:ring-[#ffd000] transition-all"
                 />
               </div>
+              
+              {searchQuery && (
+                <motion.p
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-white/70 text-sm mt-4"
+                >
+                  {filteredFilialen.length} {filteredFilialen.length === 1 ? 'filiaal' : 'filialen'} gevonden
+                </motion.p>
+              )}
             </div>
           </motion.div>
         </div>
       </div>
 
       {/* Filialen List */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        {!searchQuery && (
+          <div className="mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center"
+            >
+              <h2 className="text-3xl font-light text-[#00008B] mb-3">
+                Deutsche Bank Nederland
+              </h2>
+              <p className="text-gray-600">Bezoek een van onze filialen in Nederland</p>
+            </motion.div>
+          </div>
+        )}
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredFilialen.map((filiale, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+              transition={{ delay: idx * 0.05, duration: 0.5 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
             >
-              <h3 className="text-lg font-semibold text-[#00008B] mb-4">
-                {filiale.name}
-              </h3>
-
-              <div className="space-y-3 text-sm mb-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-[#00008B] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">{filiale.adresse}</p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Clock className="w-4 h-4 text-[#00008B] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">{filiale.zeiten}</p>
+              {/* Country Badge */}
+              <div className="absolute top-4 right-4 z-10">
+                <span className="inline-flex items-center gap-1 bg-[#00008B] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
+                  <Globe2 className="w-3 h-3" />
+                  {filiale.land}
+                </span>
+              </div>
+              
+              {/* Gradient Header */}
+              <div className="h-32 bg-gradient-to-br from-[#00008B] to-[#0000CD] relative overflow-hidden">
+                <div className="absolute inset-0 bg-white/5"></div>
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <Building2 className="w-6 h-6 text-white" />
+                  </div>
                 </div>
               </div>
 
-              <Button className="w-full mt-4 bg-[#00008B] hover:bg-[#0000CD] text-white">
-                Route planen
-              </Button>
+              {/* Content */}
+              <div className="p-6 pt-4">
+                <h3 className="text-xl font-semibold text-[#00008B] mb-4 group-hover:text-[#0000CD] transition-colors">
+                  {filiale.name}
+                </h3>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-[#00008B]" />
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">{filiale.adresse}</p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-4 h-4 text-green-600" />
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">{filiale.zeiten}</p>
+                  </div>
+                </div>
+
+                {/* Action Button */}
+                <Button className="w-full bg-gradient-to-r from-[#00008B] to-[#0000CD] hover:from-[#0000A0] hover:to-[#0000E0] text-white font-medium py-6 rounded-xl shadow-lg shadow-blue-500/20 group-hover:shadow-xl group-hover:shadow-blue-500/30 transition-all">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Route plannen
+                </Button>
+              </div>
+
+              {/* Decorative Bottom Border */}
+              <div className="h-1 bg-gradient-to-r from-[#00008B] via-[#ffd000] to-[#0000CD]"></div>
             </motion.div>
           ))}
         </div>
 
         {filteredFilialen.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500">Keine Filialen gefunden</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-20"
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-6">
+              <Search className="w-10 h-10 text-gray-400" />
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-2">Geen filialen gevonden</h3>
+            <p className="text-gray-500">Probeer een andere zoekopdracht</p>
+          </motion.div>
         )}
       </div>
 
       {/* Info Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="relative bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#00008B] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#ffd000] rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-light text-[#00008B] mb-4">Waarom Deutsche Bank?</h2>
+            <p className="text-xl text-gray-600">Uw vertrouwde partner wereldwijd</p>
+          </motion.div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-6 text-center"
+              transition={{ duration: 0.5 }}
+              className="relative bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden"
             >
-              <div className="w-16 h-16 bg-[#00008B] rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00008B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Globe2 className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#00008B] mb-3">Wereldwijd aanwezig</h3>
+                <p className="text-gray-600 leading-relaxed">In meer dan 50 landen voor u klaar met lokale expertise en mondiale kennis</p>
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold">
+                    <TrendingUp className="w-5 h-5" />
+                    <span>50+ landen</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#00008B] mb-2">Weltweit vertreten</h3>
-              <p className="text-gray-600">In über 50 Ländern für Sie da</p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-xl p-6 text-center"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="relative bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden"
             >
-              <div className="w-16 h-16 bg-[#00008B] rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ffd000]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#ffd000] to-[#ffdb33] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Building2 className="w-10 h-10 text-[#00008B]" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#00008B] mb-3">Persoonlijk advies</h3>
+                <p className="text-gray-600 leading-relaxed">Ervaren adviseurs helpen u met al uw financiële vragen en doelstellingen</p>
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold">
+                    <TrendingUp className="w-5 h-5" />
+                    <span>Expert team</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#00008B] mb-2">Persönliche Beratung</h3>
-              <p className="text-gray-600">Kompetente Experten vor Ort</p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white rounded-xl p-6 text-center"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden"
             >
-              <div className="w-16 h-16 bg-[#00008B] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Clock className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-[#00008B] mb-3">Flexibele openingstijden</h3>
+                <p className="text-gray-600 leading-relaxed">Ook op zaterdag geopend voor uw gemak en planning</p>
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold">
+                    <TrendingUp className="w-5 h-5" />
+                    <span>7 dagen beschikbaar</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#00008B] mb-2">Flexible Öffnungszeiten</h3>
-              <p className="text-gray-600">Auch samstags für Sie geöffnet</p>
             </motion.div>
           </div>
         </div>
