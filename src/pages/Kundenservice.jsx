@@ -147,45 +147,45 @@ function Kundenservice() {
           ))}
         </div>
 
-        {/* Oficina de Berlín */}
+        {/* Branch Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-white to-gray-50 border-2 border-[#00008B]/10 rounded-2xl p-8 mb-16 shadow-lg"
+          className="bg-gray-50 border border-gray-200 rounded-xl p-12 mb-20"
         >
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold text-[#00008B] mb-4">Deutsche Bank Berlín</h3>
-              <div className="space-y-3 text-gray-700">
-                <p className="flex items-start gap-2">
-                  <span className="font-semibold min-w-[100px]">Dirección:</span>
-                  <span>Unter den Linden 13-15, 10117 Berlín, Alemania</span>
+              <h3 className="text-2xl font-bold text-[#00008B] mb-6">Deutsche Bank Berlin</h3>
+              <div className="space-y-4 text-gray-700">
+                <p className="flex items-start gap-3">
+                  <span className="font-semibold min-w-[80px] text-[#00008B]">Adresse:</span>
+                  <span>Unter den Linden 13-15, 10117 Berlin, Deutschland</span>
                 </p>
-                <p className="flex items-start gap-2">
-                  <span className="font-semibold min-w-[100px]">Teléfono:</span>
+                <p className="flex items-start gap-3">
+                  <span className="font-semibold min-w-[80px] text-[#00008B]">Telefon:</span>
                   <span>+49 30 544 480 512</span>
                 </p>
-                <p className="flex items-start gap-2">
-                  <span className="font-semibold min-w-[100px]">Email:</span>
+                <p className="flex items-start gap-3">
+                  <span className="font-semibold min-w-[80px] text-[#00008B]">Email:</span>
                   <span>info@deutschebank.de</span>
                 </p>
               </div>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-[#00008B] mb-4">Horarios de atención</h4>
-              <div className="space-y-2 text-gray-700">
+              <h4 className="text-xl font-bold text-[#00008B] mb-6">Öffnungszeiten</h4>
+              <div className="space-y-3 text-gray-700">
                 <p className="flex justify-between">
-                  <span className="font-medium">Lunes - Viernes:</span>
+                  <span className="font-medium">Montag - Freitag:</span>
                   <span>9:00 - 18:00</span>
                 </p>
                 <p className="flex justify-between">
-                  <span className="font-medium">Sábado:</span>
+                  <span className="font-medium">Samstag:</span>
                   <span>10:00 - 14:00</span>
                 </p>
                 <p className="flex justify-between">
-                  <span className="font-medium">Domingo:</span>
-                  <span className="text-red-600">Cerrado</span>
+                  <span className="font-medium">Sonntag:</span>
+                  <span className="text-red-600 font-semibold">Geschlossen</span>
                 </p>
               </div>
             </div>
