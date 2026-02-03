@@ -200,18 +200,58 @@ function Kontakt() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="lg:col-span-2 bg-white rounded-2xl shadow-2xl p-8 md:p-10 border border-gray-100"
+            className="lg:col-span-2 bg-white rounded-lg shadow-2xl p-8"
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-[#00008B] rounded-xl flex items-center justify-center">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#00008B]">
-                {t('sendMessage')}
-              </h2>
+            <h2 className="text-xl font-semibold text-[#00008B] mb-2">
+              {t('sendMessage')}
+            </h2>
+            <p className="text-gray-600 text-sm mb-4">
+              {t('contactSubtitle')}
+            </p>
+            
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+              <h3 className="text-sm font-semibold text-[#00008B] mb-3 flex items-center gap-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Sicherheit bei Deutsche Bank
+              </h3>
+              <ul className="text-xs text-gray-700 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>Einlagensicherung:</strong> Bis zu 100.000€ vollständig geschützt</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>Betrugsschutz:</strong> Höchste Sicherheit für alle Transaktionen</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>Kostenlose digitale EURC/EURAU IBAN:</strong> Ihr persönliches sicheres Konto</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>Zahlungen senden & empfangen:</strong> Mit maximaler Sicherheit</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>100% auf Ihren Namen:</strong> Nur Sie haben Zugriff</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>Dezentrale Lösungen:</strong> Erstmalig innovative Blockchain-Technologie</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-600 font-bold">✓</span>
+                  <span><strong>Komplett kostenlos:</strong> Keine versteckten Gebühren</span>
+                </li>
+              </ul>
+              <p className="text-xs text-gray-600 mt-3 pt-3 border-t border-blue-200">
+                Wir werden Sie in Kürze kontaktieren
+              </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="vorname">{t('firstName')} *</Label>
