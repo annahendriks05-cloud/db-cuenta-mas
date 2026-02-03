@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import Navigation from '@/components/landing/Navigation';
+import { useTranslation } from '@/components/landing/useTranslation';
 import {
   Select,
   SelectContent,
@@ -34,6 +35,7 @@ import {
 } from 'lucide-react';
 
 export default function DigitalFestgeld() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     vorname: '',
     nachname: '',
@@ -117,24 +119,24 @@ export default function DigitalFestgeld() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 md:px-4 py-1.5 md:py-2 mb-4 md:mb-6">
-              <p className="text-xs md:text-sm font-semibold">Digital Festgeld Pionier</p>
+              <p className="text-xs md:text-sm font-semibold">{t('digitalFestgeldPionier')}</p>
             </div>
             
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-light mb-4 md:mb-6 px-4">
-              Revolutionäres Digital Festgeld
+              {t('revolutionaerDigitalFestgeld')}
             </h1>
             
             <p className="text-base md:text-xl text-white/90 mb-8 md:mb-12 px-4">
-              Wandeln Sie Ihr Geld in digitales, hochsicheres EURAU/EURC um. Erhalten Sie bis zu 6% Zinsen p.a. plus 2% Cashback-Bonus sofort nach Einzahlung.
+              {t('digitalFestgeldDesc')}
             </p>
 
             {/* Feature Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-12 px-2">
               {[
-                { label: 'Einlagensicherung', value: 'Bis zu 100.000€', icon: ShieldCheck },
-                { label: 'Attraktive Zinsen', value: '4% bis 6% p.a.', icon: TrendingUp },
-                { label: '2% Cashback', value: 'Sofort nach Einzahlung', icon: Gift },
-                { label: 'Maximale Sicherheit', value: 'Dezentrale Lösung', icon: Lock }
+                { label: t('einlagensicherung'), value: t('bisZu100k'), icon: ShieldCheck },
+                { label: t('attraktiveZinsen'), value: t('zinsen4bis6'), icon: TrendingUp },
+                { label: t('cashback2'), value: t('sofortNachEinzahlung'), icon: Gift },
+                { label: t('maximaleSicherheit'), value: t('dezentraleLoesung'), icon: Lock }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
