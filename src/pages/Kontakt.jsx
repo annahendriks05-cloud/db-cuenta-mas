@@ -31,13 +31,14 @@ function Kontakt() {
     setLoading(true);
 
     try {
-      await base44.asServiceRole.callFunction('submitContactForm', {
-        firstName: formData.vorname,
-        lastName: formData.nachname,
+      await base44.entities.Kontaktanfrage.create({
+        vorname: formData.vorname,
+        nachname: formData.nachname,
         email: formData.email,
-        phone: formData.telefon,
-        subject: formData.betreff,
-        message: formData.nachricht
+        telefon: formData.telefon,
+        betreff: formData.betreff,
+        nachricht: formData.nachricht,
+        status: 'neu'
       });
       
       toast.success('Ihre Nachricht wurde erfolgreich gesendet!');
