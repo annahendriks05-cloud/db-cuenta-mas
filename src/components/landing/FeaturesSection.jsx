@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PlusCircle, MinusCircle, CreditCard, Banknote, Globe, Shield } from 'lucide-react';
+import { PlusCircle, MinusCircle, CreditCard, Banknote, Globe, Shield, Vault, Clock } from 'lucide-react';
 
 export default function FeaturesSection() {
   const featureGroups = [
