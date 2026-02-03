@@ -201,43 +201,123 @@ function Filialen() {
       zeiten: 'Mo-Fr: 9:00-18:00',
       land: 'Deutschland'
     },
-    // Reino Unido
+    // Reino Unido - London (5 sucursales)
     {
-      name: 'Deutsche Bank London',
+      name: 'Deutsche Bank London Winchester Street',
       adresse: '1 Great Winchester Street, London EC2N 2DB, United Kingdom',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'United Kingdom'
     },
-    // Francia
     {
-      name: 'Deutsche Bank Paris',
+      name: 'Deutsche Bank London Fenchurch Street',
+      adresse: '23 Fenchurch Street, London EC3M 3BY, United Kingdom',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'United Kingdom'
+    },
+    {
+      name: 'Deutsche Bank London Canary Wharf',
+      adresse: '1 Appold Street, London EC2A 2UU, United Kingdom',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'United Kingdom'
+    },
+    {
+      name: 'Deutsche Bank London Mayfair',
+      adresse: '31 Curzon Street, London W1J 7TX, United Kingdom',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'United Kingdom'
+    },
+    {
+      name: 'Deutsche Bank London City',
+      adresse: '60 Victoria Embankment, London EC4Y 0JP, United Kingdom',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'United Kingdom'
+    },
+    // Francia - Paris (4 sucursales)
+    {
+      name: 'Deutsche Bank Paris Avenue de Friedland',
       adresse: '3 Avenue de Friedland, 75008 Paris, France',
       zeiten: 'Mo-Fr: 9:00-17:30',
       land: 'France'
     },
-    // Italia
     {
-      name: 'Deutsche Bank Milano',
+      name: 'Deutsche Bank Paris Champs-Élysées',
+      adresse: '66 Avenue des Champs-Élysées, 75008 Paris, France',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'France'
+    },
+    {
+      name: 'Deutsche Bank Paris La Défense',
+      adresse: '7 Place du Chancelier Adenauer, 75016 Paris, France',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'France'
+    },
+    {
+      name: 'Deutsche Bank Paris Opéra',
+      adresse: '12 Boulevard de la Madeleine, 75009 Paris, France',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'France'
+    },
+    // Italia - Milano (3 sucursales)
+    {
+      name: 'Deutsche Bank Milano Piazza del Calendario',
       adresse: 'Piazza del Calendario 3, 20126 Milano, Italia',
       zeiten: 'Mo-Fr: 9:00-17:30',
       land: 'Italia'
     },
     {
-      name: 'Deutsche Bank Roma',
+      name: 'Deutsche Bank Milano Piazza Duomo',
+      adresse: 'Piazza Duomo 19, 20121 Milano, Italia',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'Italia'
+    },
+    {
+      name: 'Deutsche Bank Milano Porta Nuova',
+      adresse: 'Via Gaetano de Castillia 6, 20124 Milano, Italia',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'Italia'
+    },
+    // Roma
+    {
+      name: 'Deutsche Bank Roma Via Mercadante',
       adresse: 'Via Mercadante 12/14, 00198 Roma, Italia',
       zeiten: 'Mo-Fr: 9:00-17:30',
       land: 'Italia'
     },
-    // España
     {
-      name: 'Deutsche Bank Madrid',
+      name: 'Deutsche Bank Roma Via Nazionale',
+      adresse: 'Via Nazionale 91, 00184 Roma, Italia',
+      zeiten: 'Mo-Fr: 9:00-17:30',
+      land: 'Italia'
+    },
+    // España - Madrid (3 sucursales)
+    {
+      name: 'Deutsche Bank Madrid Castellana',
       adresse: 'Paseo de la Castellana 18, 28046 Madrid, España',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'España'
     },
     {
-      name: 'Deutsche Bank Barcelona',
+      name: 'Deutsche Bank Madrid Serrano',
+      adresse: 'Calle Serrano 55, 28006 Madrid, España',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'España'
+    },
+    {
+      name: 'Deutsche Bank Madrid Azca',
+      adresse: 'Paseo de la Castellana 95, 28046 Madrid, España',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'España'
+    },
+    // Barcelona (2 sucursales)
+    {
+      name: 'Deutsche Bank Barcelona Diagonal',
       adresse: 'Avinguda Diagonal 477, 08036 Barcelona, España',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'España'
+    },
+    {
+      name: 'Deutsche Bank Barcelona Passeig de Gràcia',
+      adresse: 'Passeig de Gràcia 111, 08008 Barcelona, España',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'España'
     },
