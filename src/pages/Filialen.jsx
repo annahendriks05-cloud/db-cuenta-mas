@@ -730,12 +730,12 @@ function Filialen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <Vault className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">Tresor Lösung</h3>
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed">Eigene gratis Digital-IBAN für Empfang von Euro und Zahlungen tätigen in Euro. Sehr sicher - es gibt zentral und dezentral echte Tresor Lösung.</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">Digitale Tresor-Lösung</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">Kostenlose digitale IBAN für sichere Euro-Transaktionen. Maximale Sicherheit durch zentrale und dezentrale Verwahrung - eine innovative Lösung, die höchste Schutzstandards übertrifft.</p>
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold text-sm md:text-base">
                     <TrendingUp className="w-5 h-5" />
-                    <span>Sicherer als ein Schließfach</span>
+                    <span>Höchste Sicherheitsstandards</span>
                   </div>
                 </div>
               </div>
