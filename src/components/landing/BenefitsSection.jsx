@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from './useTranslation';
 
 export default function BenefitsSection() {
+  const { t } = useTranslation();
   return (
     <div className="bg-white py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
@@ -13,7 +15,7 @@ export default function BenefitsSection() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl text-center text-[#001e50] font-light mb-16"
         >
-          ¿Quién le da MÁS por su nómina y sus ahorros?
+          {t('whoGivesMore')}
         </motion.h2>
 
         {/* Benefits Grid */}
@@ -32,14 +34,14 @@ export default function BenefitsSection() {
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                 
                 <span className="text-xs uppercase tracking-wider text-[#ffd000] font-semibold">
-                  MÁS REMUNERACIÓN
-                </span>
-                
-                <div className="mt-6">
-                  <span className="text-6xl md:text-7xl font-light text-[#ffd000]">500 €</span>
-                </div>
-                
-                <p className="text-xl mt-4 font-medium">por traer su nómina</p>
+                   MÁS REMUNERACIÓN
+                 </span>
+
+                 <div className="mt-6">
+                   <span className="text-6xl md:text-7xl font-light text-[#ffd000]">{t('upTo')} 500€</span>
+                 </div>
+
+                 <p className="text-xl mt-4 font-medium">{t('bonusInEURC')}</p>
                 
                 <p className="text-white/70 mt-4 text-sm leading-relaxed">
                   Domiciliando una nómina<sup>1</sup> a partir de 2.000 €/mes.
@@ -77,14 +79,14 @@ export default function BenefitsSection() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#001e50]/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 
                 <span className="text-xs uppercase tracking-wider text-[#001e50] font-semibold">
-                  MÁS RENTABILIDAD
-                </span>
-                
-                <div className="mt-6">
-                  <span className="text-5xl md:text-6xl font-light text-[#001e50]">Hasta 2.240 €</span>
-                </div>
-                
-                <p className="text-xl mt-4 font-medium text-[#001e50]">por traer sus ahorros</p>
+                   {t('moreProfitability')}
+                 </span>
+
+                 <div className="mt-6">
+                   <span className="text-5xl md:text-6xl font-light text-[#001e50]">Hasta 2.240€</span>
+                 </div>
+
+                 <p className="text-xl mt-4 font-medium text-[#001e50]">{t('forYourSavings')}</p>
                 
                 <p className="text-gray-600 mt-4 text-sm leading-relaxed">
                   1,50 % TAE para saldos entre 10.000 € y 150.000 €<sup>2</sup>.
@@ -102,22 +104,21 @@ export default function BenefitsSection() {
           className="mt-16 text-center"
         >
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            <strong className="text-[#001e50]">Aproveche una o ambas promociones</strong> antes del 02/03/2026, 
-            cumpliendo <span className="text-[#001e50] underline cursor-pointer">condiciones</span><sup>3</sup>.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              className="bg-[#001e50] hover:bg-[#003087] text-white px-8 py-6 text-base font-medium transition-all duration-300"
-            >
-              Contratar con Gestor
-            </Button>
-            <Button
-              variant="outline"
-              className="border-[#001e50] text-[#001e50] hover:bg-[#001e50] hover:text-white px-8 py-6 text-base font-medium transition-all duration-300"
-            >
-              Contratar en App DB
-            </Button>
+             <strong className="text-[#001e50]">{t('useOffers')}</strong> {t('beforeDate')} <span className="text-[#001e50] underline cursor-pointer">{t('conditions')}</span><sup>3</sup>.
+           </p>
+
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+             <Button
+               className="bg-[#001e50] hover:bg-[#003087] text-white px-8 py-6 text-base font-medium transition-all duration-300"
+             >
+               {t('contactAdvisor')}
+             </Button>
+             <Button
+               variant="outline"
+               className="border-[#001e50] text-[#001e50] hover:bg-[#001e50] hover:text-white px-8 py-6 text-base font-medium transition-all duration-300"
+             >
+               {t('investMoney')}
+             </Button>
           </div>
         </motion.div>
       </div>
