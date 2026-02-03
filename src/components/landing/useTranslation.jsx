@@ -259,7 +259,14 @@ const translations = {
     contactTeam: 'Our customer service team is happy to help you. Contact us by phone, email or schedule a personal consultation.',
     contactForm: 'Contact form',
     findBranch: 'Find branch',
-    
+
+    // Opening Hours
+    openingTitle: 'Opening Hours',
+    mondayFriday: 'Monday - Friday',
+    saturday: 'Saturday',
+    sunday: 'Sunday',
+    closed: 'Closed',
+
     // Chat Dialog
     chatTitle: 'Start chat',
     chatDescription: 'Please enter your details',
