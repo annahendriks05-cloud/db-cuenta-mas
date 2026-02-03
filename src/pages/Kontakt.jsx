@@ -79,17 +79,28 @@ function Kontakt() {
       <Navigation />
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-gray-50 to-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="relative bg-gradient-to-br from-[#00008B] via-[#0000CD] to-[#1a1a8f] py-24 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#ffd000] rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <Mail className="w-4 h-4 text-[#ffd000]" />
+              <span className="text-white/90 text-sm font-medium">24/7 Erreichbar</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-light text-white mb-6">
               {t('contactTitle')}
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg md:text-xl text-white/80">
               {t('contactSubtitle')}
             </p>
           </motion.div>
@@ -104,47 +115,60 @@ function Kontakt() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-6"
+              className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-2xl p-8 shadow-xl"
             >
-              <h2 className="text-2xl font-semibold mb-6">{t('contactInformation')}</h2>
+              <h2 className="text-2xl font-semibold mb-8 flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#ffd000] rounded-lg flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-[#00008B]" />
+                </div>
+                {t('contactInformation')}
+              </h2>
               
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all">
+                  <div className="w-10 h-10 bg-[#ffd000] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#00008B]" />
+                  </div>
                   <div>
-                    <p className="font-semibold mb-1">{t('phone')}</p>
-                    <p className="text-white/90">+49 69 910-00</p>
-                    <p className="text-xs text-white/70 mt-1">Mo-Fr: 8:00 - 20:00 Uhr</p>
+                    <p className="font-semibold mb-2 text-[#ffd000]">{t('phone')}</p>
+                    <p className="text-white text-lg font-medium">+49 30 544480512</p>
+                    <p className="text-xs text-white/70 mt-1">Montag - Freitag: 9:00 - 18:00 Uhr</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all">
+                  <div className="w-10 h-10 bg-[#ffd000] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-[#00008B]" />
+                  </div>
                   <div>
-                    <p className="font-semibold mb-1">{t('email')}</p>
-                    <p className="text-white/90">kontakt@deutschebank.de</p>
+                    <p className="font-semibold mb-2 text-[#ffd000]">{t('email')}</p>
+                    <p className="text-white text-lg font-medium">info@deutschebank.de</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all">
+                  <div className="w-10 h-10 bg-[#ffd000] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-[#00008B]" />
+                  </div>
                   <div>
-                    <p className="font-semibold mb-1">{t('headquarters')}</p>
+                    <p className="font-semibold mb-2 text-[#ffd000]">Deutsche Bank Berlin</p>
                     <p className="text-white/90">
-                      Taunusanlage 12<br />
-                      60325 Frankfurt am Main<br />
+                      Unter den Linden 13-15<br />
+                      10117 Berlin<br />
                       Deutschland
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/15 transition-all">
+                  <div className="w-10 h-10 bg-[#ffd000] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-[#00008B]" />
+                  </div>
                   <div>
-                    <p className="font-semibold mb-1">{t('openingHours')}</p>
+                    <p className="font-semibold mb-2 text-[#ffd000]">{t('openingHours')}</p>
                     <p className="text-white/90 text-sm">
-                      Montag - Freitag: 8:00 - 20:00<br />
-                      Samstag: 9:00 - 14:00<br />
+                      Montag - Freitag: 9:00 - 18:00<br />
+                      Samstag: 9:00 - 13:00<br />
                       Sonntag: Geschlossen
                     </p>
                   </div>
@@ -156,13 +180,17 @@ function Kontakt() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
-              className="bg-blue-50 border border-blue-200 rounded-xl p-6"
+              className="bg-gradient-to-br from-[#ffd000] to-[#ffdb33] rounded-2xl p-6 shadow-lg"
             >
-              <h3 className="text-lg font-semibold text-[#00008B] mb-3">{t('quickHelp')}</h3>
-              <p className="text-sm text-gray-700 mb-4">
+              <h3 className="text-xl font-semibold text-[#00008B] mb-3 flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                {t('quickHelp')}
+              </h3>
+              <p className="text-sm text-[#00008B]/80 mb-4">
                 {t('urgentMatters')}
               </p>
-              <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white">
+              <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white shadow-lg">
+                <Phone className="w-4 h-4 mr-2" />
                 {t('callHotline')}
               </Button>
             </motion.div>
@@ -172,11 +200,16 @@ function Kontakt() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="lg:col-span-2 bg-white rounded-xl shadow-lg p-8"
+            className="lg:col-span-2 bg-white rounded-2xl shadow-2xl p-8 md:p-10 border border-gray-100"
           >
-            <h2 className="text-2xl font-semibold text-[#00008B] mb-6">
-              {t('sendMessage')}
-            </h2>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-[#00008B] rounded-xl flex items-center justify-center">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#00008B]">
+                {t('sendMessage')}
+              </h2>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
