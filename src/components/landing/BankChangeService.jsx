@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useTranslation } from './useTranslation';
 
 export default function BankChangeService() {
+  const { t } = useTranslation();
   const services = [
-    'Ihre Lastschriften (Strom, Wasser, etc.).',
-    'Periodische ausgehende Überweisungen und regelmäßige Eingänge (z.B. Mieteinnahmen).',
-    'Übertragung Ihres aktuellen Guthabens und sogar Kontoschließung.'
+    t('directDebits'),
+    t('periodicTransfers'),
+    t('balanceTransfer')
   ];
 
   return (
@@ -21,12 +23,11 @@ export default function BankChangeService() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl text-[#001e50] font-light mb-6 leading-tight">
-              Wir helfen Ihnen, alle Ihre Bankabbuchungen zu wechseln
+              {t('weHelpChange')}
             </h2>
             
             <p className="text-gray-600 mb-8">
-              Der Prozess ist <strong className="text-[#001e50]">einfach, sicher und völlig kostenlos</strong>, 
-              und Sie können ihn digital oder über Ihren persönlichen Berater durchführen. Sie wählen, was Sie ändern möchten:
+              {t('processSimple')}
             </p>
             
             <div className="space-y-4">
@@ -72,8 +73,7 @@ export default function BankChangeService() {
           className="mt-16 text-center bg-gradient-to-r from-[#f8f9fa] to-white rounded-2xl p-8 shadow-sm border border-gray-100"
         >
           <p className="text-lg text-[#001e50]">
-            Werden Sie Kunde und genießen Sie alle Vorteile der Deutschen Bank, 
-            <strong> einer globalen Bank, die so lokal ist, wie Sie es brauchen</strong>.
+            {t('becomeCustomer')}
           </p>
         </motion.div>
       </div>
