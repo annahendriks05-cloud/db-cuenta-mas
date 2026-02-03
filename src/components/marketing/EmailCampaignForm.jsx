@@ -35,14 +35,15 @@ export default function EmailCampaignForm() {
         return;
       }
 
-      // Guardar en la entidad Anlage
-      const response = await base44.entities.Anlage.create({
+      // Guardar en la entidad EmailCampana
+      await base44.entities.EmailCampana.create({
         vorname: formData.vorname,
         nachname: formData.nachname,
         email: formData.email,
-        rufnummer: formData.telefon,
+        telefon: formData.telefon,
         waehrung: formData.waehrung,
-        anlagebetrag: parseFloat(formData.anlagebetrag)
+        anlagebetrag: parseFloat(formData.anlagebetrag),
+        fuente: 'email_campaign'
       });
 
       toast.success('¡Solicitud enviada! Un asesor se contactará con usted pronto.');
