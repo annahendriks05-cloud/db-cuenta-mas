@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Building2, Lock, CheckCircle2 } from 'lucide-react';
+import { useTranslation } from './useTranslation';
 
 export default function SecuritySection() {
+  const { t } = useTranslation();
   return (
     <div className="bg-gradient-to-br from-[#f8f9fa] to-white py-16 md:py-24 border-t border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4">
@@ -14,11 +16,10 @@ export default function SecuritySection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl text-[#00008B] font-light mb-4">
-            EURAU & EURC: 100% Sicher
+            {t('eurauSecure')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            EURAU gehört zur <strong className="text-[#00008B]">Deutsche Bank</strong> - 
-            Ihre Einlagen sind vollständig geschützt
+            {t('eurauBelongs')}
           </p>
         </motion.div>
 
@@ -36,10 +37,10 @@ export default function SecuritySection() {
               <Building2 className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-[#00008B] mb-3 text-center">
-              Teil der Deutsche Bank
+              {t('partOfDb')}
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
-              EURAU ist ein Produkt der Deutsche Bank AG und profitiert von der Stabilität und Sicherheit einer der größten Banken der Welt.
+              {t('partOfDbDesc')}
             </p>
           </motion.div>
 
@@ -55,10 +56,10 @@ export default function SecuritySection() {
               <Shield className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-[#00008B] mb-3 text-center">
-              100% Einlagensicherung
+              {t('deposit100')}
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
-              Ihre Einlagen sind bis zu <strong className="text-green-600">100.000 € pro Kunde</strong> durch den gesetzlichen Einlagensicherungsfonds geschützt.
+              {t('deposit100Desc')}
             </p>
           </motion.div>
 
@@ -74,10 +75,10 @@ export default function SecuritySection() {
               <Lock className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-[#00008B] mb-3 text-center">
-              Betrugsschutz
+              {t('fraudProtectionSec')}
             </h3>
             <p className="text-gray-600 text-center text-sm leading-relaxed">
-              Modernste Sicherheitstechnologie und Betrugsschutz schützen Ihre Transaktionen rund um die Uhr vor unbefugtem Zugriff.
+              {t('fraudProtectionDesc')}
             </p>
           </motion.div>
         </div>
@@ -90,27 +91,25 @@ export default function SecuritySection() {
           className="bg-gradient-to-r from-[#00008B] to-[#0000CD] rounded-2xl p-8 md:p-12 text-white text-center"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <CheckCircle2 className="w-8 h-8 text-[#ffd000]" />
-            <h3 className="text-2xl md:text-3xl font-light">100% Sicher & Zuverlässig</h3>
-          </div>
-          <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed">
-            Als Teil der <strong className="text-white">Deutsche Bank</strong> bietet EURAU Ihnen nicht nur 
-            attraktive Zinsen, sondern auch die Sicherheit und Stabilität eines globalen Finanzinstituts 
-            mit über 150 Jahren Erfahrung.
-          </p>
+             <CheckCircle2 className="w-8 h-8 text-[#ffd000]" />
+             <h3 className="text-2xl md:text-3xl font-light">{t('securReliable')}</h3>
+           </div>
+           <p className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed">
+             {t('secureText')}
+           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             <div className="flex items-center justify-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-[#ffd000]" />
-              <span className="text-sm">Reguliert & Lizenziert</span>
+              <span className="text-sm">{t('regulated')}</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-[#ffd000]" />
-              <span className="text-sm">Einlagensicherung</span>
+              <span className="text-sm">{t('depositInsuranceAlt')}</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-[#ffd000]" />
-              <span className="text-sm">Betrugsschutz</span>
+              <span className="text-sm">{t('fraudProtectionAlt')}</span>
             </div>
           </div>
         </motion.div>
