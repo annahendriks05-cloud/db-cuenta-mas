@@ -114,8 +114,8 @@ function Kundenservice() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-[#00008B] mb-4">Kontaktieren Sie uns</h2>
-          <p className="text-gray-600 text-lg">Wählen Sie die beste Option für Sie</p>
+          <h2 className="text-4xl font-bold text-[#00008B] mb-4">{t('contactTitle')}</h2>
+          <p className="text-gray-600 text-lg">{t('quickHelp')}</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {serviceOptions.map((option, idx) => (
@@ -156,7 +156,7 @@ function Kundenservice() {
         >
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-[#00008B] mb-6">Deutsche Bank Berlin</h3>
+              <h3 className="text-2xl font-bold text-[#00008B] mb-6">{t('headquarters')}</h3>
               <div className="space-y-4 text-gray-700">
                 <p className="flex items-start gap-3">
                   <span className="font-semibold min-w-[80px] text-[#00008B]">Adresse:</span>
@@ -223,20 +223,20 @@ function Kundenservice() {
         </motion.div>
 
         {/* FAQ Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#00008B] mb-4">
-              Häufig gestellte Fragen
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Finden Sie Antworten auf Ihre Fragen
-            </p>
-          </div>
+         <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="mb-20"
+         >
+           <div className="text-center mb-12">
+             <h2 className="text-4xl font-bold text-[#00008B] mb-4">
+               {t('faq')}
+             </h2>
+             <p className="text-gray-600 text-lg">
+               {t('findAnswers')}
+             </p>
+           </div>
 
           <Accordion type="single" collapsible className="space-y-3">
             {faqItems.map((item, idx) => (
@@ -257,31 +257,31 @@ function Kundenservice() {
         </motion.div>
 
         {/* Contact CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-[#00008B] via-[#0000CD] to-[#00008B] text-white rounded-2xl p-16 text-center"
-        >
-          <h2 className="text-4xl font-bold mb-4">
-            Weitere Fragen?
-          </h2>
-          <p className="text-white/90 mb-10 max-w-2xl mx-auto text-lg">
-            Unser Team steht Ihnen jederzeit zur Verfügung, um Ihnen zu helfen.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link to={createPageUrl('Kontakt')} onClick={() => window.scrollTo(0, 0)}>
-              <Button className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8 font-semibold">
-                Kontaktformular
-              </Button>
-            </Link>
-            <Link to={createPageUrl('Filialen')} onClick={() => window.scrollTo(0, 0)}>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 font-semibold">
-                Filiale suchen
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
+         <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="bg-gradient-to-br from-[#00008B] via-[#0000CD] to-[#00008B] text-white rounded-2xl p-16 text-center"
+         >
+           <h2 className="text-4xl font-bold mb-4">
+             {t('stillQuestions')}
+           </h2>
+           <p className="text-white/90 mb-10 max-w-2xl mx-auto text-lg">
+             {t('contactTeam')}
+           </p>
+           <div className="flex flex-wrap gap-4 justify-center">
+             <Link to={createPageUrl('Kontakt')} onClick={() => window.scrollTo(0, 0)}>
+               <Button className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8 font-semibold">
+                 {t('contactForm')}
+               </Button>
+             </Link>
+             <Link to={createPageUrl('Filialen')} onClick={() => window.scrollTo(0, 0)}>
+               <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 font-semibold">
+                 {t('findBranch')}
+               </Button>
+             </Link>
+           </div>
+         </motion.div>
         </div>
 
       <ChatDialog open={chatOpen} onOpenChange={setChatOpen} />
