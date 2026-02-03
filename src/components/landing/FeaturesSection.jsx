@@ -60,7 +60,7 @@ export default function FeaturesSection() {
     },
     {
       title: 'MEHR Flexibilität',
-      image: 'https://images.unsplash.com/photo-1554224311-beee460c201f?w=500&h=350&fit=crop',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop',
       features: [
         {
           icon: Clock,
