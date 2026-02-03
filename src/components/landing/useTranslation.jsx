@@ -440,7 +440,14 @@ const translations = {
     contactTeam: 'Notre équipe de service client est là pour vous. Contactez-nous par téléphone, email ou prenez un rendez-vous personnel.',
     contactForm: 'Formulaire de contact',
     findBranch: 'Trouver une agence',
-    
+
+    // Opening Hours
+    openingTitle: 'Heures d\'ouverture',
+    mondayFriday: 'Lundi - Vendredi',
+    saturday: 'Samedi',
+    sunday: 'Dimanche',
+    closed: 'Fermé',
+
     // Chat Dialog
     chatTitle: 'Démarrer le chat',
     chatDescription: 'Veuillez entrer vos coordonnées',
