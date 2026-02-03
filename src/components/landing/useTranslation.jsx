@@ -78,7 +78,14 @@ const translations = {
     contactTeam: 'Unser Kundenservice-Team ist gerne für Sie da. Kontaktieren Sie uns per Telefon, E-Mail oder vereinbaren Sie einen persönlichen Beratungstermin.',
     contactForm: 'Kontaktformular',
     findBranch: 'Filiale finden',
-    
+
+    // Opening Hours
+    openingTitle: 'Öffnungszeiten',
+    mondayFriday: 'Montag - Freitag',
+    saturday: 'Samstag',
+    sunday: 'Sonntag',
+    closed: 'Geschlossen',
+
     // Chat Dialog
     chatTitle: 'Chat starten',
     chatDescription: 'Bitte geben Sie Ihre Daten ein',
