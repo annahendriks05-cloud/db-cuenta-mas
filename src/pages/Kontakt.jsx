@@ -31,16 +31,15 @@ function Kontakt() {
     setLoading(true);
 
     try {
-      // Guardar en la entidad ContactoFormulario
-      await base44.entities.ContactoFormulario.create({
+      // Guardar en la entidad Kontaktanfrage
+      await base44.entities.Kontaktanfrage.create({
         vorname: formData.vorname,
         nachname: formData.nachname,
         email: formData.email,
         telefon: formData.telefon,
-        personalausweis: '', // No se solicita en este formulario
-        postleitzahl: '', // No se solicita en este formulario
-        autorizo: true, // Asumimos autorización al enviar
-        estado: 'pendiente'
+        betreff: formData.betreff,
+        nachricht: formData.nachricht,
+        status: 'neu'
       });
 
       // Enviar email de notificación
@@ -70,6 +69,7 @@ function Kontakt() {
       });
     } catch (error) {
       toast.error('Fehler beim Senden der Nachricht');
+      console.error(error);
     } finally {
       setLoading(false);
     }
