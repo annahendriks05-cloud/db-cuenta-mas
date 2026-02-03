@@ -107,29 +107,39 @@ function Kundenservice() {
       </div>
 
       {/* Service Options */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold text-[#00008B] mb-4">Kontaktieren Sie uns</h2>
+          <p className="text-gray-600 text-lg">Wählen Sie die beste Option für Sie</p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {serviceOptions.map((option, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:border-[#00008B]/20 transition-all duration-300 text-center"
+              className="group bg-white border-2 border-gray-100 rounded-xl p-8 hover:shadow-xl hover:border-[#00008B] transition-all duration-300 text-center"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <option.icon className="w-10 h-10 text-white" />
+              <div className="w-16 h-16 bg-[#00008B] rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <option.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#00008B] mb-3">
+              <h3 className="text-lg font-semibold text-[#00008B] mb-2">
                 {option.title}
               </h3>
               <p className="text-sm text-gray-600 mb-4">{option.description}</p>
-              <p className="text-base font-semibold text-gray-900 mb-6">{option.detail}</p>
+              <p className="text-sm font-semibold text-gray-900 mb-6">{option.detail}</p>
               <Button 
                 onClick={() => {
                   if (idx === 2) setChatOpen(true);
                 }}
-                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white shadow-md"
+                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white"
               >
                 {option.action}
               </Button>
