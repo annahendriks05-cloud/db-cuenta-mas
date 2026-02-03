@@ -599,7 +599,14 @@ const translations = {
     // Dutch translations continue...
     worldwidePresent: 'Wereldwijd aanwezig',
     findBranch: 'Vind uw dichtstbijzijnde filiaal',
-    
+
+    // Opening Hours
+    openingTitle: 'Openingstijden',
+    mondayFriday: 'Maandag - Vrijdag',
+    saturday: 'Zaterdag',
+    sunday: 'Zondag',
+    closed: 'Gesloten',
+
     // Chat Dialog
     chatTitle: 'Chat starten',
     chatDescription: 'Vul uw gegevens in',
