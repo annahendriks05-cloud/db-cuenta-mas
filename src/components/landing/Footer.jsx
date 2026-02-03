@@ -31,15 +31,12 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex items-center gap-3 mb-6">
-          <svg className="w-10 h-10" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="100" height="100" fill="#00008B" stroke="white" strokeWidth="8"/>
-            <rect x="20" y="20" width="80" height="80" fill="white"/>
-            <polygon points="40,40 80,40 80,80" fill="#0000CD"/>
-          </svg>
-          <div>
-            <p className="font-semibold text-lg">Deutsche Bank</p>
-          </div>
+        <div className="mb-6">
+          <img 
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/f1efd9eb2_image.png"
+            alt="Deutsche Bank Logo"
+            className="h-12"
+          />
         </div>
         <p className="text-sm text-white/70 max-w-2xl mb-8">
           {t('footerDescription')}
