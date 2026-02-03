@@ -65,8 +65,8 @@ function Kontakt() {
         <div className="max-w-7xl mx-auto px-4">
           <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
             <svg className="w-10 h-10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="8" width="84" height="84" fill="white" stroke="white" strokeWidth="4"/>
-              <line x1="25" y1="25" x2="75" y2="75" stroke="#0000CD" strokeWidth="10" strokeLinecap="round"/>
+              <rect width="100" height="100" fill="white"/>
+              <line x1="30" y1="30" x2="70" y2="70" stroke="#0000CD" strokeWidth="8" strokeLinecap="round"/>
             </svg>
             <p className="text-lg font-semibold">Deutsche Bank</p>
           </Link>
