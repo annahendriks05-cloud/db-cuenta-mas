@@ -39,6 +39,42 @@ export default function FeaturesSection() {
           highlight: false
         }
       ]
+    },
+    {
+      title: 'MEHR Sicherheit mit Tresor-Lösung',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=350&fit=crop',
+      features: [
+        {
+          icon: Vault,
+          title: 'ECHTE TRESOR-LÖSUNG',
+          description: 'Zentral und dezentral gesichert - sicherer als ein Schließfach. Ihr digitales Geld wird wie in einem Hochsicherheitstresor verwahrt.',
+          highlight: true
+        },
+        {
+          icon: CreditCard,
+          title: 'EIGENE GRATIS DIGITAL-IBAN',
+          description: 'Kostenlose digitale IBAN für Empfang von Euro und Zahlungen in Euro - höchste Sicherheit garantiert.',
+          highlight: false
+        }
+      ]
+    },
+    {
+      title: 'MEHR Flexibilität',
+      image: 'https://images.unsplash.com/photo-1554224311-beee460c201f?w=500&h=350&fit=crop',
+      features: [
+        {
+          icon: Clock,
+          title: 'FLEXIBLE ÖFFNUNGSZEITEN',
+          description: 'Auch samstags geöffnet für Ihre Bequemlichkeit und Planung.',
+          highlight: true
+        },
+        {
+          icon: Shield,
+          title: '7 TAGE VERFÜGBAR',
+          description: 'Online-Banking rund um die Uhr - Zugriff auf Ihr Konto wann immer Sie möchten.',
+          highlight: false
+        }
+      ]
     }
   ];
 
