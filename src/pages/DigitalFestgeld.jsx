@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
+import Navigation from '@/components/landing/Navigation';
 import {
   Select,
   SelectContent,
@@ -73,6 +76,22 @@ export default function DigitalFestgeld() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
+      <div className="bg-[#00008B] text-white py-4">
+        <div className="max-w-7xl mx-auto px-4">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
+            <div className="w-10 h-10 bg-white flex items-center justify-center p-1.5">
+              <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00008B" strokeWidth="8"/>
+                <path d="M20 80 L80 20" stroke="#00008B" strokeWidth="8"/>
+              </svg>
+            </div>
+            <p className="text-lg font-semibold">Deutsche Bank</p>
+          </Link>
+        </div>
+      </div>
+      <Navigation />
+      
       {/* Risk Indicator */}
       <div className="bg-gradient-to-r from-green-50 to-blue-50 border-b border-green-200">
         <div className="max-w-7xl mx-auto px-4 py-6">

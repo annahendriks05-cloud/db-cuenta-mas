@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Clock, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
 
 export default function Filialen() {
@@ -63,21 +64,20 @@ export default function Filialen() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-[#00008B] text-white py-8">
+      <div className="bg-[#00008B] text-white py-4">
         <div className="max-w-7xl mx-auto px-4">
-          <Link to={createPageUrl('Home')} className="flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
-            <div className="w-12 h-12 bg-white flex items-center justify-center p-2">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
+            <div className="w-10 h-10 bg-white flex items-center justify-center p-1.5">
               <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
                 <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00008B" strokeWidth="8"/>
                 <path d="M20 80 L80 20" stroke="#00008B" strokeWidth="8"/>
               </svg>
             </div>
-            <div>
-              <p className="text-xl font-semibold">Deutsche Bank</p>
-            </div>
+            <p className="text-lg font-semibold">Deutsche Bank</p>
           </Link>
         </div>
       </div>
+      <Navigation />
 
       {/* Hero */}
       <div className="bg-gradient-to-br from-gray-50 to-white py-16">
