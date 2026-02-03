@@ -658,7 +658,14 @@ const translations = {
     // Italian translations continue...
     worldwidePresent: 'Presenza mondiale',
     findBranch: 'Trova la tua filiale più vicina',
-    
+
+    // Opening Hours
+    openingTitle: 'Orari di apertura',
+    mondayFriday: 'Lunedì - Venerdì',
+    saturday: 'Sabato',
+    sunday: 'Domenica',
+    closed: 'Chiuso',
+
     // Chat Dialog
     chatTitle: 'Avvia chat',
     chatDescription: 'Per favore inserisci i tuoi dati',
