@@ -364,7 +364,7 @@ export default function DigitalFestgeld() {
       </div>
 
       {/* Contact Form */}
-      <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] py-12 md:py-16">
+      <div id="contact-form" className="bg-gradient-to-br from-[#00008B] to-[#0000CD] py-12 md:py-16">
         <div className="max-w-2xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -718,7 +718,7 @@ export default function DigitalFestgeld() {
               Profitieren Sie von bis zu 6% Zinsen + 2% Cashback-Bonus. Starten Sie jetzt mit Deutsche Bank!
             </p>
             <Button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               className="bg-[#ffd000] hover:bg-[#ffdb33] text-[#00008B] px-8 md:px-12 py-5 md:py-6 text-base md:text-lg font-semibold"
             >
               JETZT KONTO ERÖFFNEN
