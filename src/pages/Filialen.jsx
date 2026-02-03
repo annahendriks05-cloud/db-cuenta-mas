@@ -321,66 +321,157 @@ function Filialen() {
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'España'
     },
-    // Estados Unidos
+    // Estados Unidos - New York (4 sucursales)
     {
-      name: 'Deutsche Bank New York',
+      name: 'Deutsche Bank New York Wall Street',
       adresse: '60 Wall Street, New York, NY 10005, USA',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'USA'
     },
-    // Suiza
     {
-      name: 'Deutsche Bank Zürich',
+      name: 'Deutsche Bank New York Midtown',
+      adresse: '1251 Avenue of the Americas, New York, NY 10020, USA',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'USA'
+    },
+    {
+      name: 'Deutsche Bank New York Park Avenue',
+      adresse: '875 Third Avenue, New York, NY 10022, USA',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'USA'
+    },
+    {
+      name: 'Deutsche Bank New York Columbus Circle',
+      adresse: '10 Columbus Circle, New York, NY 10019, USA',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'USA'
+    },
+    // Suiza - Zürich (3 sucursales)
+    {
+      name: 'Deutsche Bank Zürich Uraniastrasse',
       adresse: 'Uraniastrasse 9, 8001 Zürich, Schweiz',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Schweiz'
+    },
+    {
+      name: 'Deutsche Bank Zürich Paradeplatz',
+      adresse: 'Paradeplatz 6, 8001 Zürich, Schweiz',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Schweiz'
+    },
+    {
+      name: 'Deutsche Bank Zürich Bahnhofstrasse',
+      adresse: 'Bahnhofstrasse 45, 8001 Zürich, Schweiz',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Schweiz'
+    },
+    // Geneva
+    {
+      name: 'Deutsche Bank Genève',
+      adresse: 'Rue du Rhône 65, 1204 Genève, Schweiz',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Schweiz'
     },
     // Bélgica
     {
-      name: 'Deutsche Bank Bruxelles',
+      name: 'Deutsche Bank Bruxelles Marnix',
       adresse: 'Avenue Marnix 24, 1000 Bruxelles, Belgique',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Belgique'
     },
-    // Austria
     {
-      name: 'Deutsche Bank Wien',
+      name: 'Deutsche Bank Bruxelles Louise',
+      adresse: 'Avenue Louise 326, 1050 Bruxelles, Belgique',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Belgique'
+    },
+    // Austria - Wien (3 sucursales)
+    {
+      name: 'Deutsche Bank Wien Fleischmarkt',
       adresse: 'Fleischmarkt 1, 1010 Wien, Österreich',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Österreich'
+    },
+    {
+      name: 'Deutsche Bank Wien Ringstraße',
+      adresse: 'Kärntner Ring 17, 1010 Wien, Österreich',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Österreich'
+    },
+    {
+      name: 'Deutsche Bank Wien Donau City',
+      adresse: 'Donau-City-Straße 6, 1220 Wien, Österreich',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Österreich'
     },
     // Luxemburgo
     {
-      name: 'Deutsche Bank Luxembourg',
+      name: 'Deutsche Bank Luxembourg Kirchberg',
       adresse: '2 Boulevard Konrad Adenauer, 1115 Luxembourg',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Luxembourg'
     },
-    // Singapur
     {
-      name: 'Deutsche Bank Singapore',
+      name: 'Deutsche Bank Luxembourg Centre',
+      adresse: 'Boulevard Royal 19, 2449 Luxembourg',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Luxembourg'
+    },
+    // Singapur (2 sucursales)
+    {
+      name: 'Deutsche Bank Singapore Raffles Quay',
       adresse: 'One Raffles Quay, Singapore 048583',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Singapore'
     },
-    // Hong Kong
     {
-      name: 'Deutsche Bank Hong Kong',
+      name: 'Deutsche Bank Singapore Marina Bay',
+      adresse: '6 Shenton Way, Singapore 068809',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Singapore'
+    },
+    // Hong Kong (3 sucursales)
+    {
+      name: 'Deutsche Bank Hong Kong Cheung Kong Center',
       adresse: 'Cheung Kong Center, 2 Queen\'s Road Central, Hong Kong',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Hong Kong'
     },
-    // Japón
     {
-      name: 'Deutsche Bank Tokyo',
+      name: 'Deutsche Bank Hong Kong International Finance Centre',
+      adresse: '8 Finance Street, Central, Hong Kong',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Hong Kong'
+    },
+    {
+      name: 'Deutsche Bank Hong Kong Kowloon',
+      adresse: '1 Peking Road, Tsim Sha Tsui, Kowloon, Hong Kong',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Hong Kong'
+    },
+    // Japón - Tokyo (2 sucursales)
+    {
+      name: 'Deutsche Bank Tokyo Nagatacho',
       adresse: '2-11-1 Nagatacho, Chiyoda-ku, Tokyo 100-6171, Japan',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Japan'
     },
-    // Australia
     {
-      name: 'Deutsche Bank Sydney',
+      name: 'Deutsche Bank Tokyo Marunouchi',
+      adresse: '2-7-1 Marunouchi, Chiyoda-ku, Tokyo 100-7021, Japan',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Japan'
+    },
+    // Australia - Sydney (2 sucursales)
+    {
+      name: 'Deutsche Bank Sydney Deutsche Bank Place',
       adresse: 'Deutsche Bank Place, Corner Hunter & Phillip Streets, Sydney NSW 2000, Australia',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Australia'
+    },
+    {
+      name: 'Deutsche Bank Sydney Martin Place',
+      adresse: '126 Phillip Street, Sydney NSW 2000, Australia',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Australia'
     }
