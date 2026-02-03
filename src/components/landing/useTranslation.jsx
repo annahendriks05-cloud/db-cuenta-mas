@@ -168,7 +168,29 @@ const translations = {
     conditions: 'Bedingungen',
     contactAdvisor: 'Mit Berater kontaktieren',
     investMoney: 'Geld anlegen',
-    
+
+    // FAQ and Chat Hours
+    faqQ1: 'Wie eröffne ich ein Konto bei Deutsche Bank?',
+    faqA1: 'Sie können ein Konto online über unsere Website eröffnen oder einen Termin in einer unserer Filialen vereinbaren. Für die Online-Eröffnung benötigen Sie einen gültigen Ausweis und etwa 10 Minuten Zeit.',
+    faqQ2: 'Was ist Digital Festgeld mit EURAU/EURC?',
+    faqA2: 'Digital Festgeld ist eine innovative Anlageform, bei der Ihr Geld in sichere digitale Währungen (EURAU/EURC) umgewandelt wird. Sie profitieren von attraktiven Zinsen bis zu 6% p.a. plus 2% Cashback-Bonus bei Einzahlung.',
+    faqQ3: 'Wie sicher ist mein Geld bei Deutsche Bank?',
+    faqA3: 'Ihre Einlagen sind bis zu 100.000€ durch den Einlagensicherungsfonds vollständig geschützt. Deutsche Bank garantiert maximale Sicherheit durch bewährte Bankenstandards und moderne Technologie.',
+    faqQ4: 'Wie kann ich meine Karte sperren?',
+    faqA4: 'Rufen Sie unsere 24/7 Sperr-Hotline unter +49 116 116 an oder sperren Sie Ihre Karte direkt in der Deutsche Bank App. Die Sperrung ist kostenlos und erfolgt sofort.',
+    faqQ5: 'Welche Gebühren fallen für ein Girokonto an?',
+    faqA5: 'Unser digitales Girokonto ist komplett kostenlos. Es fallen keine Kontoführungsgebühren an. Für Premium-Services und bestimmte Transaktionen können Gebühren anfallen. Details finden Sie in unserem Preis- und Leistungsverzeichnis.',
+    faqQ6: 'Wie beantrage ich einen Kredit?',
+    faqA6: 'Sie können einen Kreditantrag online stellen oder einen Beratungstermin vereinbaren. Wir prüfen Ihren Antrag in der Regel innerhalb von 24 Stunden und informieren Sie über die Konditionen.',
+    faqQ7: 'Kann ich mein Limit erhöhen?',
+    faqA7: 'Ja, Limiterhöhungen können Sie über die App, telefonisch oder in der Filiale beantragen. Die Bearbeitung erfolgt in der Regel innerhalb von 1-3 Werktagen.',
+    faqQ8: 'Wie funktioniert Online-Banking?',
+    faqA8: 'Nach der Kontoeröffnung erhalten Sie Ihre Zugangsdaten. Mit diesen können Sie sich in der App oder auf unserer Website anmelden. Für zusätzliche Sicherheit nutzen wir Zwei-Faktor-Authentifizierung.',
+    chatHours: 'Mo-Fr 8:00-20:00 Uhr',
+    address: 'Adresse',
+    phone: 'Telefon',
+    email: 'Email',
+
     // Digital Festgeld Page
     digitalFestgeldPionier: 'Digital Festgeld Pionier',
     revolutionaerDigitalFestgeld: 'Revolutionäres Digital Festgeld',
@@ -349,7 +371,29 @@ const translations = {
     conditions: 'conditions',
     contactAdvisor: 'Contact advisor',
     investMoney: 'Invest money',
-    
+
+    // FAQ and Chat Hours
+    faqQ1: 'How do I open an account at Deutsche Bank?',
+    faqA1: 'You can open an account online through our website or schedule an appointment at one of our branches. For online account opening, you need a valid ID and about 10 minutes.',
+    faqQ2: 'What is Digital Fixed Deposit with EURAU/EURC?',
+    faqA2: 'Digital Fixed Deposit is an innovative investment form where your money is converted into secure digital currencies (EURAU/EURC). You benefit from attractive interest rates up to 6% p.a. plus 2% cashback bonus upon deposit.',
+    faqQ3: 'How safe is my money at Deutsche Bank?',
+    faqA3: 'Your deposits are fully protected up to €100,000 by the deposit insurance fund. Deutsche Bank guarantees maximum security through proven banking standards and modern technology.',
+    faqQ4: 'How can I block my card?',
+    faqA4: 'Call our 24/7 blocking hotline at +49 116 116 or block your card directly in the Deutsche Bank app. Blocking is free and takes effect immediately.',
+    faqQ5: 'What fees apply to a current account?',
+    faqA5: 'Our digital current account is completely free. No account management fees apply. Fees may apply for premium services and certain transactions. See our price and service list for details.',
+    faqQ6: 'How do I apply for a loan?',
+    faqA6: 'You can apply for a loan online or schedule a consultation appointment. We usually review your application within 24 hours and inform you of the terms.',
+    faqQ7: 'Can I increase my limit?',
+    faqA7: 'Yes, you can request limit increases via the app, by phone, or at a branch. Processing usually takes 1-3 business days.',
+    faqQ8: 'How does online banking work?',
+    faqA8: 'After account opening, you receive your login credentials. You can log in via the app or our website. For additional security, we use two-factor authentication.',
+    chatHours: 'Mon-Fri 8:00-20:00',
+    address: 'Address',
+    phone: 'Phone',
+    email: 'Email',
+
     // Digital Festgeld Page
     digitalFestgeldPionier: 'Digital Fixed Deposit Pioneer',
     revolutionaerDigitalFestgeld: 'Revolutionary Digital Fixed Deposit',
@@ -530,7 +574,29 @@ const translations = {
     conditions: 'conditions',
     contactAdvisor: 'Contacter un conseiller',
     investMoney: 'Investir de l\'argent',
-    
+
+    // FAQ and Chat Hours
+    faqQ1: 'Comment ouvrir un compte chez Deutsche Bank?',
+    faqA1: 'Vous pouvez ouvrir un compte en ligne sur notre site ou prendre rendez-vous dans l\'une de nos agences. Pour l\'ouverture en ligne, vous avez besoin d\'une pièce d\'identité valide et d\'environ 10 minutes.',
+    faqQ2: 'Qu\'est-ce qu\'un dépôt fixe numérique avec EURAU/EURC?',
+    faqA2: 'Le dépôt fixe numérique est une forme d\'investissement innovante où votre argent est converti en devises numériques sécurisées (EURAU/EURC). Vous bénéficiez de taux d\'intérêt attractifs jusqu\'à 6% p.a. plus 2% de cashback lors du dépôt.',
+    faqQ3: 'Mon argent est-il sûr chez Deutsche Bank?',
+    faqA3: 'Vos dépôts sont entièrement protégés jusqu\'à 100 000€ par le fonds d\'assurance des dépôts. Deutsche Bank garantit une sécurité maximale grâce aux normes bancaires éprouvées et à la technologie moderne.',
+    faqQ4: 'Comment puis-je bloquer ma carte?',
+    faqA4: 'Appelez notre hotline de blocage 24/7 au +49 116 116 ou bloquez votre carte directement dans l\'application Deutsche Bank. Le blocage est gratuit et prend effet immédiatement.',
+    faqQ5: 'Quels frais s\'appliquent à un compte courant?',
+    faqA5: 'Notre compte courant numérique est complètement gratuit. Aucuns frais de tenue de compte ne s\'appliquent. Des frais peuvent s\'appliquer pour les services premium et certaines transactions. Voir notre liste de prix et de services pour plus de détails.',
+    faqQ6: 'Comment demander un crédit?',
+    faqA6: 'Vous pouvez demander un crédit en ligne ou prendre un rendez-vous de consultation. Nous examinons généralement votre demande dans les 24 heures et vous informons des conditions.',
+    faqQ7: 'Puis-je augmenter ma limite?',
+    faqA7: 'Oui, vous pouvez demander une augmentation de limite via l\'application, par téléphone ou dans une agence. Le traitement prend généralement 1 à 3 jours ouvrables.',
+    faqQ8: 'Comment fonctionne la banque en ligne?',
+    faqA8: 'Après l\'ouverture du compte, vous recevez vos identifiants de connexion. Vous pouvez vous connecter via l\'application ou notre site web. Pour plus de sécurité, nous utilisons l\'authentification à deux facteurs.',
+    chatHours: 'Lun-Ven 8:00-20:00',
+    address: 'Adresse',
+    phone: 'Téléphone',
+    email: 'Email',
+
     // Digital Festgeld Page
     digitalFestgeldPionier: 'Pionnier du dépôt fixe numérique',
     revolutionaerDigitalFestgeld: 'Dépôt fixe numérique révolutionnaire',
