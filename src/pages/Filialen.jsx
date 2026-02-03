@@ -495,9 +495,9 @@ function Filialen() {
         <div className="max-w-7xl mx-auto px-4">
           <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Deutsche_Bank_logo_without_wordmark.svg/240px-Deutsche_Bank_logo_without_wordmark.svg.png" 
-              alt="Deutsche Bank Logo" 
-              className="w-10 h-10 bg-white p-1"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/411b7b6a4_logo.png"
+              alt="Deutsche Bank Logo"
+              className="w-10 h-10"
             />
             <p className="text-lg font-semibold">Deutsche Bank</p>
           </Link>
