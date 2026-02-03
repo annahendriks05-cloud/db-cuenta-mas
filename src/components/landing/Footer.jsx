@@ -79,6 +79,12 @@ export default function Footer() {
             >
               {t('kundenservice')}
             </Link>
+            <button
+              onClick={() => window.scrollTo(0, 0)}
+              className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer bg-none border-none"
+            >
+              {t('securityFraudProtection')}
+            </button>
           </div>
         </div>
       </div>
