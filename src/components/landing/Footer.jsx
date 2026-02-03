@@ -32,11 +32,11 @@ export default function Footer() {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex items-center gap-3 mb-6">
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Deutsche_Bank_logo_without_wordmark.svg/240px-Deutsche_Bank_logo_without_wordmark.svg.png" 
-            alt="Deutsche Bank Logo" 
-            className="w-10 h-10 bg-white p-1"
-          />
+          <svg className="w-10 h-10" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="100" height="100" fill="#00008B" stroke="white" strokeWidth="8"/>
+            <rect x="20" y="20" width="80" height="80" fill="white"/>
+            <polygon points="40,40 80,40 80,80" fill="#0000CD"/>
+          </svg>
           <div>
             <p className="font-semibold text-lg">Deutsche Bank</p>
           </div>
