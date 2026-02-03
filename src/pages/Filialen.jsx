@@ -17,8 +17,14 @@ function Filialen() {
   const filialen = [
     // Holanda
     {
-      name: 'Deutsche Bank Amsterdam',
+      name: 'Deutsche Bank Amsterdam Zentrum',
       adresse: 'De Entree 195, 1101 HE Amsterdam, Nederland',
+      zeiten: 'Mo-Fr: 9:00-17:00',
+      land: 'Nederland'
+    },
+    {
+      name: 'Deutsche Bank Amsterdam Zuid',
+      adresse: 'Zuidplein 116, 1077 XV Amsterdam, Nederland',
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Nederland'
     },
@@ -40,7 +46,7 @@ function Filialen() {
       zeiten: 'Mo-Fr: 9:00-17:00',
       land: 'Nederland'
     },
-    // Alemania
+    // Alemania - Frankfurt (5 sucursales)
     {
       name: 'Deutsche Bank Frankfurt Hauptsitz',
       adresse: 'Taunusanlage 12, 60325 Frankfurt am Main, Deutschland',
@@ -48,21 +54,151 @@ function Filialen() {
       land: 'Deutschland'
     },
     {
-      name: 'Deutsche Bank Berlin',
+      name: 'Deutsche Bank Frankfurt Kaiserstraße',
+      adresse: 'Kaiserstraße 30, 60311 Frankfurt am Main, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Frankfurt Flughafen',
+      adresse: 'Frankfurt Airport Center 1, 60549 Frankfurt am Main, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Frankfurt Bockenheim',
+      adresse: 'Leipziger Straße 48, 60487 Frankfurt am Main, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Frankfurt Sachsenhausen',
+      adresse: 'Schweizer Straße 32, 60594 Frankfurt am Main, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    // Berlin (5 sucursales)
+    {
+      name: 'Deutsche Bank Berlin Unter den Linden',
       adresse: 'Unter den Linden 13-15, 10117 Berlin, Deutschland',
       zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
       land: 'Deutschland'
     },
     {
-      name: 'Deutsche Bank München',
-      adresse: 'Promenadeplatz 15, 80333 München, Deutschland',
+      name: 'Deutsche Bank Berlin Kurfürstendamm',
+      adresse: 'Kurfürstendamm 237, 10719 Berlin, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Berlin Alexanderplatz',
+      adresse: 'Alexanderplatz 2, 10178 Berlin, Deutschland',
       zeiten: 'Mo-Fr: 9:00-18:00',
       land: 'Deutschland'
     },
     {
-      name: 'Deutsche Bank Hamburg',
+      name: 'Deutsche Bank Berlin Friedrichstraße',
+      adresse: 'Friedrichstraße 181, 10117 Berlin, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Berlin Potsdamer Platz',
+      adresse: 'Potsdamer Platz 5, 10785 Berlin, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    // München (5 sucursales)
+    {
+      name: 'Deutsche Bank München Promenadeplatz',
+      adresse: 'Promenadeplatz 15, 80333 München, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank München Marienplatz',
+      adresse: 'Tal 21, 80331 München, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank München Leopoldstraße',
+      adresse: 'Leopoldstraße 234, 80807 München, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank München Sendlinger Tor',
+      adresse: 'Sendlinger-Tor-Platz 8, 80336 München, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank München Pasing',
+      adresse: 'Gleichmannstraße 5, 81241 München, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    // Hamburg (4 sucursales)
+    {
+      name: 'Deutsche Bank Hamburg Jungfernstieg',
       adresse: 'Jungfernstieg 7, 20354 Hamburg, Deutschland',
       zeiten: 'Mo-Fr: 9:00-18:00, Sa: 9:00-13:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Hamburg Mönckebergstraße',
+      adresse: 'Mönckebergstraße 7, 20095 Hamburg, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Hamburg Eppendorf',
+      adresse: 'Eppendorfer Landstraße 96, 20249 Hamburg, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Hamburg Altona',
+      adresse: 'Ottenser Hauptstraße 10, 22765 Hamburg, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    // Otras ciudades alemanas
+    {
+      name: 'Deutsche Bank Köln',
+      adresse: 'Domkloster 2, 50667 Köln, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Stuttgart',
+      adresse: 'Königstraße 26, 70173 Stuttgart, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Düsseldorf',
+      adresse: 'Königsallee 45-47, 40212 Düsseldorf, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Hannover',
+      adresse: 'Große Packhofstraße 1, 30159 Hannover, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Leipzig',
+      adresse: 'Grimmaische Straße 19-21, 04109 Leipzig, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
+      land: 'Deutschland'
+    },
+    {
+      name: 'Deutsche Bank Dresden',
+      adresse: 'Prager Straße 8, 01069 Dresden, Deutschland',
+      zeiten: 'Mo-Fr: 9:00-18:00',
       land: 'Deutschland'
     },
     // Reino Unido
