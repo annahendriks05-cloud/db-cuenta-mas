@@ -139,7 +139,20 @@ const translations = {
     beforeDate: 'vor dem 02.03.2026 unter Einhaltung der',
     conditions: 'Bedingungen',
     contactAdvisor: 'Mit Berater kontaktieren',
-    investMoney: 'Geld anlegen'
+    investMoney: 'Geld anlegen',
+    
+    // Digital Festgeld Page
+    digitalFestgeldPionier: 'Digital Festgeld Pionier',
+    revolutionaerDigitalFestgeld: 'Revolutionäres Digital Festgeld',
+    digitalFestgeldDesc: 'Wandeln Sie Ihr Geld in digitales, hochsicheres EURAU/EURC um. Erhalten Sie bis zu 6% Zinsen p.a. plus 2% Cashback-Bonus sofort nach Einzahlung.',
+    einlagensicherung: 'Einlagensicherung',
+    bisZu100k: 'Bis zu 100.000€',
+    attraktiveZinsen: 'Attraktive Zinsen',
+    zinsen4bis6: '4% bis 6% p.a.',
+    cashback2: '2% Cashback',
+    sofortNachEinzahlung: 'Sofort nach Einzahlung',
+    maximaleSicherheit: 'Maximale Sicherheit',
+    dezentraleLoesung: 'Dezentrale Lösung'
   },
   en: {
     // Navigation & Common
@@ -279,7 +292,20 @@ const translations = {
     beforeDate: 'before 02.03.2026 in compliance with the',
     conditions: 'conditions',
     contactAdvisor: 'Contact advisor',
-    investMoney: 'Invest money'
+    investMoney: 'Invest money',
+    
+    // Digital Festgeld Page
+    digitalFestgeldPionier: 'Digital Fixed Deposit Pioneer',
+    revolutionaerDigitalFestgeld: 'Revolutionary Digital Fixed Deposit',
+    digitalFestgeldDesc: 'Convert your money into digital, highly secure EURAU/EURC. Earn up to 6% interest p.a. plus 2% cashback bonus immediately upon deposit.',
+    einlagensicherung: 'Deposit Insurance',
+    bisZu100k: 'Up to €100,000',
+    attraktiveZinsen: 'Attractive Interest',
+    zinsen4bis6: '4% to 6% p.a.',
+    cashback2: '2% Cashback',
+    sofortNachEinzahlung: 'Immediately after deposit',
+    maximaleSicherheit: 'Maximum Security',
+    dezentraleLoesung: 'Decentralized Solution'
   },
   fr: {
     // Navigation & Common
@@ -419,7 +445,20 @@ const translations = {
     beforeDate: 'avant le 02.03.2026 dans le respect des',
     conditions: 'conditions',
     contactAdvisor: 'Contacter un conseiller',
-    investMoney: 'Investir de l\'argent'
+    investMoney: 'Investir de l\'argent',
+    
+    // Digital Festgeld Page
+    digitalFestgeldPionier: 'Pionnier du dépôt fixe numérique',
+    revolutionaerDigitalFestgeld: 'Dépôt fixe numérique révolutionnaire',
+    digitalFestgeldDesc: 'Convertissez votre argent en EURAU/EURC numérique hautement sécurisé. Recevez jusqu\'à 6% d\'intérêts p.a. plus 2% de cashback immédiatement après le dépôt.',
+    einlagensicherung: 'Assurance des dépôts',
+    bisZu100k: 'Jusqu\'à 100 000€',
+    attraktiveZinsen: 'Intérêts attractifs',
+    zinsen4bis6: '4% à 6% p.a.',
+    cashback2: '2% Cashback',
+    sofortNachEinzahlung: 'Immédiatement après dépôt',
+    maximaleSicherheit: 'Sécurité maximale',
+    dezentraleLoesung: 'Solution décentralisée'
   },
   es: {
     // Navigation & Common
@@ -431,7 +470,19 @@ const translations = {
     // Spanish translations continue...
     worldwidePresent: 'Presencia mundial',
     findBranch: 'Encuentre su sucursal más cercana',
-    // ... (abbreviated for length)
+    
+    // Digital Festgeld Page
+    digitalFestgeldPionier: 'Pionero en depósito fijo digital',
+    revolutionaerDigitalFestgeld: 'Depósito fijo digital revolucionario',
+    digitalFestgeldDesc: 'Convierta su dinero en EURAU/EURC digital altamente seguro. Obtenga hasta 6% de interés p.a. más 2% de cashback inmediatamente después del depósito.',
+    einlagensicherung: 'Seguro de depósitos',
+    bisZu100k: 'Hasta 100.000€',
+    attraktiveZinsen: 'Intereses atractivos',
+    zinsen4bis6: '4% a 6% p.a.',
+    cashback2: '2% Cashback',
+    sofortNachEinzahlung: 'Inmediatamente después del depósito',
+    maximaleSicherheit: 'Seguridad máxima',
+    dezentraleLoesung: 'Solución descentralizada'
   },
   nl: {
     // Navigation & Common
@@ -443,7 +494,19 @@ const translations = {
     // Dutch translations continue...
     worldwidePresent: 'Wereldwijd aanwezig',
     findBranch: 'Vind uw dichtstbijzijnde filiaal',
-    // ... (abbreviated for length)
+    
+    // Digital Festgeld Page
+    digitalFestgeldPionier: 'Digitale deposito pionier',
+    revolutionaerDigitalFestgeld: 'Revolutionaire digitale deposito',
+    digitalFestgeldDesc: 'Converteer uw geld naar digitaal, zeer veilig EURAU/EURC. Ontvang tot 6% rente p.j. plus 2% cashback bonus direct na storting.',
+    einlagensicherung: 'Depositoverzekering',
+    bisZu100k: 'Tot €100.000',
+    attraktiveZinsen: 'Aantrekkelijke rente',
+    zinsen4bis6: '4% tot 6% p.j.',
+    cashback2: '2% Cashback',
+    sofortNachEinzahlung: 'Direct na storting',
+    maximaleSicherheit: 'Maximale veiligheid',
+    dezentraleLoesung: 'Gedecentraliseerde oplossing'
   },
   it: {
     // Navigation & Common
@@ -455,7 +518,19 @@ const translations = {
     // Italian translations continue...
     worldwidePresent: 'Presenza mondiale',
     findBranch: 'Trova la tua filiale più vicina',
-    // ... (abbreviated for length)
+    
+    // Digital Festgeld Page
+    digitalFestgeldPionier: 'Pioniere del deposito fisso digitale',
+    revolutionaerDigitalFestgeld: 'Deposito fisso digitale rivoluzionario',
+    digitalFestgeldDesc: 'Converti il tuo denaro in EURAU/EURC digitale altamente sicuro. Ricevi fino al 6% di interesse p.a. più 2% di cashback immediatamente dopo il deposito.',
+    einlagensicherung: 'Assicurazione depositi',
+    bisZu100k: 'Fino a €100.000',
+    attraktiveZinsen: 'Interessi interessanti',
+    zinsen4bis6: '4% a 6% p.a.',
+    cashback2: '2% Cashback',
+    sofortNachEinzahlung: 'Immediatamente dopo il deposito',
+    maximaleSicherheit: 'Massima sicurezza',
+    dezentraleLoesung: 'Soluzione decentralizzata'
   }
 };
 
