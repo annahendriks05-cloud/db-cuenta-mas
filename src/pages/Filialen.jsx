@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
+import { useTranslation } from '@/components/landing/useTranslation';
 
 function Filialen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [showAllCountries, setShowAllCountries] = useState(false);
+  const { t } = useTranslation();
 
   const filialen = [
     // Holanda
@@ -213,14 +215,14 @@ function Filialen() {
           >
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
               <Globe2 className="w-4 h-4 text-[#ffd000]" />
-              <span className="text-white/90 text-sm font-medium">Weltweit präsent</span>
+              <span className="text-white/90 text-sm font-medium">{t('worldwidePresent')}</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-light text-white mb-6">
-              Finden Sie Ihre nächste Filiale
+            <h1 className="text-4xl md:text-6xl font-light text-white mb-6">
+              {t('findBranch')}
             </h1>
-            <p className="text-xl text-white/80 mb-12">
-              Deutsche Bank Filialen in den Niederlanden. Suchen Sie weltweit nach allen Standorten.
+            <p className="text-lg md:text-xl text-white/80 mb-12 px-4">
+              {t('branchesNetherlands')}
             </p>
 
             {/* Search */}
@@ -228,10 +230,10 @@ function Filialen() {
               <div className="relative group">
                 <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-[#00008B] transition-colors" />
                 <Input
-                  placeholder="Weltweit suchen: Stadt, Land oder Adresse..."
+                  placeholder={t('searchPlaceholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-14 pr-6 py-7 text-base bg-white/95 backdrop-blur-sm border-0 shadow-2xl rounded-2xl focus:ring-2 focus:ring-[#ffd000] transition-all"
+                  className="pl-14 pr-6 py-6 md:py-7 text-sm md:text-base bg-white/95 backdrop-blur-sm border-0 shadow-2xl rounded-2xl focus:ring-2 focus:ring-[#ffd000] transition-all"
                 />
               </div>
               
@@ -241,7 +243,7 @@ function Filialen() {
                   animate={{ opacity: 1, y: 0 }}
                   className="text-white/70 text-sm mt-4"
                 >
-                  {filteredFilialen.length} {filteredFilialen.length === 1 ? 'Filiale' : 'Filialen'} gefunden
+                  {filteredFilialen.length} {filteredFilialen.length === 1 ? t('branchFound') : t('branchesFound')}
                 </motion.p>
               )}
             </div>
@@ -258,10 +260,10 @@ function Filialen() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center"
             >
-              <h2 className="text-3xl font-light text-[#00008B] mb-3">
-                Deutsche Bank Niederlande
+              <h2 className="text-2xl md:text-3xl font-light text-[#00008B] mb-3">
+                {t('deutscheBankNetherlands')}
               </h2>
-              <p className="text-gray-600">Besuchen Sie eine unserer Filialen in den Niederlanden</p>
+              <p className="text-gray-600">{t('visitBranches')}</p>
             </motion.div>
           </div>
         )}
@@ -318,9 +320,9 @@ function Filialen() {
                 </div>
 
                 {/* Action Button */}
-                <Button className="w-full bg-gradient-to-r from-[#00008B] to-[#0000CD] hover:from-[#0000A0] hover:to-[#0000E0] text-white font-medium py-6 rounded-xl shadow-lg shadow-blue-500/20 group-hover:shadow-xl group-hover:shadow-blue-500/30 transition-all">
+                <Button className="w-full bg-gradient-to-r from-[#00008B] to-[#0000CD] hover:from-[#0000A0] hover:to-[#0000E0] text-white font-medium py-5 md:py-6 rounded-xl shadow-lg shadow-blue-500/20 group-hover:shadow-xl group-hover:shadow-blue-500/30 transition-all text-sm md:text-base">
                   <MapPin className="w-4 h-4 mr-2" />
-                  Route planen
+                  {t('planRoute')}
                 </Button>
               </div>
 
@@ -339,8 +341,8 @@ function Filialen() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-6">
               <Search className="w-10 h-10 text-gray-400" />
             </div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">Keine Filialen gefunden</h3>
-            <p className="text-gray-500">Versuchen Sie eine andere Suche</p>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-2">{t('noBranchesFound')}</h3>
+            <p className="text-gray-500">{t('tryAnotherSearch')}</p>
           </motion.div>
         )}
       </div>
@@ -359,8 +361,8 @@ function Filialen() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-light text-[#00008B] mb-4">Warum Deutsche Bank?</h2>
-            <p className="text-xl text-gray-600">Ihr vertrauenswürdiger Partner weltweit</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#00008B] mb-4">{t('whyDeutscheBank')}</h2>
+            <p className="text-lg md:text-xl text-gray-600">{t('trustedPartner')}</p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -376,12 +378,12 @@ function Filialen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <Globe2 className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-[#00008B] mb-3">Weltweit vertreten</h3>
-                <p className="text-gray-600 leading-relaxed">In über 50 Ländern für Sie da mit lokaler Expertise und globalem Wissen</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">{t('worldwidePresence')}</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{t('worldwideDesc')}</p>
                 <div className="mt-6 pt-6 border-t border-gray-100">
-                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold">
+                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold text-sm md:text-base">
                     <TrendingUp className="w-5 h-5" />
-                    <span>50+ Länder</span>
+                    <span>{t('countriesPlus')}</span>
                   </div>
                 </div>
               </div>
@@ -399,12 +401,12 @@ function Filialen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#ffd000] to-[#ffdb33] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <Building2 className="w-10 h-10 text-[#00008B]" />
                 </div>
-                <h3 className="text-2xl font-semibold text-[#00008B] mb-3">Persönliche Beratung</h3>
-                <p className="text-gray-600 leading-relaxed">Erfahrene Berater helfen Ihnen bei allen finanziellen Fragen und Zielen</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">{t('personalAdvice')}</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{t('personalAdviceDesc')}</p>
                 <div className="mt-6 pt-6 border-t border-gray-100">
-                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold">
+                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold text-sm md:text-base">
                     <TrendingUp className="w-5 h-5" />
-                    <span>Expertenteam</span>
+                    <span>{t('expertTeam')}</span>
                   </div>
                 </div>
               </div>
@@ -422,12 +424,12 @@ function Filialen() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <Clock className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-[#00008B] mb-3">Flexible Öffnungszeiten</h3>
-                <p className="text-gray-600 leading-relaxed">Auch samstags geöffnet für Ihre Bequemlichkeit und Planung</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">{t('flexibleHours')}</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{t('flexibleHoursDesc')}</p>
                 <div className="mt-6 pt-6 border-t border-gray-100">
-                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold">
+                  <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold text-sm md:text-base">
                     <TrendingUp className="w-5 h-5" />
-                    <span>7 Tage verfügbar</span>
+                    <span>{t('daysAvailable')}</span>
                   </div>
                 </div>
               </div>
