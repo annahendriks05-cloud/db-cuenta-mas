@@ -79,6 +79,24 @@ const translations = {
     contactForm: 'Kontaktformular',
     findBranch: 'Filiale finden',
     
+    // Chat Dialog
+    chatTitle: 'Chat starten',
+    chatDescription: 'Bitte geben Sie Ihre Daten ein',
+    chatName: 'Name',
+    chatNamePlaceholder: 'Ihr vollständiger Name',
+    chatPhone: 'Telefon',
+    chatPhonePlaceholder: '+49...',
+    chatEmail: 'Email',
+    chatEmailPlaceholder: 'ihre.email@beispiel.com',
+    chatObservation: 'Bemerkung',
+    chatObservationPlaceholder: 'Wie können wir Ihnen helfen?',
+    chatSubmit: 'Anfrage senden',
+    chatSubmitting: 'Wird gesendet...',
+    chatSuccessTitle: 'Anfrage empfangen',
+    chatSuccessMessage: 'Momentan sind unsere Mitarbeiter beschäftigt. Wir haben Ihre Anfrage an einen Mitarbeiter weitergeleitet und werden uns so schnell wie möglich mit Ihnen in Verbindung setzen.',
+    chatClose: 'Schließen',
+    required: 'Pflichtfeld',
+    
     // Footer
     footerDescription: 'Deutsche Bank bietet hochwertige Finanzlösungen für Privatkunden und Unternehmen, unterstützt durch die Stärke einer globalen Bank.',
     allRightsReserved: 'Alle Rechte vorbehalten',
@@ -231,6 +249,24 @@ const translations = {
     contactTeam: 'Our customer service team is happy to help you. Contact us by phone, email or schedule a personal consultation.',
     contactForm: 'Contact form',
     findBranch: 'Find branch',
+    
+    // Chat Dialog
+    chatTitle: 'Start chat',
+    chatDescription: 'Please enter your details',
+    chatName: 'Name',
+    chatNamePlaceholder: 'Your full name',
+    chatPhone: 'Phone',
+    chatPhonePlaceholder: '+49...',
+    chatEmail: 'Email',
+    chatEmailPlaceholder: 'your.email@example.com',
+    chatObservation: 'Observation',
+    chatObservationPlaceholder: 'How can we help you?',
+    chatSubmit: 'Send request',
+    chatSubmitting: 'Sending...',
+    chatSuccessTitle: 'Request received',
+    chatSuccessMessage: 'Our agents are currently busy. We have passed your request to an agent and will contact you as soon as possible.',
+    chatClose: 'Close',
+    required: 'Required',
     
     // Footer
     footerDescription: 'Deutsche Bank offers high-quality financial solutions for private customers and companies, supported by the strength of a global bank.',
@@ -385,6 +421,24 @@ const translations = {
     contactForm: 'Formulaire de contact',
     findBranch: 'Trouver une agence',
     
+    // Chat Dialog
+    chatTitle: 'Démarrer le chat',
+    chatDescription: 'Veuillez entrer vos coordonnées',
+    chatName: 'Nom',
+    chatNamePlaceholder: 'Votre nom complet',
+    chatPhone: 'Téléphone',
+    chatPhonePlaceholder: '+49...',
+    chatEmail: 'Email',
+    chatEmailPlaceholder: 'votre.email@exemple.com',
+    chatObservation: 'Observation',
+    chatObservationPlaceholder: 'Comment pouvons-nous vous aider?',
+    chatSubmit: 'Envoyer la demande',
+    chatSubmitting: 'Envoi en cours...',
+    chatSuccessTitle: 'Demande reçue',
+    chatSuccessMessage: 'Nos agents sont actuellement occupés. Nous avons transmis votre demande à un agent qui vous contactera dès que possible.',
+    chatClose: 'Fermer',
+    required: 'Requis',
+    
     // Footer
     footerDescription: 'Deutsche Bank offre des solutions financières de haute qualité pour les particuliers et les entreprises, soutenues par la force d\'une banque mondiale.',
     allRightsReserved: 'Tous droits réservés',
@@ -471,6 +525,24 @@ const translations = {
     worldwidePresent: 'Presencia mundial',
     findBranch: 'Encuentre su sucursal más cercana',
     
+    // Chat Dialog
+    chatTitle: 'Iniciar chat',
+    chatDescription: 'Por favor, complete sus datos',
+    chatName: 'Nombre',
+    chatNamePlaceholder: 'Su nombre completo',
+    chatPhone: 'Teléfono',
+    chatPhonePlaceholder: '+49...',
+    chatEmail: 'Email',
+    chatEmailPlaceholder: 'su.email@ejemplo.com',
+    chatObservation: 'Observación',
+    chatObservationPlaceholder: '¿En qué podemos ayudarle?',
+    chatSubmit: 'Enviar solicitud',
+    chatSubmitting: 'Enviando...',
+    chatSuccessTitle: 'Solicitud recibida',
+    chatSuccessMessage: 'De momento nuestros agentes están ocupados. Hemos pasado su solicitud a un agente y se pondrá en contacto con usted lo más rápido posible.',
+    chatClose: 'Cerrar',
+    required: 'Obligatorio',
+    
     // Digital Festgeld Page
     digitalFestgeldPionier: 'Pionero en depósito fijo digital',
     revolutionaerDigitalFestgeld: 'Depósito fijo digital revolucionario',
@@ -495,6 +567,24 @@ const translations = {
     worldwidePresent: 'Wereldwijd aanwezig',
     findBranch: 'Vind uw dichtstbijzijnde filiaal',
     
+    // Chat Dialog
+    chatTitle: 'Chat starten',
+    chatDescription: 'Vul uw gegevens in',
+    chatName: 'Naam',
+    chatNamePlaceholder: 'Uw volledige naam',
+    chatPhone: 'Telefoon',
+    chatPhonePlaceholder: '+49...',
+    chatEmail: 'Email',
+    chatEmailPlaceholder: 'uw.email@voorbeeld.com',
+    chatObservation: 'Opmerking',
+    chatObservationPlaceholder: 'Hoe kunnen we u helpen?',
+    chatSubmit: 'Verzoek verzenden',
+    chatSubmitting: 'Verzenden...',
+    chatSuccessTitle: 'Verzoek ontvangen',
+    chatSuccessMessage: 'Onze medewerkers zijn momenteel bezig. We hebben uw verzoek doorgestuurd naar een medewerker die zo snel mogelijk contact met u zal opnemen.',
+    chatClose: 'Sluiten',
+    required: 'Verplicht',
+    
     // Digital Festgeld Page
     digitalFestgeldPionier: 'Digitale deposito pionier',
     revolutionaerDigitalFestgeld: 'Revolutionaire digitale deposito',
@@ -518,6 +608,24 @@ const translations = {
     // Italian translations continue...
     worldwidePresent: 'Presenza mondiale',
     findBranch: 'Trova la tua filiale più vicina',
+    
+    // Chat Dialog
+    chatTitle: 'Avvia chat',
+    chatDescription: 'Per favore inserisci i tuoi dati',
+    chatName: 'Nome',
+    chatNamePlaceholder: 'Il tuo nome completo',
+    chatPhone: 'Telefono',
+    chatPhonePlaceholder: '+49...',
+    chatEmail: 'Email',
+    chatEmailPlaceholder: 'tua.email@esempio.com',
+    chatObservation: 'Osservazione',
+    chatObservationPlaceholder: 'Come possiamo aiutarti?',
+    chatSubmit: 'Invia richiesta',
+    chatSubmitting: 'Invio in corso...',
+    chatSuccessTitle: 'Richiesta ricevuta',
+    chatSuccessMessage: 'Al momento i nostri agenti sono occupati. Abbiamo inoltrato la tua richiesta a un agente che ti contatterà il prima possibile.',
+    chatClose: 'Chiudi',
+    required: 'Obbligatorio',
     
     // Digital Festgeld Page
     digitalFestgeldPionier: 'Pioniere del deposito fisso digitale',

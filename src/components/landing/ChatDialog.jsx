@@ -12,8 +12,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
 import { MessageCircle, CheckCircle } from 'lucide-react';
+import { useTranslation } from './useTranslation';
 
 export default function ChatDialog({ open, onOpenChange }) {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     nombre: '',
     telefono: '',
@@ -62,9 +64,9 @@ export default function ChatDialog({ open, onOpenChange }) {
                   <MessageCircle className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <DialogTitle className="text-xl text-[#00008B]">Chat starten</DialogTitle>
+                  <DialogTitle className="text-xl text-[#00008B]">{t('chatTitle')}</DialogTitle>
                   <DialogDescription>
-                    Por favor, complete sus datos
+                    {t('chatDescription')}
                   </DialogDescription>
                 </div>
               </div>
@@ -73,52 +75,52 @@ export default function ChatDialog({ open, onOpenChange }) {
             <form onSubmit={handleSubmit} className="space-y-4 mt-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Nombre <span className="text-red-500">*</span>
+                  {t('chatName')} <span className="text-red-500">*</span>
                 </label>
                 <Input
                   required
                   value={formData.nombre}
                   onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                  placeholder="Su nombre completo"
+                  placeholder={t('chatNamePlaceholder')}
                   className="border-gray-300"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Teléfono
+                  {t('chatPhone')}
                 </label>
                 <Input
                   type="tel"
                   value={formData.telefono}
                   onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
-                  placeholder="+49..."
+                  placeholder={t('chatPhonePlaceholder')}
                   className="border-gray-300"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email <span className="text-red-500">*</span>
+                  {t('chatEmail')} <span className="text-red-500">*</span>
                 </label>
                 <Input
                   type="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="su.email@ejemplo.com"
+                  placeholder={t('chatEmailPlaceholder')}
                   className="border-gray-300"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Observación
+                  {t('chatObservation')}
                 </label>
                 <Textarea
                   value={formData.observacion}
                   onChange={(e) => setFormData({ ...formData, observacion: e.target.value })}
-                  placeholder="¿En qué podemos ayudarle?"
+                  placeholder={t('chatObservationPlaceholder')}
                   className="border-gray-300 h-24"
                 />
               </div>
@@ -128,7 +130,7 @@ export default function ChatDialog({ open, onOpenChange }) {
                 disabled={loading}
                 className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white"
               >
-                {loading ? 'Enviando...' : 'Enviar solicitud'}
+                {loading ? t('chatSubmitting') : t('chatSubmit')}
               </Button>
             </form>
           </>
@@ -138,17 +140,16 @@ export default function ChatDialog({ open, onOpenChange }) {
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             <DialogTitle className="text-xl text-[#00008B] mb-3">
-              Solicitud recibida
+              {t('chatSuccessTitle')}
             </DialogTitle>
             <DialogDescription className="text-base mb-6">
-              De momento nuestros agentes están ocupados. Hemos pasado su solicitud a un agente
-              y se pondrá en contacto con usted lo más rápido posible.
+              {t('chatSuccessMessage')}
             </DialogDescription>
             <Button
               onClick={handleClose}
               className="bg-[#00008B] hover:bg-[#0000CD] text-white"
             >
-              Cerrar
+              {t('chatClose')}
             </Button>
           </div>
         )}
