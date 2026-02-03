@@ -20,36 +20,36 @@ function Kundenservice() {
   const [chatOpen, setChatOpen] = useState(false);
   const faqItems = [
     {
-      question: 'Wie eröffne ich ein Konto bei Deutsche Bank?',
-      answer: 'Sie können ein Konto online über unsere Website eröffnen oder einen Termin in einer unserer Filialen vereinbaren. Für die Online-Eröffnung benötigen Sie einen gültigen Ausweis und etwa 10 Minuten Zeit.'
+      question: t('faqQ1'),
+      answer: t('faqA1')
     },
     {
-      question: 'Was ist Digital Festgeld mit EURAU/EURC?',
-      answer: 'Digital Festgeld ist eine innovative Anlageform, bei der Ihr Geld in sichere digitale Währungen (EURAU/EURC) umgewandelt wird. Sie profitieren von attraktiven Zinsen bis zu 6% p.a. plus 2% Cashback-Bonus bei Einzahlung.'
+      question: t('faqQ2'),
+      answer: t('faqA2')
     },
     {
-      question: 'Wie sicher ist mein Geld bei Deutsche Bank?',
-      answer: 'Ihre Einlagen sind bis zu 100.000€ durch den Einlagensicherungsfonds vollständig geschützt. Deutsche Bank garantiert maximale Sicherheit durch bewährte Bankenstandards und moderne Technologie.'
+      question: t('faqQ3'),
+      answer: t('faqA3')
     },
     {
-      question: 'Wie kann ich meine Karte sperren?',
-      answer: 'Rufen Sie unsere 24/7 Sperr-Hotline unter +49 116 116 an oder sperren Sie Ihre Karte direkt in der Deutsche Bank App. Die Sperrung ist kostenlos und erfolgt sofort.'
+      question: t('faqQ4'),
+      answer: t('faqA4')
     },
     {
-      question: 'Welche Gebühren fallen für ein Girokonto an?',
-      answer: 'Unser digitales Girokonto ist komplett kostenlos. Es fallen keine Kontoführungsgebühren an. Für Premium-Services und bestimmte Transaktionen können Gebühren anfallen. Details finden Sie in unserem Preis- und Leistungsverzeichnis.'
+      question: t('faqQ5'),
+      answer: t('faqA5')
     },
     {
-      question: 'Wie beantrage ich einen Kredit?',
-      answer: 'Sie können einen Kreditantrag online stellen oder einen Beratungstermin vereinbaren. Wir prüfen Ihren Antrag in der Regel innerhalb von 24 Stunden und informieren Sie über die Konditionen.'
+      question: t('faqQ6'),
+      answer: t('faqA6')
     },
     {
-      question: 'Kann ich mein Limit erhöhen?',
-      answer: 'Ja, Limiterhöhungen können Sie über die App, telefonisch oder in der Filiale beantragen. Die Bearbeitung erfolgt in der Regel innerhalb von 1-3 Werktagen.'
+      question: t('faqQ7'),
+      answer: t('faqA7')
     },
     {
-      question: 'Wie funktioniert Online-Banking?',
-      answer: 'Nach der Kontoeröffnung erhalten Sie Ihre Zugangsdaten. Mit diesen können Sie sich in der App oder auf unserer Website anmelden. Für zusätzliche Sicherheit nutzen wir Zwei-Faktor-Authentifizierung.'
+      question: t('faqQ8'),
+      answer: t('faqA8')
     }
   ];
 
@@ -71,7 +71,7 @@ function Kundenservice() {
     {
       icon: MessageCircle,
       title: t('liveChat'),
-      description: 'Mo-Fr 8:00-20:00 Uhr',
+      description: t('chatHours'),
       detail: t('chatWithAdvisor'),
       action: t('startChat')
     },
@@ -159,15 +159,15 @@ function Kundenservice() {
               <h3 className="text-2xl font-bold text-[#00008B] mb-6">{t('headquarters')}</h3>
               <div className="space-y-4 text-gray-700">
                 <p className="flex items-start gap-3">
-                  <span className="font-semibold min-w-[80px] text-[#00008B]">Adresse:</span>
+                  <span className="font-semibold min-w-[80px] text-[#00008B]">{t('address')}:</span>
                   <span>Unter den Linden 13-15, 10117 Berlin, Deutschland</span>
                 </p>
                 <p className="flex items-start gap-3">
-                  <span className="font-semibold min-w-[80px] text-[#00008B]">Telefon:</span>
+                  <span className="font-semibold min-w-[80px] text-[#00008B]">{t('phone')}:</span>
                   <span>+49 30 544 480 512</span>
                 </p>
                 <p className="flex items-start gap-3">
-                  <span className="font-semibold min-w-[80px] text-[#00008B]">Email:</span>
+                  <span className="font-semibold min-w-[80px] text-[#00008B]">{t('email')}:</span>
                   <span>info@deutschebank.de</span>
                 </p>
               </div>
