@@ -56,14 +56,14 @@ function Kundenservice() {
       icon: Phone,
       title: t('phoneHotline'),
       description: t('available247'),
-      detail: '+49 69 910-00',
+      detail: '+49 30 544 480 512',
       action: t('callNow')
     },
     {
       icon: Mail,
       title: t('emailSupport'),
       description: t('response24h'),
-      detail: 'service@deutschebank.de',
+      detail: 'info@deutschebank.de',
       action: t('sendEmail')
     },
     {
@@ -126,22 +126,67 @@ function Kundenservice() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all text-center"
+              className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:border-[#00008B]/20 transition-all duration-300 text-center"
             >
-              <div className="w-16 h-16 bg-[#00008B] rounded-full flex items-center justify-center mx-auto mb-4">
-                <option.icon className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <option.icon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-[#00008B] mb-2">
+              <h3 className="text-xl font-semibold text-[#00008B] mb-3">
                 {option.title}
               </h3>
-              <p className="text-sm text-gray-600 mb-3">{option.description}</p>
-              <p className="text-sm font-medium text-gray-800 mb-4">{option.detail}</p>
-              <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white">
+              <p className="text-sm text-gray-600 mb-4">{option.description}</p>
+              <p className="text-base font-semibold text-gray-900 mb-6">{option.detail}</p>
+              <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white shadow-md">
                 {option.action}
               </Button>
             </motion.div>
           ))}
         </div>
+
+        {/* Oficina de Berlín */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-br from-white to-gray-50 border-2 border-[#00008B]/10 rounded-2xl p-8 mb-16 shadow-lg"
+        >
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold text-[#00008B] mb-4">Deutsche Bank Berlín</h3>
+              <div className="space-y-3 text-gray-700">
+                <p className="flex items-start gap-2">
+                  <span className="font-semibold min-w-[100px]">Dirección:</span>
+                  <span>Unter den Linden 13-15, 10117 Berlín, Alemania</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="font-semibold min-w-[100px]">Teléfono:</span>
+                  <span>+49 30 544 480 512</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="font-semibold min-w-[100px]">Email:</span>
+                  <span>info@deutschebank.de</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold text-[#00008B] mb-4">Horarios de atención</h4>
+              <div className="space-y-2 text-gray-700">
+                <p className="flex justify-between">
+                  <span className="font-medium">Lunes - Viernes:</span>
+                  <span>9:00 - 18:00</span>
+                </p>
+                <p className="flex justify-between">
+                  <span className="font-medium">Sábado:</span>
+                  <span>10:00 - 14:00</span>
+                </p>
+                <p className="flex justify-between">
+                  <span className="font-medium">Domingo:</span>
+                  <span className="text-red-600">Cerrado</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Emergency Section */}
         <motion.div
