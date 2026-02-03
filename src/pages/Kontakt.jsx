@@ -1,304 +1,280 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
-import { Loader2, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
+import Footer from '@/components/landing/Footer';
 
 export default function Kontakt() {
   const [formData, setFormData] = useState({
     vorname: '',
     nachname: '',
-    personalausweis: '',
-    telefon: '',
     email: '',
-    postleitzahl: '',
-    autorizo: false
+    telefon: '',
+    betreff: '',
+    nachricht: ''
   });
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!formData.autorizo) {
-      toast.error('Bitte akzeptieren Sie die Datenschutzrichtlinie');
-      return;
-    }
-
     setLoading(true);
-    
+
     try {
-      await base44.entities.ContactoFormulario.create(formData);
-      setSubmitted(true);
-      toast.success('Vielen Dank! Wir werden uns bald bei Ihnen melden.');
+      await base44.integrations.Core.SendEmail({
+        to: 'kontakt@deutschebank.de',
+        subject: `Kontaktanfrage: ${formData.betreff}`,
+        body: `
+          Vorname: ${formData.vorname}
+          Nachname: ${formData.nachname}
+          Email: ${formData.email}
+          Telefon: ${formData.telefon}
+          
+          Nachricht:
+          ${formData.nachricht}
+        `
+      });
+      
+      toast.success('Ihre Nachricht wurde erfolgreich gesendet!');
+      setFormData({
+        vorname: '',
+        nachname: '',
+        email: '',
+        telefon: '',
+        betreff: '',
+        nachricht: ''
+      });
     } catch (error) {
-      toast.error('Fehler beim Senden des Formulars');
+      toast.error('Fehler beim Senden der Nachricht');
     } finally {
       setLoading(false);
     }
   };
 
-  if (submitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-[#00008B] to-[#0000CD] flex items-center justify-center p-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-2xl shadow-2xl p-12 max-w-md w-full text-center"
-        >
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="w-12 h-12 text-green-600" />
-          </div>
-          <h2 className="text-3xl font-bold text-[#00008B] mb-4">
-            Vielen Dank!
-          </h2>
-          <p className="text-gray-600 mb-8">
-            Ihre Anfrage wurde erfolgreich übermittelt. Ein Berater wird Sie innerhalb von 24 Stunden kontaktieren.
-          </p>
-          <Button
-            onClick={() => window.location.href = '/'}
-            className="bg-[#00008B] hover:bg-[#0000CD] text-white"
-          >
-            Zur Startseite
-          </Button>
-        </motion.div>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f8f9fa] to-white py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-16 h-16 bg-white border-2 border-[#00008B] flex items-center justify-center p-2 rounded-lg shadow-lg">
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <div className="bg-[#00008B] text-white py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
+            <div className="w-12 h-12 bg-white flex items-center justify-center p-2">
               <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
                 <rect x="10" y="10" width="80" height="80" fill="none" stroke="#00008B" strokeWidth="8"/>
                 <path d="M20 80 L80 20" stroke="#00008B" strokeWidth="8"/>
               </svg>
             </div>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-4">
-            Konto eröffnen bei Deutsche Bank
-          </h1>
-          <p className="text-lg text-gray-600">
-            Füllen Sie dieses Formular aus und wir werden uns unverbindlich mit Ihnen in Verbindung setzen
-          </p>
-        </motion.div>
+            <div>
+              <p className="text-xl font-semibold">Deutsche Bank</p>
+            </div>
+          </Link>
+        </div>
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Left - Benefits */}
+      {/* Hero */}
+      <div className="bg-gradient-to-br from-gray-50 to-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center max-w-3xl mx-auto"
           >
-            <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-semibold mb-4">Erhalten Sie bis zu</h3>
-              <p className="text-6xl font-light text-[#ffd000] mb-2">500€</p>
-              <p className="text-xl mb-6">Bonus in EURC</p>
-              <div className="h-px bg-white/20 my-6"></div>
-              <p className="text-white/90">
-                Profitieren Sie von unserem exklusiven Willkommensbonus für neue Kunden
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-xl font-semibold text-[#00008B] mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-6 h-6 text-green-600" />
-                Ihre Vorteile
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold mt-1">✓</span>
-                  <span><strong>Einlagensicherung</strong> bis zu 100.000€</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold mt-1">✓</span>
-                  <span><strong>Kostenlose EURC/EURAU IBAN</strong></span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold mt-1">✓</span>
-                  <span><strong>Höchste Sicherheit</strong> für alle Transaktionen</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold mt-1">✓</span>
-                  <span><strong>Komplett kostenlos</strong> - keine versteckten Gebühren</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold mt-1">✓</span>
-                  <span><strong>Blockchain-Technologie</strong> - innovative dezentrale Lösungen</span>
-                </li>
-              </ul>
-            </div>
+            <h1 className="text-4xl md:text-5xl font-light text-[#00008B] mb-6">
+              Kontakt
+            </h1>
+            <p className="text-xl text-gray-600">
+              Wir sind für Sie da. Kontaktieren Sie uns per Telefon, E-Mail oder über unser Kontaktformular.
+            </p>
           </motion.div>
+        </div>
+      </div>
 
-          {/* Right - Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-white rounded-2xl shadow-2xl p-8"
-          >
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-              <p className="text-sm text-gray-700">
-                <strong className="text-[#00008B]">⏱ Schnelle Bearbeitung:</strong> Ein Berater wird Sie innerhalb von 24 Stunden unverbindlich kontaktieren
+      {/* Contact Info & Form */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Contact Information */}
+          <div className="lg:col-span-1 space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-gradient-to-br from-[#00008B] to-[#0000CD] text-white rounded-xl p-6"
+            >
+              <h2 className="text-2xl font-semibold mb-6">Kontaktinformationen</h2>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold mb-1">Telefon</p>
+                    <p className="text-white/90">+49 69 910-00</p>
+                    <p className="text-xs text-white/70 mt-1">Mo-Fr: 8:00 - 20:00 Uhr</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold mb-1">E-Mail</p>
+                    <p className="text-white/90">kontakt@deutschebank.de</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold mb-1">Hauptsitz</p>
+                    <p className="text-white/90">
+                      Taunusanlage 12<br />
+                      60325 Frankfurt am Main<br />
+                      Deutschland
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-[#ffd000] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold mb-1">Öffnungszeiten</p>
+                    <p className="text-white/90 text-sm">
+                      Montag - Freitag: 8:00 - 20:00<br />
+                      Samstag: 9:00 - 14:00<br />
+                      Sonntag: Geschlossen
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className="bg-blue-50 border border-blue-200 rounded-xl p-6"
+            >
+              <h3 className="text-lg font-semibold text-[#00008B] mb-3">Schnelle Hilfe</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                Für dringende Anliegen kontaktieren Sie bitte unsere Hotline.
               </p>
-            </div>
+              <Button className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white">
+                Hotline anrufen
+              </Button>
+            </motion.div>
+          </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Label htmlFor="vorname" className="text-sm text-gray-700">
-                  Vorname <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="vorname"
-                  required
-                  placeholder="Ihr Vorname"
-                  value={formData.vorname}
-                  onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
-                />
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="lg:col-span-2 bg-white rounded-xl shadow-lg p-8"
+          >
+            <h2 className="text-2xl font-semibold text-[#00008B] mb-6">
+              Senden Sie uns eine Nachricht
+            </h2>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="vorname">Vorname *</Label>
+                  <Input
+                    id="vorname"
+                    required
+                    value={formData.vorname}
+                    onChange={(e) => setFormData({ ...formData, vorname: e.target.value })}
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="nachname">Nachname *</Label>
+                  <Input
+                    id="nachname"
+                    required
+                    value={formData.nachname}
+                    onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
+                    className="mt-1"
+                  />
+                </div>
               </div>
 
-              <div>
-                <Label htmlFor="nachname" className="text-sm text-gray-700">
-                  Nachname <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="nachname"
-                  required
-                  placeholder="Ihr Nachname"
-                  value={formData.nachname}
-                  onChange={(e) => setFormData({ ...formData, nachname: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="personalausweis" className="text-sm text-gray-700">
-                  Personalausweis <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="personalausweis"
-                  required
-                  placeholder="Beispiel: 12345678X"
-                  value={formData.personalausweis}
-                  onChange={(e) => setFormData({ ...formData, personalausweis: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="telefon" className="text-sm text-gray-700">
-                  Telefon <span className="text-red-500">*</span>
-                </Label>
-                <div className="flex gap-2 mt-1">
-                  <Select defaultValue="de">
-                    <SelectTrigger className="w-24 border-gray-300">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="de">🇩🇪 +49</SelectItem>
-                      <SelectItem value="at">🇦🇹 +43</SelectItem>
-                      <SelectItem value="ch">🇨🇭 +41</SelectItem>
-                      <SelectItem value="es">🇪🇸 +34</SelectItem>
-                      <SelectItem value="fr">🇫🇷 +33</SelectItem>
-                      <SelectItem value="uk">🇬🇧 +44</SelectItem>
-                    </SelectContent>
-                  </Select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="email">E-Mail *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="telefon">Telefon</Label>
                   <Input
                     id="telefon"
-                    required
-                    placeholder="612 34 56 78"
                     value={formData.telefon}
                     onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
-                    className="flex-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
+                    className="mt-1"
                   />
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-sm text-gray-700">
-                  E-Mail <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  required
-                  placeholder="Beispiel: email@domain.de"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
-                />
+                <Label htmlFor="betreff">Betreff *</Label>
+                <Select
+                  value={formData.betreff}
+                  onValueChange={(value) => setFormData({ ...formData, betreff: value })}
+                >
+                  <SelectTrigger className="mt-1">
+                    <SelectValue placeholder="Bitte wählen..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Kontoeröffnung">Kontoeröffnung</SelectItem>
+                    <SelectItem value="Digital Festgeld">Digital Festgeld</SelectItem>
+                    <SelectItem value="Beratungstermin">Beratungstermin</SelectItem>
+                    <SelectItem value="Beschwerden">Beschwerden</SelectItem>
+                    <SelectItem value="Allgemeine Anfrage">Allgemeine Anfrage</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div>
-                <Label htmlFor="postleitzahl" className="text-sm text-gray-700">
-                  Postleitzahl <span className="text-red-500">*</span>
-                </Label>
-                <Input
-                  id="postleitzahl"
+                <Label htmlFor="nachricht">Nachricht *</Label>
+                <Textarea
+                  id="nachricht"
                   required
-                  placeholder="Beispiel: 10115"
-                  value={formData.postleitzahl}
-                  onChange={(e) => setFormData({ ...formData, postleitzahl: e.target.value })}
-                  className="mt-1 border-gray-300 focus:border-[#00008B] focus:ring-[#001e50]"
+                  value={formData.nachricht}
+                  onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })}
+                  className="mt-1 h-32"
+                  placeholder="Beschreiben Sie Ihr Anliegen..."
                 />
-              </div>
-
-              <div className="flex items-start space-x-3 pt-2">
-                <Checkbox
-                  id="autorizo"
-                  required
-                  checked={formData.autorizo}
-                  onCheckedChange={(checked) => setFormData({ ...formData, autorizo: checked })}
-                  className="mt-1 border-gray-300 data-[state=checked]:bg-[#00008B]"
-                />
-                <Label htmlFor="autorizo" className="text-xs text-gray-600 leading-relaxed">
-                  ICH AUTORISIERE die Erhebung und Verarbeitung meiner Daten zur Verwaltung meines Antrags und zum Empfang kommerzieller Informationen, wie in der{' '}
-                  <span className="text-[#00008B] underline cursor-pointer hover:text-[#0000CD]">
-                    Datenschutzrichtlinie
-                  </span>{' '}
-                  beschrieben. <span className="text-red-500">*</span>
-                </Label>
               </div>
 
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white py-6 text-base font-medium transition-all duration-300 mt-4"
+                className="w-full bg-[#00008B] hover:bg-[#0000CD] text-white py-6 text-base"
               >
                 {loading ? (
                   <>
                     <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    Senden...
+                    Wird gesendet...
                   </>
                 ) : (
-                  'FORMULAR ABSENDEN'
+                  'Nachricht senden'
                 )}
               </Button>
             </form>
           </motion.div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

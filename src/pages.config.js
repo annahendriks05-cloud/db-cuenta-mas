@@ -50,6 +50,8 @@
 import Home from './pages/Home';
 import Kontakt from './pages/Kontakt';
 import DigitalFestgeld from './pages/DigitalFestgeld';
+import Filialen from './pages/Filialen';
+import Kundenservice from './pages/Kundenservice';
 import __Layout from './Layout.jsx';
 
 
@@ -57,6 +59,8 @@ export const PAGES = {
     "Home": Home,
     "Kontakt": Kontakt,
     "DigitalFestgeld": DigitalFestgeld,
+    "Filialen": Filialen,
+    "Kundenservice": Kundenservice,
 }
 
 export const pagesConfig = {

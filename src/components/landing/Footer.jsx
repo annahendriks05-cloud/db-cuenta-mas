@@ -56,15 +56,24 @@ export default function Footer() {
             >
               Digital Festgeld
             </Link>
-            <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
+            <Link 
+              to={createPageUrl('Kontakt')}
+              className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
+            >
               Kontakt
-            </span>
-            <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
+            </Link>
+            <Link 
+              to={createPageUrl('Filialen')}
+              className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
+            >
               Filialen
-            </span>
-            <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
+            </Link>
+            <Link 
+              to={createPageUrl('Kundenservice')}
+              className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
+            >
               Kundenservice
-            </span>
+            </Link>
           </div>
         </div>
       </div>
