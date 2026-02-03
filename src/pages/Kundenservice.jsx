@@ -173,19 +173,19 @@ function Kundenservice() {
               </div>
             </div>
             <div>
-              <h4 className="text-xl font-bold text-[#00008B] mb-6">Öffnungszeiten</h4>
+              <h4 className="text-xl font-bold text-[#00008B] mb-6">{t('openingTitle')}</h4>
               <div className="space-y-3 text-gray-700">
                 <p className="flex justify-between">
-                  <span className="font-medium">Montag - Freitag:</span>
+                  <span className="font-medium">{t('mondayFriday')}:</span>
                   <span>9:00 - 18:00</span>
                 </p>
                 <p className="flex justify-between">
-                  <span className="font-medium">Samstag:</span>
+                  <span className="font-medium">{t('saturday')}:</span>
                   <span>10:00 - 14:00</span>
                 </p>
                 <p className="flex justify-between">
-                  <span className="font-medium">Sonntag:</span>
-                  <span className="text-red-600 font-semibold">Geschlossen</span>
+                  <span className="font-medium">{t('sunday')}:</span>
+                  <span className="text-red-600 font-semibold">{t('closed')}</span>
                 </p>
               </div>
             </div>
