@@ -208,7 +208,7 @@ function Kundenservice() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-red-600 hover:bg-red-700 text-white">
-                  {t('blockCard')}: +49 116 116
+                  {t('blockCard')}: +49 30 544 480 512
                 </Button>
                 <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50">
                   {t('blockOnline')}
