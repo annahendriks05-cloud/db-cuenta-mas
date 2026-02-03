@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { TrendingUp, Lock, Building2 } from 'lucide-react';
+import { createPageUrl } from '@/utils';
 import AnlageDialog from './AnlageDialog';
 
 export default function ProductSection() {
@@ -29,8 +31,8 @@ export default function ProductSection() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
-            <div>
-              <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl p-10 text-white relative overflow-hidden">
+            <Link to={createPageUrl('DigitalFestgeld')}>
+              <div className="bg-gradient-to-br from-[#00008B] to-[#0000CD] rounded-2xl p-10 text-white relative overflow-hidden cursor-pointer hover:from-[#0000A0] hover:to-[#0000E0] transition-all">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                 
@@ -94,7 +96,7 @@ export default function ProductSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
             
             <div className="flex justify-center">
               <img
