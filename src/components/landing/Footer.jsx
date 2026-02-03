@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 
 export default function Footer() {
   return (
@@ -48,12 +50,12 @@ export default function Footer() {
             © {new Date().getFullYear()} Deutsche Bank AG. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-6">
-            <a 
-              href="/DigitalFestgeld"
+            <Link 
+              to={createPageUrl('DigitalFestgeld')}
               className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer"
             >
               Digital Festgeld
-            </a>
+            </Link>
             <span className="text-xs text-white/50 hover:text-white transition-colors cursor-pointer">
               Kontakt
             </span>

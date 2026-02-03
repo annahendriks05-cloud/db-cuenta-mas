@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
+import { createPageUrl } from '@/utils';
 import {
   Select,
   SelectContent,
@@ -85,22 +87,23 @@ export default function HeroSection() {
             </h1>
 
             {/* Promotion Box */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-[#0000A0] rounded-lg p-8 inline-block cursor-pointer hover:bg-[#0000B5] transition-colors"
-              onClick={() => window.location.href = '/DigitalFestgeld'}
-            >
-              <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
-              <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">8.000€</p>
-              <p className="text-white text-lg">Bonus in EURC</p>
-              <p className="text-white/70 text-xs mt-3 space-y-1">
-                <div>25k: 4% + 2% Cashback</div>
-                <div>50k: 5% + 2% Cashback</div>
-                <div>100k: 6% + 2% Cashback</div>
-              </p>
-            </motion.div>
+            <Link to={createPageUrl('DigitalFestgeld')}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-[#0000A0] rounded-lg p-8 inline-block cursor-pointer hover:bg-[#0000B5] transition-colors"
+              >
+                <p className="text-white/80 text-lg mb-2">Erhalten Sie bis zu</p>
+                <p className="text-[#ffd000] text-6xl md:text-7xl font-light mb-2">8.000€</p>
+                <p className="text-white text-lg">Bonus in EURC</p>
+                <p className="text-white/70 text-xs mt-3 space-y-1">
+                  <div>25k: 4% + 2% Cashback</div>
+                  <div>50k: 5% + 2% Cashback</div>
+                  <div>100k: 6% + 2% Cashback</div>
+                </p>
+              </motion.div>
+            </Link>
 
             <p className="mt-8 text-white/80 text-sm">
               Wählen Sie, wie Sie Ihr Konto eröffnen möchten, über einen Berater oder direkt über der SMS Funktion{' '}
