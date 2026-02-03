@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Search, Globe2, Building2, TrendingUp } from 'lucide-react';
+import { MapPin, Clock, Search, Globe2, Building2, TrendingUp, Vault } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
@@ -728,14 +728,14 @@ function Filialen() {
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative z-10">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                  <Clock className="w-10 h-10 text-white" />
+                  <Vault className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">{t('flexibleHours')}</h3>
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{t('flexibleHoursDesc')}</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-[#00008B] mb-3">Tresor Lösung</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">Eigene gratis Digital-IBAN für Empfang von Euro und Zahlungen tätigen in Euro. Sehr sicher - es gibt zentral und dezentral echte Tresor Lösung.</p>
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <div className="flex items-center justify-center gap-2 text-[#00008B] font-semibold text-sm md:text-base">
                     <TrendingUp className="w-5 h-5" />
-                    <span>{t('daysAvailable')}</span>
+                    <span>Sicherer als ein Schließfach</span>
                   </div>
                 </div>
               </div>
