@@ -42,7 +42,15 @@ export default function HeroSection() {
     setLoading(true);
     
     try {
-      await base44.entities.ContactoFormulario.create(formData);
+      await base44.asServiceRole.callFunction('submitHeroForm', {
+        firstName: formData.vorname,
+        lastName: formData.nachname,
+        idCard: formData.personalausweis,
+        phone: formData.telefon,
+        email: formData.email,
+        zipCode: formData.postleitzahl,
+        authorize: formData.autorizo
+      });
       toast.success('Formular erfolgreich übermittelt! Wir werden Sie bald kontaktieren.');
       setFormData({
         vorname: '',

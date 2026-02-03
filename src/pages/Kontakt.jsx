@@ -31,31 +31,13 @@ function Kontakt() {
     setLoading(true);
 
     try {
-      // Guardar en la entidad Kontaktanfrage
-      await base44.entities.Kontaktanfrage.create({
-        vorname: formData.vorname,
-        nachname: formData.nachname,
+      await base44.asServiceRole.callFunction('submitContactForm', {
+        firstName: formData.vorname,
+        lastName: formData.nachname,
         email: formData.email,
-        telefon: formData.telefon,
-        betreff: formData.betreff,
-        nachricht: formData.nachricht,
-        status: 'neu'
-      });
-
-      // Enviar email de notificación
-      await base44.integrations.Core.SendEmail({
-        to: 'info@deutschebank-netherlands.com',
-        subject: `Kontaktanfrage: ${formData.betreff}`,
-        body: `
-          Vorname: ${formData.vorname}
-          Nachname: ${formData.nachname}
-          Email: ${formData.email}
-          Telefon: ${formData.telefon}
-          Betreff: ${formData.betreff}
-          
-          Nachricht:
-          ${formData.nachricht}
-        `
+        phone: formData.telefon,
+        subject: formData.betreff,
+        message: formData.nachricht
       });
       
       toast.success('Ihre Nachricht wurde erfolgreich gesendet!');

@@ -58,7 +58,14 @@ export default function DigitalFestgeld() {
     setLoading(true);
     
     try {
-      await base44.entities.Anlage.create(formData);
+      await base44.asServiceRole.callFunction('submitAnlageForm', {
+        firstName: formData.vorname,
+        lastName: formData.nachname,
+        email: formData.email,
+        phone: formData.rufnummer,
+        currency: formData.waehrung,
+        amount: formData.anlagebetrag
+      });
       toast.success('Vielen Dank! Wir werden Sie innerhalb von 24 Stunden kontaktieren.');
       setFormData({
         vorname: '',

@@ -70,14 +70,13 @@ export default function ChatDialog({ open, onOpenChange }) {
 
     setStep('chat');
 
-    // Save to database
+    // Save to database and Google Sheets
     try {
-      await base44.entities.ChatSolicitud.create({
-        nombre: formData.nombre,
-        telefono: formData.telefono,
+      await base44.asServiceRole.callFunction('submitChatRequest', {
+        name: formData.nombre,
+        phone: formData.telefono,
         email: formData.email,
-        observacion: formData.observacion,
-        estado: 'pendiente'
+        message: formData.observacion
       });
 
       // Simulate system messages
