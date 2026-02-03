@@ -10,6 +10,7 @@ import Footer from '@/components/landing/Footer';
 
 function Filialen() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showAllCountries, setShowAllCountries] = useState(false);
 
   const filialen = [
     // Holanda
@@ -167,11 +168,16 @@ function Filialen() {
     }
   ];
 
-  const filteredFilialen = filialen.filter(filiale =>
-    filiale.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    filiale.adresse.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    filiale.land.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredFilialen = filialen.filter(filiale => {
+    // Si hay búsqueda, mostrar todos los países
+    if (searchQuery.trim()) {
+      return filiale.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        filiale.adresse.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        filiale.land.toLowerCase().includes(searchQuery.toLowerCase());
+    }
+    // Sin búsqueda, solo mostrar Holanda
+    return filiale.land === 'Nederland';
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -203,7 +209,7 @@ function Filialen() {
               Filialen
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Finden Sie eine Deutsche Bank Filiale weltweit
+              Deutsche Bank filialen in Nederland. Zoek wereldwijd in de zoekbalk.
             </p>
 
             {/* Search */}
@@ -211,7 +217,7 @@ function Filialen() {
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <Input
-                  placeholder="Stadt, Land oder Adresse suchen..."
+                  placeholder="Zoek wereldwijd: stad, land of adres..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 py-6 text-base"
