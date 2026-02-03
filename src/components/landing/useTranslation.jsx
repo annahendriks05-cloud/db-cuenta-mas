@@ -554,7 +554,14 @@ const translations = {
     // Spanish translations continue...
     worldwidePresent: 'Presencia mundial',
     findBranch: 'Encuentre su sucursal más cercana',
-    
+
+    // Opening Hours
+    openingTitle: 'Horarios de apertura',
+    mondayFriday: 'Lunes - Viernes',
+    saturday: 'Sábado',
+    sunday: 'Domingo',
+    closed: 'Cerrado',
+
     // Chat Dialog
     chatTitle: 'Iniciar chat',
     chatDescription: 'Por favor, complete sus datos',
