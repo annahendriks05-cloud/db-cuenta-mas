@@ -13,7 +13,7 @@ import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
 
-export default function Kundenservice() {
+function Kundenservice() {
   const faqItems = [
     {
       question: 'Wie eröffne ich ein Konto bei Deutsche Bank?',
@@ -240,3 +240,5 @@ export default function Kundenservice() {
     </div>
   );
 }
+
+export default Kundenservice;

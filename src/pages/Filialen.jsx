@@ -8,7 +8,7 @@ import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
 
-export default function Filialen() {
+function Filialen() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filialen = [
@@ -222,3 +222,5 @@ export default function Filialen() {
     </div>
   );
 }
+
+export default Filialen;

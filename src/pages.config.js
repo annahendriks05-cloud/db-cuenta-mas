@@ -47,19 +47,19 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
-import Home from './pages/Home';
-import Kontakt from './pages/Kontakt';
 import DigitalFestgeld from './pages/DigitalFestgeld';
 import Filialen from './pages/Filialen';
+import Home from './pages/Home';
+import Kontakt from './pages/Kontakt';
 import Kundenservice from './pages/Kundenservice';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
-    "Home": Home,
-    "Kontakt": Kontakt,
     "DigitalFestgeld": DigitalFestgeld,
     "Filialen": Filialen,
+    "Home": Home,
+    "Kontakt": Kontakt,
     "Kundenservice": Kundenservice,
 }
 

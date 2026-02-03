@@ -13,7 +13,7 @@ import { createPageUrl } from '@/utils';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
 
-export default function Kontakt() {
+function Kontakt() {
   const [formData, setFormData] = useState({
     vorname: '',
     nachname: '',
@@ -278,3 +278,5 @@ export default function Kontakt() {
     </div>
   );
 }
+
+export default Kontakt;
