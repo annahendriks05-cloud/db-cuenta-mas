@@ -1,14 +1,26 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
-import Filialen from './Filialen';
+import React from 'react';
+import Navigation from '@/components/landing/Navigation';
+import HeroSection from '@/components/landing/HeroSection';
+import ProductSection from '@/components/landing/ProductSection';
+import BenefitsSection from '@/components/landing/BenefitsSection';
+import FeaturesSection from '@/components/landing/FeaturesSection';
+import SecuritySection from '@/components/landing/SecuritySection';
+import BankChangeService from '@/components/landing/BankChangeService';
+import RiskIndicator from '@/components/landing/RiskIndicator';
+import Footer from '@/components/landing/Footer';
 
 export default function Home() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate(createPageUrl('Filialen'));
-  }, [navigate]);
-
-  return <Filialen />;
+  return (
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      <HeroSection />
+      <ProductSection />
+      <BenefitsSection />
+      <FeaturesSection />
+      <SecuritySection />
+      <BankChangeService />
+      <RiskIndicator />
+      <Footer />
+    </div>
+  );
 }
