@@ -74,7 +74,7 @@ export default function HeroSection() {
             {/* Logo */}
             <div className="mb-8">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/8c3869e76_image.png"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/df2e47d7b_image.png"
                 alt="Deutsche Bank Logo"
                 className="h-16"
               />
