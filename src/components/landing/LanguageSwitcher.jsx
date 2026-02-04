@@ -15,6 +15,7 @@ export default function LanguageSwitcher() {
     setLanguage(value);
     localStorage.setItem('language', value);
     window.dispatchEvent(new Event('languageChange'));
+    window.location.reload();
   };
 
   React.useEffect(() => {
