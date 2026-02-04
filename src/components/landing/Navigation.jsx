@@ -8,7 +8,6 @@ export default function Navigation() {
   const { t } = useTranslation();
   
   const navItems = [
-    { label: t('digitalFestgeld'), path: 'DigitalFestgeld' },
     { label: t('kontakt'), path: 'Kontakt' },
     { label: t('filialen'), path: 'Filialen' },
     { label: t('kundenservice'), path: 'Kundenservice' }
