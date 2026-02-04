@@ -65,7 +65,7 @@ function Kontakt() {
         <div className="max-w-7xl mx-auto px-4">
           <Link to={createPageUrl('Home')} className="hover:opacity-80 transition-opacity inline-flex">
             <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/4b6227d9b_image.png"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/eb373d3cf_logodeustchbank.png"
               alt="Deutsche Bank Logo"
               className="h-12"
             />
