@@ -31,13 +31,12 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex items-center gap-3 mb-6">
+        <div className="mb-6">
           <img 
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/f1efd9eb2_image.png"
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/8c3869e76_image.png"
             alt="Deutsche Bank Logo"
             className="h-12"
           />
-          <span className="text-white text-2xl font-semibold">Deutsche Bank</span>
         </div>
         <p className="text-sm text-white/70 max-w-2xl mb-8">
           {t('footerDescription')}

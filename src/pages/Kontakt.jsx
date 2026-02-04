@@ -63,13 +63,12 @@ function Kontakt() {
       {/* Header */}
       <div className="bg-[#00008B] text-white py-4">
         <div className="max-w-7xl mx-auto px-4">
-          <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:opacity-80 transition-opacity inline-flex">
+          <Link to={createPageUrl('Home')} className="hover:opacity-80 transition-opacity inline-flex">
             <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/f1efd9eb2_image.png"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/8c3869e76_image.png"
               alt="Deutsche Bank Logo"
               className="h-12"
             />
-            <span className="text-white text-2xl font-semibold">Deutsche Bank</span>
           </Link>
         </div>
       </div>

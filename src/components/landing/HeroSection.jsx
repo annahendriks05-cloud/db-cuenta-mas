@@ -72,13 +72,12 @@ export default function HeroSection() {
             className="text-white"
           >
             {/* Logo */}
-            <div className="flex items-center gap-3 mb-8">
+            <div className="mb-8">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/f1efd9eb2_image.png"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/8c3869e76_image.png"
                 alt="Deutsche Bank Logo"
-                className="h-12"
+                className="h-16"
               />
-              <span className="text-white text-2xl font-semibold">Deutsche Bank</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
