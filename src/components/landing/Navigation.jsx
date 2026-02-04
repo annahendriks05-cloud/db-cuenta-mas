@@ -19,7 +19,7 @@ export default function Navigation() {
         <div className="flex flex-col md:flex-row justify-between items-center py-3 md:py-4 gap-3 md:gap-0">
           <Link to={createPageUrl('Home')} className="hover:opacity-80 transition-opacity">
             <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/91b5a46a1_image.png"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697cf26cc2a02d112fd30c1c/eb373d3cf_logodeustchbank.png"
               alt="Deutsche Bank Logo"
               className="h-10 md:h-12"
             />
