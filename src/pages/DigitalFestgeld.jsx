@@ -87,6 +87,7 @@ export default function DigitalFestgeld() {
               alt="Deutsche Bank Logo"
               className="h-12"
             />
+            <span className="text-white text-2xl font-semibold">Deutsche Bank</span>
           </Link>
         </div>
       </div>
